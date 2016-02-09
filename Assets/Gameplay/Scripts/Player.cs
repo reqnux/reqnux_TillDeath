@@ -18,4 +18,7 @@ public class Player : Unit {
     {
 
     }
+
+    public Weapon CurrentWeapon{ get; set;}
+    private Weapon currentWeapon;
 }
