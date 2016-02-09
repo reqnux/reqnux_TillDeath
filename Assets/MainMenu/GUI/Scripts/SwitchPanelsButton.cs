@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SwitchPanelsButton : MonoBehaviour {
+public class SwitchPanelsButton : MonoBehaviour 
+{
 
 	public GameObject turnOffPanel;
 	public GameObject turnOnPanel;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
 	
 	}
 
-	public void switchPanels() {
-		if (turnOnPanel && turnOffPanel) {
+	public void switchPanels() 
+    {
+		if (turnOnPanel && turnOffPanel) 
+        {
 			turnOffPanel.SetActive (false);
 			turnOnPanel.SetActive (true);
 		} else {
