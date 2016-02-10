@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PickableItem
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Pickups
+  - Units
+  - Bullets
   - 
   - 
   - 
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 514946261
+    locked: 0
+  - name: Pickups
+    uniqueID: 1168976775
+    locked: 0
+  - name: Units
+    uniqueID: 3305910395
+    locked: 0
+  - name: Bullets
+    uniqueID: 2410853277
     locked: 0

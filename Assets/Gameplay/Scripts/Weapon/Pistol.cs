@@ -7,5 +7,10 @@ public class Pistol : Weapon {
         base.Start();
 	}
 	
+    public override void shoot()
+    {
+        
+    }
+
 
 }

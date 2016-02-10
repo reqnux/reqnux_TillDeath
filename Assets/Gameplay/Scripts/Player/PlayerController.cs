@@ -5,7 +5,6 @@ public class PlayerController : UnitMovement {
 
     private float horizontalMovement;
     private float verticalMovement;
-    private UnitStats unitStats;
     private Player player;
     private Rigidbody2D playerRigidbody;
 
@@ -13,7 +12,6 @@ public class PlayerController : UnitMovement {
     void Start () {
         player = GetComponent<Player> ();
         playerRigidbody = GetComponent<Rigidbody2D> ();
-        unitStats = player.Stats;
     }
 
     void Update() {
@@ -39,7 +37,7 @@ public class PlayerController : UnitMovement {
             verticalMovement = 0;
         }
 
-        playerRigidbody.velocity = new Vector2(horizontalMovement,verticalMovement).normalized *(unitStats.MovementSpeed);
+        playerRigidbody.velocity = new Vector2(horizontalMovement,verticalMovement).normalized *(player.Stats.MovementSpeed);
         //playerRigidbody.position = new Vector2 (Mathf.Clamp (playerRigidbody.position.x, Mapa.xMin, Mapa.xMax),
         //    Mathf.Clamp (playerRigidbody.position.y, Mapa.yMin, Mapa.yMax));
         lookAtTarget(Camera.main.ScreenToWorldPoint (Input.mousePosition));

@@ -6,7 +6,8 @@ public class Player : Unit {
     // Use this for initialization
     public override void Start () 
     {
-
+        base.Start();
+        stats.MovementSpeed = 5;
     }
 
     public override void death() 
@@ -20,5 +21,6 @@ public class Player : Unit {
     }
 
     public Weapon CurrentWeapon{ get; set;}
+    [SerializeField]
     private Weapon currentWeapon;
 }

@@ -13,17 +13,14 @@ public abstract class Weapon : PickableItem {
 
     public override void pickup()
     {
-        
+        removeFromMap();
     }
 
-    public void shoot()
-    {
-        
-    }
+    public abstract void shoot();
 
     public void reload()
     {
-        
+        currentBullets = clipSize;
     }
 
 
