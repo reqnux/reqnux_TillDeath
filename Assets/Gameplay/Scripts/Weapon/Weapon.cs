@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Weapon : PickableItem {
+public abstract class Weapon : MonoBehaviour {
 
 	public virtual void Start () {
         currentBullets = clipSize;
@@ -10,11 +10,6 @@ public abstract class Weapon : PickableItem {
 	void Update () {
 	
 	}
-
-    public override void pickup()
-    {
-        removeFromMap();
-    }
 
     public abstract void shoot();
 

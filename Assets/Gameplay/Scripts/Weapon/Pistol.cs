@@ -9,7 +9,7 @@ public class Pistol : Weapon {
 	
     public override void shoot()
     {
-        
+        Debug.Log("Pistol: shoot");
     }
 
 
