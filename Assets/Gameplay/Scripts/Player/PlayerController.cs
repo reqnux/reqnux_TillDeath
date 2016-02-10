@@ -7,11 +7,12 @@ public class PlayerController : UnitMovement {
     private float verticalMovement;
     private Player player;
     private Rigidbody2D playerRigidbody;
+    private Map map;
 
-    // Use this for initialization
     void Start () {
         player = GetComponent<Player> ();
         playerRigidbody = GetComponent<Rigidbody2D> ();
+        map = GameObject.FindObjectOfType<Map>();
     }
 
     void Update() {
@@ -24,8 +25,6 @@ public class PlayerController : UnitMovement {
     }
 
     protected override void move() {
-        // getAxis returns values from -10 to 10
-
         if (Input.GetAxis ("Horizontal") != 0) {
             horizontalMovement = Input.GetAxis ("Horizontal") / Mathf.Abs(Input.GetAxis ("Horizontal"));
         } else {
@@ -38,8 +37,8 @@ public class PlayerController : UnitMovement {
         }
 
         playerRigidbody.velocity = new Vector2(horizontalMovement,verticalMovement).normalized *(player.Stats.MovementSpeed);
-        //playerRigidbody.position = new Vector2 (Mathf.Clamp (playerRigidbody.position.x, Mapa.xMin, Mapa.xMax),
-        //    Mathf.Clamp (playerRigidbody.position.y, Mapa.yMin, Mapa.yMax));
+        playerRigidbody.position = new Vector2 (Mathf.Clamp (playerRigidbody.position.x, -map.XMovementRange, map.XMovementRange),
+                                                Mathf.Clamp (playerRigidbody.position.y, -map.YMovementRange, map.YMovementRange));
         lookAtTarget(Camera.main.ScreenToWorldPoint (Input.mousePosition));
 
     }
