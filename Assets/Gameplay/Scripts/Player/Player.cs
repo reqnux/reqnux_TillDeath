@@ -20,7 +20,15 @@ public class Player : Unit {
 
     }
 
-    public Weapon CurrentWeapon{ get; set;}
+    public void useWeapon(Weapon weapon)
+    {
+        currentWeapon = weapon;
+    }
+    public Weapon CurrentWeapon
+    {
+        get{return currentWeapon;} 
+    }
+
     [SerializeField]
     private Weapon currentWeapon;
 }
