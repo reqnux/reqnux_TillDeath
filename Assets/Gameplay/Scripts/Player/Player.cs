@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Player : Unit {
 
-    // Use this for initialization
+    [SerializeField]
+    private Weapon currentWeapon;
+
     public override void Start () 
     {
         base.Start();
@@ -29,6 +31,4 @@ public class Player : Unit {
         get{return currentWeapon;} 
     }
 
-    [SerializeField]
-    private Weapon currentWeapon;
 }

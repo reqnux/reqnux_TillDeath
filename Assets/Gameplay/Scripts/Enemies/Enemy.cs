@@ -6,7 +6,7 @@ public class Enemy : Unit {
 	// Use this for initialization
 	public override void Start () 
     {
-	
+        base.Start();
 	}
 
     public override void death() 

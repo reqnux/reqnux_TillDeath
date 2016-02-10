@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 
-public class UnitStats 
-{
+public class UnitStats {
 
     public int Damage{ get; set;}
     public int MovementSpeed{ get; set;}

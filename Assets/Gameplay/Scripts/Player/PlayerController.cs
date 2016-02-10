@@ -9,13 +9,15 @@ public class PlayerController : UnitMovement {
     private Rigidbody2D playerRigidbody;
     private Map map;
 
-    void Start () {
+    void Start () 
+    {
         player = GetComponent<Player> ();
         playerRigidbody = GetComponent<Rigidbody2D> ();
         map = GameObject.FindObjectOfType<Map>();
     }
 
-    void Update() {
+    void Update() 
+    {
         if (Input.GetKey (KeyCode.Mouse0)) {
             player.CurrentWeapon.shoot();
         }
@@ -24,7 +26,8 @@ public class PlayerController : UnitMovement {
         }
     }
 
-    protected override void move() {
+    protected override void move() 
+    {
         if (Input.GetAxis ("Horizontal") != 0) {
             horizontalMovement = Input.GetAxis ("Horizontal") / Mathf.Abs(Input.GetAxis ("Horizontal"));
         } else {
@@ -40,6 +43,5 @@ public class PlayerController : UnitMovement {
         playerRigidbody.position = new Vector2 (Mathf.Clamp (playerRigidbody.position.x, -map.XMovementRange, map.XMovementRange),
                                                 Mathf.Clamp (playerRigidbody.position.y, -map.YMovementRange, map.YMovementRange));
         lookAtTarget(Camera.main.ScreenToWorldPoint (Input.mousePosition));
-
     }
 }

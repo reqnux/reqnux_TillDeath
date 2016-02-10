@@ -3,6 +3,7 @@ using System.Collections;
 
 public abstract class Unit : MonoBehaviour 
 {
+    protected UnitStats stats;
 
     public virtual void Start() 
     {
@@ -14,5 +15,4 @@ public abstract class Unit : MonoBehaviour
 
     public UnitStats Stats {get{return stats;}}
 
-    protected UnitStats stats;
 }
