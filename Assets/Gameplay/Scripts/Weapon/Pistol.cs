@@ -15,6 +15,8 @@ public class Pistol : Weapon {
             spawnBullet();
             lastShotTime = Time.time;
             currentAmmo--;
+            if (currentAmmo == 0)
+                reload();
         }
     }
 
