@@ -4,14 +4,14 @@ using System.Collections;
 public abstract class Weapon : MonoBehaviour {
 
     [SerializeField] protected int damage;
-    protected int currentBullets;
+    protected int currentAmmo;
     [SerializeField] protected int clipSize;
     [SerializeField] protected float reloadTime;
     [SerializeField] protected float delayBetweenShots;
 
     public virtual void Awake () 
     {
-        currentBullets = clipSize;
+        currentAmmo = clipSize;
     }
     
     void Update () {
@@ -22,8 +22,15 @@ public abstract class Weapon : MonoBehaviour {
 
     public void reload()
     {
-        currentBullets = clipSize;
+        currentAmmo = clipSize;
     }
 
-
+    public int CurrentAmmo
+    {
+        get { return currentAmmo;}
+    }
+    public int ClipSize
+    {
+        get { return clipSize;}
+    }
 }
