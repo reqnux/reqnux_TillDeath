@@ -11,6 +11,7 @@ public abstract class Weapon : MonoBehaviour {
     [SerializeField] protected int damage;
     protected int currentAmmo;
     [SerializeField] protected int clipSize;
+    protected bool flagReloading;
 
     [SerializeField] protected float reloadTime;
     [SerializeField] protected float delayBetweenShots;
@@ -33,7 +34,9 @@ public abstract class Weapon : MonoBehaviour {
     }
     private IEnumerator reloadCoroutine()
     {
+        flagReloading = true;
         yield return new WaitForSeconds(reloadTime);
+        flagReloading = false;
         currentAmmo = clipSize;
     }
 

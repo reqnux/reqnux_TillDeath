@@ -10,7 +10,7 @@ public class Pistol : Weapon {
 	
     public override void shoot()
     {
-        if (currentAmmo > 0 && Time.time > lastShotTime + delayBetweenShots)
+        if (!flagReloading && currentAmmo > 0 && Time.time > lastShotTime + delayBetweenShots)
         {
             spawnBullet();
             lastShotTime = Time.time;
