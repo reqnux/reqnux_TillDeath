@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickableItem
   - Enemy
+  - Bullets
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - 
   - Ground
   - Pickups
-  - Units
+  - Enemies
   - Bullets
-  - 
+  - Player
   - 
   - 
   - 

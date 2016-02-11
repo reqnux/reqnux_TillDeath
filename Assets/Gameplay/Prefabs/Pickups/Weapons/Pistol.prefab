@@ -142,10 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2003a21e0d919154d9ed6b5e3fe4ea00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  clipSize: 0
-  reloadTime: 0
-  delayBetweenShots: 0
+  bulletPrefab: {fileID: 5048244, guid: 7359f833c09c38a41aae66a3aa525396, type: 2}
+  damage: 5
+  clipSize: 12
+  reloadTime: 2
+  delayBetweenShots: 0.7
+  bulletSpeed: 20
 --- !u!212 &21264492
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -212,7 +214,31 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5048244, guid: 7359f833c09c38a41aae66a3aa525396, type: 2}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: clipSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: delayBetweenShots
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158832}
