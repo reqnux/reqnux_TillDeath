@@ -4,9 +4,10 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 
     private Weapon weapon;
+    private float bulletLifeTime = 2;
 
     void Start () {
-	
+        Destroy(gameObject, bulletLifeTime);
 	}
 	
     void OnCollisionEnter2D(Collision2D col)
