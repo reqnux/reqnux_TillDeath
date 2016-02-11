@@ -5,7 +5,7 @@ public abstract class Unit : MonoBehaviour
 {
     protected UnitStats stats;
 
-    public virtual void Start() 
+    public virtual void Awake() 
     {
         stats = new UnitStats();
     }

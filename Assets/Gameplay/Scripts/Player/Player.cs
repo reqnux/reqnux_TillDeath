@@ -6,10 +6,12 @@ public class Player : Unit {
     [SerializeField]
     private Weapon currentWeapon;
 
-    public override void Start () 
+    public override void Awake () 
     {
-        base.Start();
+        base.Awake();
         stats.MovementSpeed = 5;
+        stats.MaxHealth = 50;
+        stats.CurrentHealth = stats.MaxHealth/2;
     }
 
     public override void death() 

@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Pistol : Weapon {
 
-	public override void Start () 
+	public override void Awake () 
     {
-        base.Start();
+        base.Awake();
 	}
 	
     public override void shoot()

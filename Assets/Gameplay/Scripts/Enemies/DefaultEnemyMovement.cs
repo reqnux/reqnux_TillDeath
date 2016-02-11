@@ -13,9 +13,9 @@ public class DefaultEnemyMovement : UnitMovement {
     private Vector3 movementDirection;
 
     private bool flagChasing;
-    private float chaseStartTime;
+    private float chaseAwakeTime;
 
-    void Start() 
+    void Awake() 
     {
         player = GameObject.Find("Player").GetComponent<Player>();
         movingUnit = GetComponent<Unit>();
@@ -28,12 +28,12 @@ public class DefaultEnemyMovement : UnitMovement {
             Debug.DrawRay(transform.position, movementDirection);
             if(!flagChasing) {
                 flagChasing = true;
-                chaseStartTime = Time.time;
+                chaseAwakeTime = Time.time;
             }
             movementDirection = player.transform.position;
         } else {
             if(flagChasing) {
-                if(Time.time > chaseStartTime + chaseTime) {
+                if(Time.time > chaseAwakeTime + chaseTime) {
                     flagChasing = false;
                     movementDirection = pointBetweenPlayerAndEnemy ();
                 } else {

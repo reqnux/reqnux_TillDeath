@@ -4,9 +4,9 @@ using System.Collections;
 public class Enemy : Unit {
 
 	// Use this for initialization
-	public override void Start () 
+	public override void Awake () 
     {
-        base.Start();
+        base.Awake();
 	}
 
     public override void death() 

@@ -9,7 +9,7 @@ public abstract class Weapon : MonoBehaviour {
     [SerializeField] protected float reloadTime;
     [SerializeField] protected float delayBetweenShots;
 
-    public virtual void Start () 
+    public virtual void Awake () 
     {
         currentBullets = clipSize;
     }

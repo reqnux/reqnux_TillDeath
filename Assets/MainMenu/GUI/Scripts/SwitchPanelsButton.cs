@@ -8,7 +8,7 @@ public class SwitchPanelsButton : MonoBehaviour
 	public GameObject turnOnPanel;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
     {
 	
 	}

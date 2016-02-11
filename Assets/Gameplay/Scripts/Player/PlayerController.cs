@@ -9,7 +9,7 @@ public class PlayerController : UnitMovement {
     private Rigidbody2D playerRigidbody;
     private Map map;
 
-    void Start () 
+    void Awake () 
     {
         player = GetComponent<Player> ();
         playerRigidbody = GetComponent<Rigidbody2D> ();
