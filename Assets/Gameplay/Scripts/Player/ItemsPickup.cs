@@ -9,6 +9,7 @@ public class ItemsPickup : MonoBehaviour {
         {
             PickableItem item = col.gameObject.GetComponent<PickableItem>();
             handleItem(item);
+            item.pickup();
         }
     }
 

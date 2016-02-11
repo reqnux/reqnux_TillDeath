@@ -10,8 +10,20 @@ public class Pistol : Weapon {
 	
     public override void shoot()
     {
-        Debug.Log("Pistol: shoot");
+        if (currentAmmo > 0 && Time.time > lastShotTime + delayBetweenShots)
+        {
+            spawnBullet();
+            lastShotTime = Time.time;
+            currentAmmo--;
+        }
     }
 
+    protected override void spawnBullet()
+    {
+        Rigidbody2D bullet = (Rigidbody2D) Instantiate(bulletPrefab, gunEnding.transform.position, gunEnding.transform.rotation);
+        bullet.velocity = gunEnding.transform.up * bulletSpeed;
+
+        bullet.GetComponent<Bullet>().Weapon = this;
+    }
 
 }

@@ -21,7 +21,7 @@ public class PlayerController : UnitMovement {
         if (Input.GetKey (KeyCode.Mouse0)) {
             player.CurrentWeapon.shoot();
         }
-        if (Input.GetKey (KeyCode.R)) {
+        if (Input.GetKeyDown (KeyCode.R)) {
             player.CurrentWeapon.reload();
         }
     }

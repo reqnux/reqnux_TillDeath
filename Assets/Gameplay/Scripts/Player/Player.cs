@@ -11,7 +11,16 @@ public class Player : Unit {
         base.Awake();
         stats.MovementSpeed = 5;
         stats.MaxHealth = 50;
-        stats.CurrentHealth = stats.MaxHealth/2;
+        stats.CurrentHealth = stats.MaxHealth;
+    }
+
+    void Start()
+    {
+        Weapon defaultWeapon = GameObject.Find("DefaultWeapon").GetComponent<Weapon>();
+        if (defaultWeapon != null)
+            useWeapon(defaultWeapon);
+        else
+            Debug.LogError("Player : No default weapon found on map!");
     }
 
     public override void death() 
@@ -27,6 +36,8 @@ public class Player : Unit {
     public void useWeapon(Weapon weapon)
     {
         currentWeapon = weapon;
+        weapon.Player = this;
+        stats.Damage = weapon.Damage;
     }
     public Weapon CurrentWeapon
     {
