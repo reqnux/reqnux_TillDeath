@@ -36,6 +36,7 @@ public class Player : Unit {
     {
         if (Time.time > lastDamageTakenTime + timeBetweenDamage)
         {
+            lastDamageTakenTime = Time.time;
             stats.CurrentHealth -= damage;
             if (stats.CurrentHealth <= 0)
                 death();

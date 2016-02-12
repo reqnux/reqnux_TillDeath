@@ -16,7 +16,7 @@ public class GameEventsHandler : MonoBehaviour {
 
     void onPlayerDeath()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         StartCoroutine(showEndGamePanel());
     }
 

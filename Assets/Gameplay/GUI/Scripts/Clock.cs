@@ -23,8 +23,8 @@ public class Clock : MonoBehaviour {
         if (Time.time > lastUpdateTime + 1) 
         {
             lastUpdateTime = Time.time;
-            modulo = Time.time % 60;
-            minutes = Mathf.FloorToInt(Time.time/60);
+            modulo = Time.timeSinceLevelLoad % 60;
+            minutes = Mathf.FloorToInt(Time.timeSinceLevelLoad/60);
             seconds = Mathf.FloorToInt (modulo);
             if (isVisible)
                 clockText.text = getClockText();
