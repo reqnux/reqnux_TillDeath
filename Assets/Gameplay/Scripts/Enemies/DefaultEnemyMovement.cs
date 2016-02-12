@@ -22,6 +22,16 @@ public class DefaultEnemyMovement : UnitMovement {
         movementDirection = pointBetweenPlayerAndEnemy();
     }
 
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+    }
+
     protected override void move() 
     {
         if (ifPlayerInAggro()) {

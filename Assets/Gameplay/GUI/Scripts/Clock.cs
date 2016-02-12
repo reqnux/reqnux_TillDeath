@@ -12,15 +12,26 @@ public class Clock : MonoBehaviour {
     private int seconds;
     private float modulo;
 
+    private bool stopped;
 
     void Awake() 
     {
         clockText = GetComponent<Text>();
     }
 
+    void Start()
+    {
+        Player.playerDeathEvent += stopClock;
+    }
+
+    void OnDisable()
+    {
+        Player.playerDeathEvent -= stopClock;
+    }
+
     void Update () 
     {
-        if (Time.time > lastUpdateTime + 1) 
+        if (!stopped && Time.time > lastUpdateTime + 1) 
         {
             lastUpdateTime = Time.time;
             modulo = Time.timeSinceLevelLoad % 60;
@@ -47,6 +58,11 @@ public class Clock : MonoBehaviour {
     public void showClock(bool showClock)
     {
         isVisible = showClock;
+    }
+
+    void stopClock()
+    {
+        stopped = true;
     }
 
 }

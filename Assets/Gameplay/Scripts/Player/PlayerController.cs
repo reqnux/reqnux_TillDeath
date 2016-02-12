@@ -16,6 +16,16 @@ public class PlayerController : UnitMovement {
         map = GameObject.FindObjectOfType<Map>();
     }
 
+    protected override void Start()
+    {
+        base.Start();
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+    }
+
     void Update() 
     {
         if (Input.GetKey (KeyCode.Mouse0)) {

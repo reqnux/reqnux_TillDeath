@@ -29,7 +29,8 @@ public class Player : Unit {
 
     public override void death() 
     {
-        playerDeathEvent();
+        if(playerDeathEvent != null)
+            playerDeathEvent();
     }
 
     public override void takeDamage(int damage)

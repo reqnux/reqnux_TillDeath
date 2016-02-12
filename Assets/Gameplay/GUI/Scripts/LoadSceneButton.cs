@@ -12,7 +12,6 @@ public class LoadSceneButton : MonoBehaviour {
 
     public void reloadScene()
     {
-        Debug.Log("reload scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
