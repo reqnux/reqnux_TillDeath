@@ -16,4 +16,12 @@ public class EnemyAttack : MonoBehaviour {
             col.gameObject.GetComponent<Player>().takeDamage(enemyStats.Damage);
         }
     }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<Player>().takeDamage(enemyStats.Damage);
+        }
+    }
 }
