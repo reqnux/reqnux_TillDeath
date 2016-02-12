@@ -7,6 +7,8 @@ TagManager:
   - PickableItem
   - Enemy
   - Bullets
+  - GameManager
+  - Spawner
   layers:
   - Default
   - TransparentFX

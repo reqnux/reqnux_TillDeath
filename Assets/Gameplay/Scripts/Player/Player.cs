@@ -6,11 +6,15 @@ public class Player : Unit {
     [SerializeField]
     private Weapon currentWeapon;
 
+    private float timeBetweenDamage = 0.5f;
+    private float lastDamageTakenTime;
+
+    public delegate void PlayerDeathEvent();
+    public static event PlayerDeathEvent playerDeathEvent;
+
     public override void Awake () 
     {
         base.Awake();
-        stats.MovementSpeed = 5;
-        stats.MaxHealth = 50;
         stats.CurrentHealth = stats.MaxHealth;
     }
 
@@ -25,12 +29,17 @@ public class Player : Unit {
 
     public override void death() 
     {
-
+        playerDeathEvent();
     }
 
     public override void takeDamage(int damage)
     {
-
+        if (Time.time > lastDamageTakenTime + timeBetweenDamage)
+        {
+            stats.CurrentHealth -= damage;
+            if (stats.CurrentHealth <= 0)
+                death();
+        }
     }
 
     public void useWeapon(Weapon weapon)
