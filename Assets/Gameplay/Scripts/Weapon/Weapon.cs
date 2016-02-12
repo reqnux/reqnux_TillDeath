@@ -30,7 +30,8 @@ public abstract class Weapon : MonoBehaviour {
 
     public void reload()
     {
-        StartCoroutine(reloadCoroutine());
+        if(!flagReloading)
+            StartCoroutine(reloadCoroutine());
     }
     private IEnumerator reloadCoroutine()
     {
