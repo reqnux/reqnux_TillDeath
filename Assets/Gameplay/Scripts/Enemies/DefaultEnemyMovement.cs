@@ -25,7 +25,6 @@ public class DefaultEnemyMovement : UnitMovement {
     protected override void move() 
     {
         if (ifPlayerInAggro()) {
-            Debug.DrawRay(transform.position, movementDirection);
             if(!flagChasing) {
                 flagChasing = true;
                 chaseAwakeTime = Time.time;
