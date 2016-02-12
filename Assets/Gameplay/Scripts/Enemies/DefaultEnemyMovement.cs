@@ -6,10 +6,10 @@ public class DefaultEnemyMovement : UnitMovement {
     private Player player;
     private Unit movingUnit;
 
-    [SerializeField] private float aggroRange = 5;
-    [SerializeField] private float chaseTime = 4; //chase time after entering aggroRange
+    [SerializeField]  float aggroRange = 5;
+    [SerializeField]  float chaseTime = 4; //chase time after entering aggroRange
     //how far player has to be from current movementDirection, to pick new movementDirection
-    [SerializeField] private float targetResetDistance = 5; 
+    [SerializeField]  float targetResetDistance = 5; 
     private Vector3 movementDirection;
 
     private bool flagChasing;

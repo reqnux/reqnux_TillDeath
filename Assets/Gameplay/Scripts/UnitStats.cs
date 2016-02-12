@@ -4,11 +4,11 @@ using System.Collections;
 [System.Serializable]
 public class UnitStats {
 
-    [SerializeField] private int damage;
-    [SerializeField] private int movementSpeed;
+    [SerializeField]  int damage;
+    [SerializeField]  int movementSpeed;
     private int currentHealth;
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int bonusChance;
+    [SerializeField]  int maxHealth;
+    [SerializeField]  int bonusChance;
 
     public int Damage{ get {return damage;} set{damage = value;}}
     public int MovementSpeed{ get {return movementSpeed;} set{movementSpeed = value;}}

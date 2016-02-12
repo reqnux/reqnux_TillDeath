@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    [SerializeField] private Enemy enemyPrefab;
-    [SerializeField] private bool isActive = true;
-    [SerializeField] private float timeBetweenSpawns; // in seconds
+    [SerializeField]  Enemy enemyPrefab;
+    [SerializeField]  bool isActive = true;
+    [SerializeField]  float timeBetweenSpawns; // in seconds
     private float lastSpawnTime;
 	
     void Start()

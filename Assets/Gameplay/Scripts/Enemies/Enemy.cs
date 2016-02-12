@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Enemy : Unit {
 
+    public delegate void EnemyDeathEvent(Enemy enemy);
+    public static event EnemyDeathEvent enemyDeathEvent;
+
 	public override void Awake () 
     {
         base.Awake();
@@ -11,6 +14,8 @@ public class Enemy : Unit {
 
     public override void death() 
     {
+        if (enemyDeathEvent != null)
+            enemyDeathEvent(this);
         Destroy(gameObject);
     }
 	

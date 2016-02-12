@@ -44,7 +44,7 @@ public class Clock : MonoBehaviour {
         }
     }
 
-    private string getClockText() 
+    public string getClockText() 
     {
         string min = minutes.ToString();
         string sec = seconds.ToString();

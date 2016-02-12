@@ -3,14 +3,13 @@ using System.Collections;
 
 public class Player : Unit {
 
-    [SerializeField]
-    private Weapon currentWeapon;
+    public delegate void PlayerDeathEvent();
+    public static event PlayerDeathEvent playerDeathEvent;
+
+    [SerializeField]  Weapon currentWeapon;
 
     private float timeBetweenDamage = 0.5f;
     private float lastDamageTakenTime;
-
-    public delegate void PlayerDeathEvent();
-    public static event PlayerDeathEvent playerDeathEvent;
 
     public override void Awake () 
     {

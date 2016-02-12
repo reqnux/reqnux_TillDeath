@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameEventsHandler : MonoBehaviour {
 
-    [SerializeField] private EndGamePanel endGamePanel;
+    [SerializeField]  EndGamePanel endGamePanel;
 
     void Start () {
         Player.playerDeathEvent += onPlayerDeath;
