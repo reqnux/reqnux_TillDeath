@@ -5,14 +5,9 @@ using System.Collections;
 public class SurvivalEndGamePanel : EndGamePanel {
 
     [SerializeField] Text timeSurvivedText;
+    [SerializeField] Text scoreText;
     [SerializeField] Text enemiesKilledText;
 
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
     void OnEnable()
     {
         displayStats();
@@ -21,6 +16,7 @@ public class SurvivalEndGamePanel : EndGamePanel {
     void displayStats()
     {
         timeSurvivedText.text = GameObject.FindObjectOfType<Clock>().getClockText();
+        scoreText.text = GameObject.FindObjectOfType<CurrentGameStats>().Score.ToString();
         enemiesKilledText.text = GameObject.FindObjectOfType<CurrentGameStats>().EnemiesKilled.ToString();
     }
 }

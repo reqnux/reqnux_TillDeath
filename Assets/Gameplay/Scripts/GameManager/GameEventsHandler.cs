@@ -17,6 +17,7 @@ public class GameEventsHandler : MonoBehaviour {
     void onPlayerDeath()
     {
         //Time.timeScale = 0;
+        checkForNewHighscore();
         StartCoroutine(showEndGamePanel());
     }
 
@@ -26,4 +27,12 @@ public class GameEventsHandler : MonoBehaviour {
         endGamePanel.gameObject.SetActive(true);
     }
 
+    void checkForNewHighscore()
+    {
+        SurvivalHighscores scores = new SurvivalHighscores();
+        if (scores.checkQualifiedOnList(GetComponent<CurrentGameStats>().Score, GetComponent<CurrentGameStats>().TimeSurvived))
+        {
+            scores.addNewHighscore(GetComponent<CurrentGameStats>().Score, GetComponent<CurrentGameStats>().TimeSurvived);
+        }
+    }
 }
