@@ -7,15 +7,19 @@ public class Enemy : Unit {
     public static event EnemyDeathEvent enemyDeathEvent;
 
     [SerializeField] Blood bloodPrefab;
+    protected ItemsDrop itemsDrop;
+
 
 	public override void Awake () 
     {
         base.Awake();
+        itemsDrop = GetComponent<ItemsDrop>();
         stats.CurrentHealth = stats.MaxHealth;
 	}
 
     public override void death() 
     {
+        itemsDrop.dropRandomItem();
         if (enemyDeathEvent != null)
             enemyDeathEvent(this);
         Destroy(gameObject);

@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11456192}
   - 114: {fileID: 11473082}
   - 114: {fileID: 11488054}
+  - 114: {fileID: 11411050}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy
@@ -92,6 +93,24 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &11411050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45159ea16f91f6d4ea6d7952ec3327db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropChance: 50
+  items:
+  - {fileID: 11496418, guid: dbd25069ab6600b4f814d3983a17c13d, type: 2}
+  - {fileID: 11424752, guid: 6e9352ba35ad2034590bd87d08a8a9f7, type: 2}
+  - {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8, type: 2}
+  - {fileID: 11434204, guid: bfedcfc1b337c604fb64588594ea2b6a, type: 2}
+  - {fileID: 11463664, guid: b4fce2065076a4746af7cc334de9ab93, type: 2}
 --- !u!114 &11456192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,6 +191,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: items.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
@@ -192,6 +215,35 @@ Prefab:
       value: 
       objectReference: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[0]
+      value: 
+      objectReference: {fileID: 11496418, guid: dbd25069ab6600b4f814d3983a17c13d,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11424752, guid: 6e9352ba35ad2034590bd87d08a8a9f7,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11434204, guid: bfedcfc1b337c604fb64588594ea2b6a,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11463664, guid: b4fce2065076a4746af7cc334de9ab93,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: itemDropChance
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199550}

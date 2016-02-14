@@ -135,7 +135,7 @@ MonoBehaviour:
   damage: 10
   clipSize: 15
   reloadTime: 4
-  delayBetweenShots: 1
+  delayBetweenShots: 1.5
   bulletSpeed: 30
 --- !u!114 &11452094
 MonoBehaviour:

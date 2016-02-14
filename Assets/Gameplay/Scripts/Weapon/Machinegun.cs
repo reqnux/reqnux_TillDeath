@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Machinegun : Weapon {
 
-    public override void Awake () 
+    protected override void Awake () 
     {
         base.Awake();
     }

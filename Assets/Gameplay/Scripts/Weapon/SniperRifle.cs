@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SniperRifle : Weapon {
 
-    public override void Awake () 
+    protected override void Awake () 
     {
         base.Awake();
     }

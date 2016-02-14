@@ -143,11 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5048244, guid: 7359f833c09c38a41aae66a3aa525396, type: 2}
-  damage: 0
-  clipSize: 0
-  reloadTime: 0
-  delayBetweenShots: 0
-  bulletSpeed: 0
+  damage: 10
+  clipSize: 60
+  reloadTime: 5
+  delayBetweenShots: 0.2
+  bulletSpeed: 30
 --- !u!212 &21215108
 SpriteRenderer:
   m_ObjectHideFlags: 1

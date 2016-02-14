@@ -6,7 +6,7 @@ public class Shotgun : Weapon {
     [SerializeField] int bulletsPerShot = 7;
     [SerializeField] int shotConeWidth = 30; // degrees
 
-    public override void Awake () 
+    protected override void Awake () 
     {
         base.Awake();
     }

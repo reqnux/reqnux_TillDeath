@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Weapon : MonoBehaviour {
+public abstract class Weapon : Item {
 
     protected Player player;
 
@@ -19,8 +19,9 @@ public abstract class Weapon : MonoBehaviour {
 
     [SerializeField] protected int bulletSpeed;
 
-    public virtual void Awake () 
+    protected override void Awake () 
     {
+        base.Awake();
         currentAmmo = clipSize;
         gunEnding = GameObject.Find("GunEnding").transform;
     }
