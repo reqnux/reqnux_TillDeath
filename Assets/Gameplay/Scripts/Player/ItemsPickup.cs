@@ -3,6 +3,13 @@ using System.Collections;
 
 public class ItemsPickup : MonoBehaviour {
 
+    Player player;
+
+    void Start()
+    {
+        player = GetComponent<Player>();   
+    }
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "PickableItem")
@@ -17,7 +24,9 @@ public class ItemsPickup : MonoBehaviour {
     {
         if (item.GetComponent<Weapon>())
         {
-            GetComponent<Player>().useWeapon(item.GetComponent<Weapon>());
+            if (player.CurrentWeapon)
+                player.CurrentWeapon.GetComponent<PickableItem>().destroy();
+            player.useWeapon(item.GetComponent<Weapon>());
         }
         else
         {
