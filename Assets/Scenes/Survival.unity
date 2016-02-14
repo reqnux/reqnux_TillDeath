@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeSurvivedText: {fileID: 1127779351}
+  scoreText: {fileID: 1722621663}
   enemiesKilledText: {fileID: 1109453589}
 --- !u!114 &98299976 stripped
 MonoBehaviour:
@@ -1346,6 +1347,12 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 489296, guid: 702de74fd331882448bf28c798e16148, type: 2}
   m_PrefabInternal: {fileID: 299747562}
+--- !u!114 &1722621663 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11434446, guid: 688b1d8912480bb439d62428722b8d4d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1977929167}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1930553051
 GameObject:
   m_ObjectHideFlags: 0

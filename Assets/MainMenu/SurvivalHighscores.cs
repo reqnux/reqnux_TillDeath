@@ -7,7 +7,8 @@ public class SurvivalHighscores : Highscores {
 
     public bool checkQualifiedOnList(int score, int timeSurvived)
     {
-        SurvivalHsData currentHighscores = StatsFilesManager.loadSurvivalHighscores();
+        StatsFilesManager sfm = new StatsFilesManager();
+        SurvivalHsData currentHighscores = sfm.loadSurvivalHighscores();
         if (currentHighscores.scores.Count > HIGHSCORES_COUNT)
             Debug.LogError("SurvivalHighscores : currentHighscores contains more than " + HIGHSCORES_COUNT + " records!");
 
@@ -22,13 +23,15 @@ public class SurvivalHighscores : Highscores {
 
     public void addNewHighscore(int score, int timeSurvived)
     {
-        SurvivalHsData currentHighscores = StatsFilesManager.loadSurvivalHighscores();
+        StatsFilesManager sfm = new StatsFilesManager();
+        SurvivalHsData currentHighscores = sfm.loadSurvivalHighscores();
 
         int newScoreIndex = findNewScoreIndex(currentHighscores.scores, score, timeSurvived);
         currentHighscores.scores.Insert(newScoreIndex, new Pair(score, timeSurvived));
-        currentHighscores.scores.RemoveAt(currentHighscores.scores.Count - 1);
+        if(currentHighscores.scores.Count > HIGHSCORES_COUNT)
+            currentHighscores.scores.RemoveAt(currentHighscores.scores.Count - 1);
 
-        StatsFilesManager.saveSurvivalHighscores(currentHighscores);
+        sfm.saveSurvivalHighscores(currentHighscores);
     }
 
 
