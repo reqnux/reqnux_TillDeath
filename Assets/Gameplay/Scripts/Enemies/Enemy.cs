@@ -6,6 +6,8 @@ public class Enemy : Unit {
     public delegate void EnemyDeathEvent(Enemy enemy);
     public static event EnemyDeathEvent enemyDeathEvent;
 
+    [SerializeField] Blood bloodPrefab;
+
 	public override void Awake () 
     {
         base.Awake();
@@ -22,6 +24,8 @@ public class Enemy : Unit {
     public override void takeDamage(int damage)
     {
         stats.CurrentHealth -= damage;
+        Instantiate(bloodPrefab, transform.position, transform.localRotation);
+
         if (stats.CurrentHealth <= 0)
             death();
     }
