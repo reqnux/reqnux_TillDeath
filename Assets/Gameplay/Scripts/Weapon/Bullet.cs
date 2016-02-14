@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-    private Weapon weapon;
-    private float bulletLifeTime = 2;
+    protected Weapon weapon;
+    protected float bulletLifeTime = 2;
 
-    void Start () {
+    protected virtual void Start () {
         Destroy(gameObject, bulletLifeTime);
 	}
 	
