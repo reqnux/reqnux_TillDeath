@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    [SerializeField]  Enemy enemyPrefab;
+    [SerializeField]  Enemy[] enemyPrefabs;
     [SerializeField]  bool isActive = true;
     [SerializeField]  float timeBetweenSpawns; // in seconds
     private float lastSpawnTime;
@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour {
 
     void spawnEnemy()
     {
-        Enemy enemy = (Enemy) Instantiate(enemyPrefab, transform.position, transform.rotation);
+        Enemy enemy = (Enemy) Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], transform.position, transform.rotation);
     }
 
     void disable()
