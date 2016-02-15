@@ -13,6 +13,11 @@ public abstract class Unit : MonoBehaviour
     public abstract void death();
     public abstract void takeDamage(int damage);
 
+    public void heal(int health)
+    {
+        stats.CurrentHealth = Mathf.Min(stats.CurrentHealth + health, stats.MaxHealth);
+    }
+
     public UnitStats Stats {get{return stats;}}
 
 }

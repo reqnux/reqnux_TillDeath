@@ -28,9 +28,12 @@ public class ItemsPickup : MonoBehaviour {
                 player.CurrentWeapon.destroy();
             player.useWeapon(item.GetComponent<Weapon>());
         }
-        else
+        else if(item.GetComponent<Bonus>())
         {
-            Debug.LogError("ItemsPickup : Unrecognized PickableItem!");
+            
         }
+        else 
+            Debug.LogError("ItemsPickup : Unrecognized PickableItem!");
+            
     }
 }

@@ -25,7 +25,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 496872}
   - 58: {fileID: 5869908}
-  - 114: {fileID: 11493348}
   - 114: {fileID: 11458156}
   m_Layer: 9
   m_Name: Shotgun
@@ -139,17 +138,6 @@ MonoBehaviour:
   bulletSpeed: 20
   bulletsPerShot: 7
   shotConeWidth: 30
---- !u!114 &11493348
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50645b9fe08578e46ba6c493549c6363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21209142
 SpriteRenderer:
   m_ObjectHideFlags: 1

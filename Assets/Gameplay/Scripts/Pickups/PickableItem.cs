@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickableItem : MonoBehaviour {
+public abstract class PickableItem : MonoBehaviour {
 
     float removeFromMapDistance;
 
@@ -10,7 +10,7 @@ public class PickableItem : MonoBehaviour {
         removeFromMapDistance = GameObject.FindObjectOfType<Map>().YMovementRange * 2;
     }
 
-    public void pickup()
+    public virtual void pickup()
     {
         removeFromMap();
     }
