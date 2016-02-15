@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Weapon : Item {
+public abstract class Weapon : PickableItem {
 
     protected Player player;
 
@@ -19,11 +19,14 @@ public abstract class Weapon : Item {
 
     [SerializeField] protected int bulletSpeed;
 
-    protected override void Awake () 
+    protected virtual void Awake () 
     {
-        base.Awake();
         currentAmmo = clipSize;
         gunEnding = GameObject.Find("GunEnding").transform;
+    }
+    protected override void Start()
+    {
+        base.Start();
     }
 
     public abstract void shoot();

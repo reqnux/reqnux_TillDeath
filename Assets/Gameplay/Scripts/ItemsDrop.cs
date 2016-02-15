@@ -4,7 +4,7 @@ using System.Collections;
 public class ItemsDrop : MonoBehaviour {
 
     [SerializeField] int itemDropChance; // in %
-    [SerializeField] Item[] items;
+    [SerializeField] PickableItem[] items;
 
     void Start () {
 	

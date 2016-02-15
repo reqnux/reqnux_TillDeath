@@ -25,7 +25,7 @@ public class ItemsPickup : MonoBehaviour {
         if (item.GetComponent<Weapon>())
         {
             if (player.CurrentWeapon)
-                player.CurrentWeapon.GetComponent<PickableItem>().destroy();
+                player.CurrentWeapon.destroy();
             player.useWeapon(item.GetComponent<Weapon>());
         }
         else

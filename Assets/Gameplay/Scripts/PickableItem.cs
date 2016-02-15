@@ -5,7 +5,7 @@ public class PickableItem : MonoBehaviour {
 
     float removeFromMapDistance;
 
-    void Start()
+    protected virtual void Start()
     {
         removeFromMapDistance = GameObject.FindObjectOfType<Map>().YMovementRange * 2;
     }
