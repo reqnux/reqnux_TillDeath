@@ -12,4 +12,8 @@ public class SpeedBonus : Bonus {
     {
         base.pickup();
     }
+
+    public override void activate()
+    {
+    }
 }

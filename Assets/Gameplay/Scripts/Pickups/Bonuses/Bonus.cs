@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bonus : PickableItem {
+public abstract class Bonus : PickableItem {
 
     protected Player player;
 
@@ -18,5 +18,17 @@ public class Bonus : PickableItem {
     {
         base.pickup();
     }
-		
+        
+    public abstract void activate();
+
+    public float Duration
+    {
+        get { return duration;}
+    }
+    public float TimeLeft
+    {
+        get { return timeLeft;}
+        set { timeLeft = value;}
+    }
+
 }

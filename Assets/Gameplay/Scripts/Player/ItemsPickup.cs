@@ -30,7 +30,10 @@ public class ItemsPickup : MonoBehaviour {
         }
         else if(item.GetComponent<Bonus>())
         {
-            
+            if (item.GetComponent<Bonus>().Duration != 0)
+                player.GetComponent<BonusManager>().handleBonus(item.GetComponent<Bonus>());
+            else
+                item.GetComponent<Bonus>().activate();
         }
         else 
             Debug.LogError("ItemsPickup : Unrecognized PickableItem!");

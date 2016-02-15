@@ -12,9 +12,14 @@ public class HealthBonus : Bonus {
 	
     public override void pickup()
     {
+        activate();
+        destroy();
+    }
+
+    public override void activate()
+    {
         int health = player.Stats.MaxHealth * percentageHealthRecovered / 100;
         player.heal(health);
-        destroy();
     }
 
 }
