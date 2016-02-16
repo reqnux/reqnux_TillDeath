@@ -58,6 +58,11 @@ public abstract class Weapon : PickableItem {
         get{ return damage;}
     }
 
+    public bool Reloading
+    { 
+        get{ return flagReloading;}
+    }
+
     public Player Player
     {
         get{return player;}
