@@ -47,7 +47,8 @@ public class Player : Unit {
     {
         currentWeapon = weapon;
         weapon.Player = this;
-        stats.Damage = weapon.Damage;
+        stats.BaseDamage = weapon.Damage;
+        // recalculate bonusDamage, based on active bonuses
     }
     public Weapon CurrentWeapon
     {

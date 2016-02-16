@@ -15,5 +15,6 @@ public class SpeedBonus : Bonus {
 
     public override void activate()
     {
+        base.activate();
     }
 }

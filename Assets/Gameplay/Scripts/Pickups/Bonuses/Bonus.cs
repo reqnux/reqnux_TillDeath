@@ -8,6 +8,10 @@ public abstract class Bonus : PickableItem {
     [SerializeField] protected float duration;
     [SerializeField] protected float timeLeft;
 
+    float tickRate = 0.2f; //in seconds
+    float lastTickTime;
+    bool activated;
+
     protected override void Start()
     {
         base.Start();
@@ -18,8 +22,23 @@ public abstract class Bonus : PickableItem {
     {
         base.pickup();
     }
-        
-    public abstract void activate();
+
+    void Update()
+    {
+        if (activated && duration > 0)
+        {
+            if (Time.timeSinceLevelLoad > lastTickTime + tickRate)
+            {
+                timeLeft -= tickRate;
+                lastTickTime = Time.timeSinceLevelLoad;
+            }
+        }
+    }
+
+    public virtual void activate()
+    {
+        activated = true;
+    }
 
     public float Duration
     {

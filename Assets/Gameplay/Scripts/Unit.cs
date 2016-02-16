@@ -3,8 +3,7 @@ using System.Collections;
 
 public abstract class Unit : MonoBehaviour 
 {
-    [SerializeField]
-    protected UnitStats stats;
+    [SerializeField] protected UnitStats stats;
 
     public virtual void Awake() 
     {
