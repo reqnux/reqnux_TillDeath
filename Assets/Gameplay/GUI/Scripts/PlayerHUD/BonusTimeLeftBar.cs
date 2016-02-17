@@ -9,7 +9,6 @@ public class BonusTimeLeftBar : StateBar {
     {
         if (bonus)
         {
-            Debug.Log("time lft " + bonus.TimeLeft);
             updateBar(bonus.TimeLeft, bonus.Duration);
         }
     }

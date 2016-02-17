@@ -6,7 +6,7 @@ public abstract class Bonus : PickableItem {
     protected Player player;
 
     [SerializeField] protected float duration;
-    [SerializeField] protected float timeLeft;
+    protected float timeLeft;
 
     float tickRate = 0.2f; //in seconds
     float lastTickTime;
@@ -16,6 +16,7 @@ public abstract class Bonus : PickableItem {
     {
         base.Start();
         player = GameObject.FindObjectOfType<Player>();
+        timeLeft = duration;
     }
 
     public override void pickup()
@@ -38,6 +39,10 @@ public abstract class Bonus : PickableItem {
     public virtual void activate()
     {
         activated = true;
+    }
+    public virtual void deactivate()
+    {
+        
     }
 
     public float Duration

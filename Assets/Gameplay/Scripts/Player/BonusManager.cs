@@ -22,6 +22,7 @@ public class BonusManager : MonoBehaviour {
         {
             if (activeBonuses[i].TimeLeft <= 0)
             {
+                activeBonuses[i].deactivate();
                 Destroy(activeBonuses[i].gameObject);
                 activeBonuses.RemoveAt(i);
             }
