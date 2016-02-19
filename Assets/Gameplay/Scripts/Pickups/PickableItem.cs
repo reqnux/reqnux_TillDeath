@@ -6,17 +6,20 @@ public abstract class PickableItem : MonoBehaviour {
 
     float removeFromMapDistance;
     float selfDestroyTime = 20; 
-    float fadeAwayTime = 2;
+    float fadeAwayTime = 4;
 
     protected virtual void Start()
     {
         removeFromMapDistance = GameObject.FindObjectOfType<Map>().YMovementRange * 2;
-        //Invoke("selfDestroy", selfDestroyTime - fadeAwayTime);
+        if (gameObject.name != "DefaultWeapon")
+            Invoke("selfDestroy", selfDestroyTime - fadeAwayTime);
     }
 
     public virtual void pickup()
     {
         removeFromMap();
+        CancelInvoke("selfDestroy");
+        StopCoroutine("fadeAway");
     }
 
 
@@ -35,15 +38,14 @@ public abstract class PickableItem : MonoBehaviour {
 
     void selfDestroy()
     {
-        fadeAway();
-        destroy();
+        StartCoroutine("fadeAway");
     }
 
-    void fadeAway()
+    IEnumerator fadeAway()
     {
         SpriteRenderer[] sprites = transform.GetComponentsInChildren<SpriteRenderer>();
         bool spritesTransparent = false;
-        float alphaChange = 0.1f;
+        float alphaChange = 0.05f;
         while (!spritesTransparent)
         {
             spritesTransparent = true;
@@ -53,12 +55,9 @@ public abstract class PickableItem : MonoBehaviour {
                 if (s.color.a > 0)
                     spritesTransparent = false;
             }
-            StartCoroutine(wait(fadeAwayTime * alphaChange));
+            yield return new WaitForSeconds(fadeAwayTime * alphaChange);
         }
+        destroy();
     }
 
-    IEnumerator wait(float time)
-    {
-        yield return new WaitForSeconds(time);
-    }
 }
