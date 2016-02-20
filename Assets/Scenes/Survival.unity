@@ -1018,14 +1018,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 117042, guid: 3ae9989e01bdc424791baa6677e3b88f, type: 2}
-      propertyPath: m_Name
-      value: Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442476, guid: 3ae9989e01bdc424791baa6677e3b88f, type: 2}
-      propertyPath: timeBetweenSpawns
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ae9989e01bdc424791baa6677e3b88f, type: 2}
   m_IsPrefabParent: 0

@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.33, z: 0}
+  m_LocalPosition: {x: 10.590235, y: -0.13036785, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,6 +42,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 11456192, guid: 85b82a0a053c9ba4284138d0c0953167, type: 2}
   - {fileID: 11479946, guid: b931b6e294b4c3240b999738171fe675, type: 2}
+  - {fileID: 11498622, guid: 1579cc7250d2f4748b6e62d53642a1a7, type: 2}
   isActive: 1
   timeBetweenSpawns: 3
 --- !u!1001 &100100000

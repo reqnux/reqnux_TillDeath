@@ -112,7 +112,8 @@ MonoBehaviour:
   - {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8, type: 2}
   - {fileID: 11434204, guid: bfedcfc1b337c604fb64588594ea2b6a, type: 2}
   - {fileID: 11410426, guid: 26bdc3d9db40c8c43b8fd39220164c94, type: 2}
-  - {fileID: 11473694, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db, type: 2}
+  - {fileID: 11410082, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db, type: 2}
+  - {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4, type: 2}
 --- !u!114 &11413054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,7 +195,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: items.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: items.Array.data[0]
@@ -229,7 +230,12 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: items.Array.data[6]
       value: 
-      objectReference: {fileID: 11473694, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db,
+      objectReference: {fileID: 11410082, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[7]
+      value: 
+      objectReference: {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
