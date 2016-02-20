@@ -1,35 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &107624
+--- !u!1 &115072
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 447006}
-  - 50: {fileID: 5070682}
-  - 58: {fileID: 5820824}
-  - 114: {fileID: 11498622}
-  - 114: {fileID: 11442704}
-  - 114: {fileID: 11430764}
-  - 114: {fileID: 11489814}
+  - 4: {fileID: 432690}
+  - 50: {fileID: 5091822}
+  - 58: {fileID: 5898504}
+  - 114: {fileID: 11478778}
+  - 114: {fileID: 11489554}
+  - 114: {fileID: 11444368}
+  - 114: {fileID: 11433296}
   m_Layer: 10
-  m_Name: StrongZombie
+  m_Name: StarterWeaponMonster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &125640
+--- !u!1 &128060
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 460458}
-  - 212: {fileID: 21244472}
+  - 4: {fileID: 466410}
+  - 212: {fileID: 21293090}
   m_Layer: 10
   m_Name: zombie
   m_TagString: Untagged
@@ -37,38 +37,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &447006
+--- !u!4 &432690
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
+  m_GameObject: {fileID: 115072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0482574, y: 0.7244929, z: 0}
+  m_LocalPosition: {x: -17.406105, y: 0.10259122, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 460458}
+  - {fileID: 466410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &460458
+--- !u!4 &466410
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125640}
+  m_GameObject: {fileID: 128060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.233568, y: 1.233568, z: 1.0279733}
+  m_LocalScale: {x: 1.1183245, y: 1.1183245, z: 0.9319371}
   m_Children: []
-  m_Father: {fileID: 447006}
+  m_Father: {fileID: 432690}
   m_RootOrder: 0
---- !u!50 &5070682
+--- !u!50 &5091822
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
+  m_GameObject: {fileID: 115072}
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -79,12 +79,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5820824
+--- !u!58 &5898504
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
+  m_GameObject: {fileID: 115072}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -93,74 +93,68 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &11430764
+--- !u!114 &11433296
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45159ea16f91f6d4ea6d7952ec3327db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDropChance: 5
-  items:
-  - {fileID: 11424752, guid: 6e9352ba35ad2034590bd87d08a8a9f7, type: 2}
-  - {fileID: 11463664, guid: b4fce2065076a4746af7cc334de9ab93, type: 2}
-  - {fileID: 11496418, guid: dbd25069ab6600b4f814d3983a17c13d, type: 2}
-  - {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8, type: 2}
-  - {fileID: 11434204, guid: bfedcfc1b337c604fb64588594ea2b6a, type: 2}
-  - {fileID: 11410426, guid: 26bdc3d9db40c8c43b8fd39220164c94, type: 2}
-  - {fileID: 11410082, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db, type: 2}
-  - {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4, type: 2}
---- !u!114 &11442704
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2adb850f83fbcdb40bfd4f6485e459e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11489814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
+  m_GameObject: {fileID: 115072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc85f595ec1836c4da0badeef0fde988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 1.5
-  chaseTime: 1
---- !u!114 &11498622
+  aggroRange: 2
+  chaseTime: 2
+--- !u!114 &11444368
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
+  m_GameObject: {fileID: 115072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45159ea16f91f6d4ea6d7952ec3327db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDropChance: 100
+  items:
+  - {fileID: 11424752, guid: 6e9352ba35ad2034590bd87d08a8a9f7, type: 2}
+  - {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8, type: 2}
+--- !u!114 &11478778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44d37e1c08659a449800a2078058a0c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    damage: 7
+    damage: 4
     movementSpeed: 1
-    maxHealth: 15
+    maxHealth: 10
     itemDropChance: 0
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
---- !u!212 &21244472
+--- !u!114 &11489554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adb850f83fbcdb40bfd4f6485e459e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &21293090
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125640}
+  m_GameObject: {fileID: 128060}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -181,7 +175,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -989056901
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8424d4868e094fb4eaaa7630abfe7b04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f232300f285abfc4bb3d2f3520ccaf8d, type: 3}
   m_Color: {r: 0.3137255, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,46 +185,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: items.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: items.Array.data[6]
-      value: 
-      objectReference: {fileID: 11410082, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db,
-        type: 2}
-    - target: {fileID: 0}
-      propertyPath: items.Array.data[7]
-      value: 
-      objectReference: {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4,
-        type: 2}
-    - target: {fileID: 0}
-      propertyPath: stats.movementSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: stats.maxHealth
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: stats.damage
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: chaseTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: targetResetDistance
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: aggroRange
-      value: 1.5
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 107624}
+  m_RootGameObject: {fileID: 115072}
   m_IsPrefabParent: 1

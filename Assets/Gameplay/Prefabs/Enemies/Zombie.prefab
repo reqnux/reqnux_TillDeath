@@ -27,9 +27,9 @@ GameObject:
   - 50: {fileID: 5024212}
   - 58: {fileID: 5868806}
   - 114: {fileID: 11456192}
-  - 114: {fileID: 11473082}
   - 114: {fileID: 11488054}
   - 114: {fileID: 11411050}
+  - 114: {fileID: 11457088}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy
@@ -131,7 +131,7 @@ MonoBehaviour:
     maxHealth: 10
     itemDropChance: 0
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
---- !u!114 &11473082
+--- !u!114 &11457088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -139,12 +139,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 199550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a67f5ab6e3541245ac468ab5cf29d2c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc85f595ec1836c4da0badeef0fde988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 2
-  chaseTime: 5
-  targetResetDistance: 5
+  aggroRange: 1.5
+  chaseTime: 1
 --- !u!114 &11488054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -262,6 +261,18 @@ Prefab:
       value: 
       objectReference: {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: chaseTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: targetResetDistance
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: aggroRange
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199550}
