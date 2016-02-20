@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DefaultEnemyMovement : UnitMovement {
+public class RandomEnemyMovement : UnitMovement {
 
     Player player;
     Unit movingUnit;
 
     [SerializeField]  float aggroRange = 5;
     [SerializeField]  float chaseTime = 4; //chase time after entering aggroRange
-    //how far player has to be from current movementDirection, to pick new movementDirection
-    [SerializeField]  float targetResetDistance = 5; 
     Vector3 movementDirection;
+
+    Map map;
 
     bool flagChasing;
     float chaseAwakeTime;
@@ -18,8 +18,9 @@ public class DefaultEnemyMovement : UnitMovement {
     void Awake() 
     {
         player = GameObject.Find("Player").GetComponent<Player>();
+        map = GameObject.FindObjectOfType<Map>();
         movingUnit = GetComponent<Unit>();
-        movementDirection = pointBetweenPlayerAndEnemy();
+        movementDirection = randomPoint();
     }
 
     protected override void Start()
@@ -44,29 +45,26 @@ public class DefaultEnemyMovement : UnitMovement {
             if(flagChasing) {
                 if(Time.time > chaseAwakeTime + chaseTime) {
                     flagChasing = false;
-                    movementDirection = pointBetweenPlayerAndEnemy ();
+                    movementDirection = randomPoint();
                 } else {
                     movementDirection = player.transform.position;
                 }
             } 
-            else {
-                if ((transform.position - movementDirection).magnitude < 0.3f 
-                    || (player.transform.position - movementDirection).magnitude > targetResetDistance) {
-                    movementDirection = pointBetweenPlayerAndEnemy ();
-                }
-            }
+            else if ((transform.position - movementDirection).magnitude < 0.3f)
+                movementDirection = randomPoint();
+            
         }
         lookAtTarget(movementDirection);
         GetComponent<Rigidbody2D>().velocity = transform.up * movingUnit.Stats.MovementSpeed;
     }
 
-    Vector3 pointBetweenPlayerAndEnemy() 
+    private Vector3 randomPoint() 
     {
-        return new Vector3(Random.Range (transform.position.x, player.transform.position.x),
-                           Random.Range (transform.position.y, player.transform.position.y), 0);
+        return new Vector3(Random.Range (-map.XMovementRange, map.XMovementRange),
+            Random.Range (-map.YMovementRange, map.YMovementRange), 0);
     }
 
-    bool ifPlayerInAggro()
+    private bool ifPlayerInAggro()
     {
         return ((player.transform.position - transform.position).magnitude <= aggroRange);
     }
