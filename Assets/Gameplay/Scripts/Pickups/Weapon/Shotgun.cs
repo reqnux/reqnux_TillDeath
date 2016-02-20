@@ -13,7 +13,7 @@ public class Shotgun : Weapon {
 
     public override void shoot()
     {
-        if (!flagReloading && currentAmmo > 0 && Time.time > lastShotTime + delayBetweenShots)
+        if (canShoot())
         {
             gunEnding.Rotate(new Vector3(0, 0, -shotConeWidth / 2));
             for (int i = 0; i < bulletsPerShot; i++)

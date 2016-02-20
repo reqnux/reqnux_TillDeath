@@ -3,8 +3,8 @@ using System.Collections;
 
 public class SpeedBonus : Bonus {
 
-    [SerializeField] int percentageSpeedBoost;
-    float speedBoost;
+    [Range(0.0f,1.0f)] [SerializeField] float speedBoost;
+    float calculatedSpeedBoost;
 
     protected override void Start()
     {
@@ -19,11 +19,11 @@ public class SpeedBonus : Bonus {
     public override void activate()
     {
         base.activate();
-        speedBoost = player.Stats.BaseMovementSpeed * percentageSpeedBoost/100;
-        player.Stats.BonusMovementSpeed += (int)speedBoost;
+        calculatedSpeedBoost = player.Stats.BaseMovementSpeed * speedBoost;
+        player.Stats.BonusMovementSpeed += (int)calculatedSpeedBoost;
     }
     public override void deactivate()
     {
-        player.Stats.BonusMovementSpeed -= (int)speedBoost;
+        player.Stats.BonusMovementSpeed -= (int)calculatedSpeedBoost;
     }
 }

@@ -29,20 +29,36 @@ public abstract class Weapon : PickableItem {
         base.Start();
     }
 
-    public abstract void shoot();
     protected abstract void spawnBullet();
+    public virtual void shoot()
+    {
+        if (canShoot())
+        {
+            spawnBullet();
+            lastShotTime = Time.time;
+            currentAmmo--;
+            if (currentAmmo == 0)
+                reload();
+        }
+    }
 
     public void reload()
     {
         if(!flagReloading)
             StartCoroutine(reloadCoroutine());
     }
-    private IEnumerator reloadCoroutine()
+    IEnumerator reloadCoroutine()
     {
         flagReloading = true;
-        yield return new WaitForSeconds(reloadTime);
+        yield return new WaitForSeconds(reloadTime * (1.0f - player.Stats.ReducedReloadTime));
         flagReloading = false;
         currentAmmo = clipSize;
+    }
+
+    protected bool canShoot()
+    {
+        return !flagReloading && currentAmmo > 0 
+            && Time.time > lastShotTime + delayBetweenShots*(1.0f - player.Stats.ReducedTimeBetweenShots);
     }
 
     public int CurrentAmmo

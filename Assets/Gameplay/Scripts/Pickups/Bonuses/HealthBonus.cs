@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HealthBonus : Bonus {
 
-    [SerializeField] int percentageHealthRecovered; // % of player's max health
+    [Range(0.0f,1.0f)][SerializeField] float healthRecovered; // % of player's max health
 
     protected override void Start()
     {
@@ -17,8 +17,7 @@ public class HealthBonus : Bonus {
 
     public override void activate()
     {
-        int health = player.Stats.MaxHealth * percentageHealthRecovered / 100;
-        Debug.Log(health);
+        int health = (int)(player.Stats.MaxHealth * healthRecovered);
         player.heal(health);
     }
 

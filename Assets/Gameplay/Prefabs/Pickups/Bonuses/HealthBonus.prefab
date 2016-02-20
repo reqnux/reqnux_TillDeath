@@ -130,9 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a135c6f9ae3afe43b616101ebc28a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selfDestroyFlag: 1
   duration: 0
-  percentageHealthRecovered: 30
+  healthRecovered: 0.3
 --- !u!212 &21218866
 SpriteRenderer:
   m_ObjectHideFlags: 1
