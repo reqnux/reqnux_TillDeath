@@ -28,26 +28,24 @@ public class PlayerController : UnitMovement {
 
     void Update() 
     {
-        if (Input.GetKey (KeyCode.Mouse0)) {
+        if (Input.GetKey (KeyCode.Mouse0))
             player.CurrentWeapon.shoot();
-        }
-        if (Input.GetKeyDown (KeyCode.R)) {
+        
+        if (Input.GetKeyDown (KeyCode.R))
             player.CurrentWeapon.reload();
-        }
     }
 
     protected override void move() 
     {
-        if (Input.GetAxis ("Horizontal") != 0) {
+        if (Input.GetAxis ("Horizontal") != 0)
             horizontalMovement = Input.GetAxis ("Horizontal") / Mathf.Abs(Input.GetAxis ("Horizontal"));
-        } else {
+        else
             horizontalMovement = 0;
-        }
-        if (Input.GetAxis ("Vertical") != 0) {
+        
+        if (Input.GetAxis ("Vertical") != 0)
             verticalMovement = Input.GetAxis("Vertical")/Mathf.Abs(Input.GetAxis("Vertical"));
-        } else {
+        else
             verticalMovement = 0;
-        }
 
         playerRigidbody.velocity = new Vector2(horizontalMovement,verticalMovement).normalized *(player.Stats.MovementSpeed);
         playerRigidbody.position = new Vector2 (Mathf.Clamp (playerRigidbody.position.x, -map.XMovementRange, map.XMovementRange),
