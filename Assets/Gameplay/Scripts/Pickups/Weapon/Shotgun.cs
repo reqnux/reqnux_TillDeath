@@ -23,6 +23,7 @@ public class Shotgun : Weapon {
             }
             gunEnding.localRotation = Quaternion.identity;
 
+            playShotSound();
             lastShotTime = Time.time;
             currentAmmo--;
             if (currentAmmo == 0)
