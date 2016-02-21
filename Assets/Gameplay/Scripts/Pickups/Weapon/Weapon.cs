@@ -7,7 +7,7 @@ public abstract class Weapon : PickableItem {
 
     [SerializeField] protected Rigidbody2D bulletPrefab;
     protected Transform gunEnding;
-    protected AudioSource audioSource;
+    protected WeaponSound weaponSound;
 
     [SerializeField] protected int damage;
     protected int currentAmmo;
@@ -24,7 +24,8 @@ public abstract class Weapon : PickableItem {
     {
         currentAmmo = clipSize;
         gunEnding = GameObject.Find("GunEnding").transform;
-        audioSource = GetComponent<AudioSource>();
+        weaponSound = transform.GetComponentInChildren<WeaponSound>();
+
     }
     protected override void Start()
     {
@@ -37,7 +38,7 @@ public abstract class Weapon : PickableItem {
         if (canShoot())
         {
             spawnBullet();
-            playShotSound();
+            weaponSound.playShotSound();
             lastShotTime = Time.time;
             currentAmmo--;
             if (currentAmmo == 0)
@@ -53,7 +54,9 @@ public abstract class Weapon : PickableItem {
     IEnumerator reloadCoroutine()
     {
         flagReloading = true;
-        yield return new WaitForSeconds(reloadTime * (1.0f - player.Stats.ReducedReloadTime));
+        float timeToReloadEnd = reloadTime * (1.0f - player.Stats.ReducedReloadTime);
+        weaponSound.playReloadSound(timeToReloadEnd);
+        yield return new WaitForSeconds(timeToReloadEnd);
         flagReloading = false;
         currentAmmo = clipSize;
     }
@@ -62,11 +65,6 @@ public abstract class Weapon : PickableItem {
     {
         return !flagReloading && currentAmmo > 0 
             && Time.time > lastShotTime + delayBetweenShots*(1.0f - player.Stats.ReducedTimeBetweenShots);
-    }
-
-    protected void playShotSound()
-    {
-        audioSource.PlayOneShot(audioSource.clip);
     }
 
     public int CurrentAmmo
