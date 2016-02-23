@@ -5,17 +5,17 @@ public class Spawner : MonoBehaviour {
 
     [SerializeField]  Enemy[] enemyPrefabs;
     [SerializeField]  bool isActive = true;
-    [SerializeField]  float timeBetweenSpawns; // in seconds
-    private float lastSpawnTime;
+    float lastSpawnTime;
+    float timeBetweenSpawns;
 	
     void Start()
     {
-        Player.playerDeathEvent += disable;
+        GameManager.gameStopEvent += disable;
     }
 
     void OnDisable()
     {
-        Player.playerDeathEvent -= disable;
+        GameManager.gameStopEvent -= disable;
     }
 
     void Update()

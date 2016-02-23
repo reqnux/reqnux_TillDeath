@@ -17,6 +17,11 @@ public abstract class Unit : MonoBehaviour
         stats.CurrentHealth = Mathf.Min(stats.CurrentHealth + health, stats.MaxHealth);
     }
 
+    public bool isAlive()
+    {
+        return stats.CurrentHealth > 0;
+    }
+
     public UnitStats Stats {get{return stats;}}
 
 }

@@ -21,12 +21,12 @@ public class Clock : MonoBehaviour {
 
     void Start()
     {
-        Player.playerDeathEvent += stopClock;
+        GameManager.gameStopEvent += stopClock;
     }
 
     void OnDisable()
     {
-        Player.playerDeathEvent -= stopClock;
+        GameManager.gameStopEvent -= stopClock;
     }
 
     void Update () 

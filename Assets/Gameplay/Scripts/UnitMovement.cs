@@ -5,12 +5,12 @@ public class UnitMovement : MonoBehaviour {
 
     protected virtual void Start()
     {
-        Player.playerDeathEvent += disableMovement;
+        GameManager.gameStopEvent += disableMovement;
     }
 
     protected virtual void OnDisable()
     {
-        Player.playerDeathEvent -= disableMovement;
+        GameManager.gameStopEvent -= disableMovement;
     }
 
     protected virtual void FixedUpdate () {

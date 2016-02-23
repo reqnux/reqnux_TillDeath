@@ -16,14 +16,14 @@ public class SurvivalSpawner : MonoBehaviour {
 
     void Start()
     {
-        Player.playerDeathEvent += disable;
+        GameManager.gameStopEvent += disable;
         map = GameObject.FindObjectOfType<Map>();
         monstersPerMinute = initialMonstersPerMinute;
     }
 
     void OnDisable()
     {
-        Player.playerDeathEvent -= disable;
+        GameManager.gameStopEvent -= disable;
     }
 
     void Update()

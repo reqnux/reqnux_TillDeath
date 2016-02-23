@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameEventsHandler : MonoBehaviour {
+public class SurvivalGameEventsHandler : MonoBehaviour {
 
-    [SerializeField]  EndGamePanel endGamePanel;
+    [SerializeField] EndGamePanel endGamePanel;
 
     void Start () {
         Player.playerDeathEvent += onPlayerDeath;
@@ -16,7 +16,7 @@ public class GameEventsHandler : MonoBehaviour {
 
     void onPlayerDeath()
     {
-        //Time.timeScale = 0;
+        GetComponent<GameManager>().gameStop();
         checkForNewHighscore();
         StartCoroutine(showEndGamePanel());
     }
