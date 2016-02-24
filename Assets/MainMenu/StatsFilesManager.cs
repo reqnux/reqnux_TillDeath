@@ -5,24 +5,25 @@ using System.Collections.Generic;
 
 public class StatsFilesManager {
 
-    private const string dataPath = "/mystats.dat";
+    const string survivalDataPath = "/mystatsSurvival.dat";
+    const string missionsDataPath = "/mystatsMissions.dat";
 
     public void saveSurvivalHighscores(SurvivalHsData data)
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + dataPath);
+        FileStream file = File.Create(Application.persistentDataPath + survivalDataPath);
         Debug.Log("Data saved count " + data.scores.Count);
         bf.Serialize(file, data);
         file.Close();
-        Debug.Log("saved in " + Application.persistentDataPath + dataPath);
+        Debug.Log("saved in " + Application.persistentDataPath + survivalDataPath);
     }
 
     public SurvivalHsData loadSurvivalHighscores()
     {
-        if (File.Exists(Application.persistentDataPath + dataPath))
+        if (File.Exists(Application.persistentDataPath + survivalDataPath))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + dataPath, FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + survivalDataPath, FileMode.Open);
             SurvivalHsData data = (SurvivalHsData)bf.Deserialize(file);
             Debug.Log("Data loaded count " + data.scores.Count);
             file.Close();
@@ -30,6 +31,30 @@ public class StatsFilesManager {
         }
         Debug.LogWarning("StatsFilesManager : Can't load survival highscores! File doesn't exists!");
         SurvivalHsData emptyData = new SurvivalHsData(0);
+        return emptyData;
+    }
+
+    public void saveMissionsHighscores(MissionsHsData data)
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + missionsDataPath);
+        bf.Serialize(file, data);
+        file.Close();
+        Debug.Log("saved in " + Application.persistentDataPath + missionsDataPath);
+    }
+
+    public MissionsHsData loadMissionsHighscores()
+    {
+        if (File.Exists(Application.persistentDataPath + missionsDataPath))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + missionsDataPath, FileMode.Open);
+            MissionsHsData data = (MissionsHsData)bf.Deserialize(file);
+            file.Close();
+            return data;
+        }
+        Debug.LogWarning("StatsFilesManager : Can't load missions highscores! File doesn't exists!");
+        MissionsHsData emptyData = new MissionsHsData(0);
         return emptyData;
     }
 }

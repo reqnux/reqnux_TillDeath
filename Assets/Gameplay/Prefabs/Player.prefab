@@ -136,7 +136,7 @@ MonoBehaviour:
     damage: 0
     movementSpeed: 3
     maxHealth: 50
-    bonusChance: 0
+    itemDropChance: 0
   currentWeapon: {fileID: 0}
 --- !u!114 &11446678
 MonoBehaviour:
@@ -198,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: -989056901
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f2797d08d02fa5542b4422dbf95ba861, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8014706, g: 0.8014706, b: 0.8014706, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

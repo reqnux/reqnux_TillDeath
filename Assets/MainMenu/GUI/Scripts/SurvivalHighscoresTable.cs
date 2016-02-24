@@ -14,7 +14,6 @@ public class SurvivalHighscoresTable : MonoBehaviour {
     {
         StatsFilesManager sfm = new StatsFilesManager();
         SurvivalHsData data = sfm.loadSurvivalHighscores();
-        //Debug.Log(data.scores.Count);
         for (int i = 0; i < data.scores.Count; i++)
         {
             transform.GetChild(i).FindChild("score").GetComponent<Text>().text = data.scores[i].first.ToString();
