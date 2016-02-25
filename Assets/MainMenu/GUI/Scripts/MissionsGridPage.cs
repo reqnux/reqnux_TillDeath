@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MissionsGridPage : MonoBehaviour {
 
+    [SerializeField] MissionGridButton selectedButton;
+
     void OnEnable()
     {
         setupMissionsButtons();
@@ -16,6 +18,16 @@ public class MissionsGridPage : MonoBehaviour {
         for (int i = 0; i < missionsHighscores.scores.Count; i++)
         {
             transform.FindChild("MissionGridButton" + (i + 1)).GetComponent<MissionGridButton>().setUnlocked(true);
+        }
+    }
+
+    public MissionGridButton SelectedButton
+    {
+        set
+        {
+            if (selectedButton != null)
+                selectedButton.setSelectedFrameColor(false);
+            selectedButton = value;    
         }
     }
 
