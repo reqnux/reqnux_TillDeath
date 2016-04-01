@@ -5,7 +5,6 @@ using System.Collections;
 public class Clock : MonoBehaviour {
 
     [SerializeField]
-    private  bool isVisible = true;
     private Text clockText;
     private float lastUpdateTime = 0;
     private int minutes;
@@ -34,21 +33,19 @@ public class Clock : MonoBehaviour {
         if (!stopped && Time.time > lastUpdateTime + 1) 
         {
             lastUpdateTime = Time.time;
-            if (isVisible)
-                clockText.text = getClockText();
-            else
-                clockText.text = "";
+            if (clockText.enabled)
+                clockText.text = Formatter.secondsToClockText(Mathf.FloorToInt(Time.timeSinceLevelLoad));
         }
     }
 
     public string getClockText() 
     {
-        return Formatter.secondsToClockText(Mathf.FloorToInt(Time.timeSinceLevelLoad));
+        return clockText.text;
     }
 
     public void showClock(bool showClock)
     {
-        isVisible = showClock;
+        clockText.enabled = showClock;
     }
 
     void stopClock()
