@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class MissionGameEventsHandler : MonoBehaviour {
@@ -17,7 +18,7 @@ public class MissionGameEventsHandler : MonoBehaviour {
     public void onMissionComplete()
     {
         GetComponent<GameManager>().gameStop();
-        //checkForNewHighscore();
+        checkForNewHighscore();
         StartCoroutine(showEndGamePanel());
     }
 
@@ -35,11 +36,14 @@ public class MissionGameEventsHandler : MonoBehaviour {
 
     void checkForNewHighscore()
     {
-        SurvivalHighscores scores = new SurvivalHighscores();
-        if (scores.checkQualifiedOnList(GetComponent<CurrentGameStats>().Score, GetComponent<CurrentGameStats>().TimeSurvived))
+        MissionsHighscores scores = new MissionsHighscores();
+        int missionNumber = Formatter.sceneNameToMissionNumber(SceneManager.GetActiveScene().name);
+        if (scores.checkMissionNewTopScore(missionNumber, GetComponent<CurrentGameStats>().Score))
         {
-            scores.addNewHighscore(GetComponent<CurrentGameStats>().Score, GetComponent<CurrentGameStats>().TimeSurvived);
+            scores.setMissionTopScore(missionNumber, GetComponent<CurrentGameStats>().Score);
         }
     }
+
+
 }
 

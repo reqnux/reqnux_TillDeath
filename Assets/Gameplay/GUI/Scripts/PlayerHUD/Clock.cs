@@ -34,9 +34,6 @@ public class Clock : MonoBehaviour {
         if (!stopped && Time.time > lastUpdateTime + 1) 
         {
             lastUpdateTime = Time.time;
-            modulo = Time.timeSinceLevelLoad % 60;
-            minutes = Mathf.FloorToInt(Time.timeSinceLevelLoad/60);
-            seconds = Mathf.FloorToInt (modulo);
             if (isVisible)
                 clockText.text = getClockText();
             else
@@ -46,13 +43,7 @@ public class Clock : MonoBehaviour {
 
     public string getClockText() 
     {
-        string min = minutes.ToString();
-        string sec = seconds.ToString();
-        if (minutes.ToString().Length == 1) 
-            min = "0" + min;
-        if (seconds.ToString().Length == 1) 
-            sec = "0" + sec;
-        return min+":"+sec;
+        return Formatter.secondsToClockText(Mathf.FloorToInt(Time.timeSinceLevelLoad));
     }
 
     public void showClock(bool showClock)

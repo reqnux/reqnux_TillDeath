@@ -17,6 +17,21 @@ public class Formatter {
 
     public static string secondsToClockText(int seconds)
     {
-        return Mathf.FloorToInt(seconds/60) +":" + seconds % 60; 
+        string min = Mathf.FloorToInt(seconds / 60).ToString();
+        string sec = (seconds%60).ToString();
+        if (min.Length == 1) 
+            min = "0" + min;
+        if (sec.Length == 1) 
+            sec = "0" + sec;
+        return min + ":" + sec; 
+    }
+
+    public static int sceneNameToMissionNumber(string sceneName)
+    {
+        int missionNumber;
+        if(int.TryParse(sceneName.Substring(7, sceneName.Length - 7), out missionNumber))
+            return missionNumber;
+        Debug.LogError("Formatter : sceneNameToMissionNumber parsing error!");
+        return -1;
     }
 }
