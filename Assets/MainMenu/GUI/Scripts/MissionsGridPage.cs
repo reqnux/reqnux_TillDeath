@@ -15,9 +15,10 @@ public class MissionsGridPage : MonoBehaviour {
         StatsFilesManager sfm = new StatsFilesManager();
         MissionsHsData missionsHighscores = sfm.loadMissionsHighscores();
 
-        for (int i = 0; i < missionsHighscores.scores.Count; i++)
+        for (int i = 0; i < missionsHighscores.scores.Length; i++)
         {
-            transform.FindChild("MissionGridButton" + (i + 1)).GetComponent<MissionGridButton>().setUnlocked(true);
+            if(missionsHighscores.scores[i] > 0)
+                transform.FindChild("MissionGridButton" + (i + 1)).GetComponent<MissionGridButton>().setUnlocked(true);
         }
     }
 

@@ -7,9 +7,10 @@ public class MissionsHighscores : Highscores {
 
     public bool checkMissionNewTopScore(int missionNumber, int score)
     {
+        Debug.Log("x");
         StatsFilesManager sfm = new StatsFilesManager();
         MissionsHsData missionsHighscores = sfm.loadMissionsHighscores();
-        if (missionNumber > missionsHighscores.scores.Count || missionNumber < 1)
+        if (missionNumber > MISSIONS_COUNT || missionNumber < 1)
             Debug.LogError("MissionsHighscores : Wrong missionNumber! missionNumber = " + missionNumber);
 
         return score > missionsHighscores.scores[missionNumber - 1];
@@ -19,7 +20,7 @@ public class MissionsHighscores : Highscores {
     {
         StatsFilesManager sfm = new StatsFilesManager();
         MissionsHsData missionsHighscores = sfm.loadMissionsHighscores();
-        if (missionNumber > missionsHighscores.scores.Count || missionNumber < 1)
+        if (missionNumber > MISSIONS_COUNT || missionNumber < 1)
             Debug.LogError("MissionsHighscores : Wrong missionNumber! missionNumber = " + missionNumber);
         missionsHighscores.scores[missionNumber - 1] = score;
         sfm.saveMissionsHighscores(missionsHighscores);
@@ -32,21 +33,18 @@ public class MissionsHighscores : Highscores {
         if (missionNumber > MISSIONS_COUNT || missionNumber < 1)
             Debug.LogError("MissionsHighscores : Wrong missionNumber! missionNumber = " + missionNumber);
         
-        if (missionNumber > missionsHighscores.scores.Count)
-            return 0;
-        else
-            return missionsHighscores.scores[missionNumber - 1];
+        return missionsHighscores.scores[missionNumber - 1];
     }
 }
 
 [System.Serializable]
 public class MissionsHsData
 {
-    public List<int> scores;
+    public int[] scores;
 
     public MissionsHsData() {}   // use this constructor when reading from file
     public MissionsHsData(int x) // use this constructor for empty highscores list
     {
-        scores = new List<int>(MissionsHighscores.MISSIONS_COUNT);
+        scores = new int[MissionsHighscores.MISSIONS_COUNT];
     } 
 }

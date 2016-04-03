@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c1249af5cfae04586101701a66fe02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isVisible: 1
+  clockText: {fileID: 0}
 --- !u!114 &2075627587
 MonoBehaviour:
   m_ObjectHideFlags: 0
