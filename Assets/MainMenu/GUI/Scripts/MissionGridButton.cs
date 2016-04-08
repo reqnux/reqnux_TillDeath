@@ -25,16 +25,17 @@ public class MissionGridButton : MonoBehaviour {
 
     public void setUnlocked(bool value)
     {
+        unlocked = true;
         transform.FindChild("lockImage").gameObject.SetActive(!value);
-        transform.FindChild("Text").gameObject.SetActive(value);
+        transform.FindChild("Text").gameObject.GetComponent<Text>().enabled = value;
     }
 
     public void setSelectedFrameColor(bool selected)
     {
         if (selected)
-            GetComponent<Image>().color = new Color(255, 0, 0, 0.58f); //red color preset
+            GetComponent<Image>().color = new Color(1, 0, 0, 0.58f); //red color preset
         else
-            GetComponent<Image>().color = new Color(54, 54, 54, 1.0f); // dark grey color preset
+            GetComponent<Image>().color = new Color(0.2f, 0.2f, 0.2f, 1.0f); // dark grey color preset
     }
 
 }

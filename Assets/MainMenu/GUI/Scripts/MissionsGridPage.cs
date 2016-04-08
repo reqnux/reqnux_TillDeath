@@ -17,7 +17,7 @@ public class MissionsGridPage : MonoBehaviour {
 
         for (int i = 0; i < missionsHighscores.scores.Length; i++)
         {
-            if(missionsHighscores.scores[i] > 0)
+            if(missionsHighscores.scores[i] > 0 || missionsHighscores.scores[i-1] > 0)
                 transform.FindChild("MissionGridButton" + (i + 1)).GetComponent<MissionGridButton>().setUnlocked(true);
         }
     }

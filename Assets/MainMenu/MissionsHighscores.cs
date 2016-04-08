@@ -7,7 +7,6 @@ public class MissionsHighscores : Highscores {
 
     public bool checkMissionNewTopScore(int missionNumber, int score)
     {
-        Debug.Log("x");
         StatsFilesManager sfm = new StatsFilesManager();
         MissionsHsData missionsHighscores = sfm.loadMissionsHighscores();
         if (missionNumber > MISSIONS_COUNT || missionNumber < 1)

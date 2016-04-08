@@ -4,6 +4,7 @@ public class MissionsNames {
 
     public static string[] names =
         {
-        "DAY ZERO"
+        "DAY ZERO",
+        "MISSION 2"
         };
 }
