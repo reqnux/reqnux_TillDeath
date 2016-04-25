@@ -11,11 +11,19 @@ public class MissionEndGamePanel : EndGamePanel {
 
     void OnEnable()
     {
+        Debug.Log("enejbel;");
         displayStats();
         if (GameObject.FindObjectOfType<Player>().isAlive())
+        {
             panelTitle.text = "MISSION COMPLETED";
+            transform.FindChild("ReplayMissionButton").gameObject.SetActive(false);
+        }
         else
+        {
+            Debug.Log("enejbel false");
             panelTitle.text = "MISSION FAILED";
+            transform.FindChild("NextMissionButton").gameObject.SetActive(false);
+        }
     }
 
     void displayStats()
