@@ -18,7 +18,7 @@ public class MissionWinConditions : MonoBehaviour {
 	}
 
 
-    bool missionCompleted()
+    public bool missionCompleted()
     {
         return GameObject.FindGameObjectsWithTag("Spawner").Length == 0
             && GameObject.FindGameObjectsWithTag("Enemy").Length == 0;

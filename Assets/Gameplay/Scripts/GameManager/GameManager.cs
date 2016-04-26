@@ -8,14 +8,6 @@ public class GameManager : MonoBehaviour {
 
     bool game_stopped = false;
 
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
-
     public void gameStop()
     {
         game_stopped = true;
