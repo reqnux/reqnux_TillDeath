@@ -17,6 +17,7 @@ public abstract class Weapon : PickableItem {
     [SerializeField] protected float reloadTime;
     [SerializeField] protected float delayBetweenShots;
     protected float lastShotTime;
+    protected float timeToReloadEnd;
 
     [SerializeField] protected int bulletSpeed;
 
@@ -54,7 +55,7 @@ public abstract class Weapon : PickableItem {
     IEnumerator reloadCoroutine()
     {
         flagReloading = true;
-        float timeToReloadEnd = reloadTime * (1.0f - player.Stats.ReducedReloadTime);
+        timeToReloadEnd = reloadTime * (1.0f - player.Stats.ReducedReloadTime);
         weaponSound.playReloadSound(timeToReloadEnd);
         yield return new WaitForSeconds(timeToReloadEnd);
         flagReloading = false;
@@ -89,5 +90,13 @@ public abstract class Weapon : PickableItem {
     {
         get{return player;}
         set{player = value;}
+    }
+
+    public float ReloadTime {
+        get{return reloadTime;}
+    }
+
+    public float TimeToReloadEnd {
+        get{return timeToReloadEnd;}
     }
 }

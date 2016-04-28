@@ -654,15 +654,7 @@ Prefab:
     - target: {fileID: 11428676, guid: 5db1fd4d3a52dcf4d94a971b3a11fd6c, type: 2}
       propertyPath: unit
       value: 
-      objectReference: {fileID: 1427944295}
-    - target: {fileID: 22433558, guid: 5db1fd4d3a52dcf4d94a971b3a11fd6c, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22415246, guid: 5db1fd4d3a52dcf4d94a971b3a11fd6c, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1212576669}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5db1fd4d3a52dcf4d94a971b3a11fd6c, type: 2}
   m_IsPrefabParent: 0
@@ -909,6 +901,12 @@ Transform:
   - {fileID: 192154971}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1212576669 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148,
+    type: 2}
+  m_PrefabInternal: {fileID: 299747562}
+  m_Script: {fileID: 11500000, guid: f46d0f5232ca89b4a84611cdfa460ded, type: 3}
 --- !u!1 &1378449871
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,12 +952,6 @@ MonoBehaviour:
   MpMPerMinuteGrow: 5
   enemyPrefabs:
   - {fileID: 11456192, guid: 85b82a0a053c9ba4284138d0c0953167, type: 2}
---- !u!114 &1427944295 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148,
-    type: 2}
-  m_PrefabInternal: {fileID: 299747562}
-  m_Script: {fileID: 11500000, guid: f46d0f5232ca89b4a84611cdfa460ded, type: 3}
 --- !u!4 &1500680524 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448092, guid: e23e321a0eb41334087fc6a7e3d49775, type: 2}
