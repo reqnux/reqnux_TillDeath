@@ -6,8 +6,7 @@ public class KeyboardEvents : MonoBehaviour {
     public GameObject pausePanel;
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape) &&
-            !GameObject.FindGameObjectWithTag("GameManager").GetComponent<MissionWinConditions>().missionCompleted())
+        if (Input.GetKeyDown(KeyCode.Escape))
             pausePanel.SetActive(!pausePanel.activeInHierarchy);
     }
 }
