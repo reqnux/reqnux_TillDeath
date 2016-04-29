@@ -20,11 +20,10 @@ public class Enemy : Unit {
     public override void death() 
     {
         itemsDrop.dropRandomItem();
-        if (enemyDeathEvent != null)
-            enemyDeathEvent(this);
+        deathEvent();
         Destroy(gameObject);
     }
-	
+    
     public override void takeDamage(int damage)
     {
         stats.CurrentHealth -= damage;
@@ -34,4 +33,9 @@ public class Enemy : Unit {
             death();
     }
 
+    protected void deathEvent()
+    {
+        if (enemyDeathEvent != null)
+            enemyDeathEvent(this);
+    }
 }
