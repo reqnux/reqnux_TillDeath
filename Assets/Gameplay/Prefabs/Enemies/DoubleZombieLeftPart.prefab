@@ -147,7 +147,7 @@ MonoBehaviour:
   stats:
     damage: 4
     movementSpeed: 1
-    maxHealth: 10
+    maxHealth: 15
     itemDropChance: 0
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!114 &11457962
@@ -200,7 +200,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: stats.maxHealth
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 133994}

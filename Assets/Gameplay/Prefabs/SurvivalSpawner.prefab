@@ -39,12 +39,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18f24f613bafa84e8d4711b4a7a04c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
+  initialMonstersPerMinute: 40
+  MpMPerMinuteGrow: 20
   enemyPrefabs:
   - {fileID: 11456192, guid: 85b82a0a053c9ba4284138d0c0953167, type: 2}
   - {fileID: 11479946, guid: b931b6e294b4c3240b999738171fe675, type: 2}
   - {fileID: 11498622, guid: 1579cc7250d2f4748b6e62d53642a1a7, type: 2}
-  isActive: 1
-  timeBetweenSpawns: 3
+  - {fileID: 11487068, guid: d7857aa3931706c469524c4457dc7a72, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

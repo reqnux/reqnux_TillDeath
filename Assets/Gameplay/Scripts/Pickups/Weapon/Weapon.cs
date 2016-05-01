@@ -47,7 +47,7 @@ public abstract class Weapon : PickableItem {
         }
     }
 
-    public void reload()
+    public virtual void reload()
     {
         if(!flagReloading)
             StartCoroutine(reloadCoroutine());
@@ -98,5 +98,9 @@ public abstract class Weapon : PickableItem {
 
     public float TimeToReloadEnd {
         get{return timeToReloadEnd;}
+    }
+
+    public Transform GunEnding {
+        get{return gunEnding;}
     }
 }
