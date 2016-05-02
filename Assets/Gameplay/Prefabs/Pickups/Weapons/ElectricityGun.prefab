@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &123550
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.796, y: 1.011, z: 0}
+  m_LocalPosition: {x: 2.796, y: 1.011, z: 0.025878906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446548}
@@ -142,7 +142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a0ac12e57cad49d498c532e9a817fb14, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bac42af48d57e8f4e9b2101302b604f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 0.8
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
-  damage: 0
+  damage: 5
   clipSize: 1
   reloadTime: 0
   delayBetweenShots: 0.5

@@ -16,9 +16,9 @@ public class PlayerController : UnitMovement {
         map = GameObject.FindObjectOfType<Map>();
     }
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
     }
 
     protected override void OnDisable()

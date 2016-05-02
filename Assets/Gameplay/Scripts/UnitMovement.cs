@@ -3,10 +3,11 @@ using System.Collections;
 
 public class UnitMovement : MonoBehaviour {
 
-    protected virtual void Start()
+    protected virtual void OnEnable()
     {
         GameManager.gameStopEvent += disableMovement;
     }
+
 
     protected virtual void OnDisable()
     {
@@ -29,7 +30,12 @@ public class UnitMovement : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
     }
 
-    void disableMovement()
+    public void enableMovement()
+    {
+        this.enabled = true;
+    }
+
+    public void disableMovement()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         this.enabled = false;

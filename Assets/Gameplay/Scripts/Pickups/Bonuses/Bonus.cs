@@ -10,7 +10,7 @@ public abstract class Bonus : PickableItem {
 
     float tickRate = 0.2f; //in seconds
     float lastTickTime;
-    bool activated;
+    protected bool activated;
 
     protected override void Start()
     {
@@ -24,7 +24,7 @@ public abstract class Bonus : PickableItem {
         base.pickup();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (activated && duration > 0)
         {
