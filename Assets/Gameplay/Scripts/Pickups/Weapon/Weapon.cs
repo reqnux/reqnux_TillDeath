@@ -92,15 +92,24 @@ public abstract class Weapon : PickableItem {
         set{player = value;}
     }
 
-    public float ReloadTime {
+    public float ReloadTime 
+    {
         get{return reloadTime;}
     }
 
-    public float TimeToReloadEnd {
+    public float TimeToReloadEnd 
+    {
         get{return timeToReloadEnd;}
     }
 
-    public Transform GunEnding {
+    public Transform GunEnding 
+    {
         get{return gunEnding;}
+    }
+
+    public Rigidbody2D BulletPrefab
+    {
+        get{ return bulletPrefab;}
+        set{ bulletPrefab = value;}
     }
 }

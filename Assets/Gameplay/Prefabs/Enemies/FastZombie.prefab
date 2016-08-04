@@ -115,6 +115,8 @@ MonoBehaviour:
   - {fileID: 11410082, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db, type: 2}
   - {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4, type: 2}
   - {fileID: 11400110, guid: 5c5701567c6d25e408db89fc67969931, type: 2}
+  - {fileID: 11462736, guid: 294f1681a520b4d4ca70e2b514fde312, type: 2}
+  - {fileID: 11418878, guid: 82651ab2c71b0b144b6b55cb032a610c, type: 2}
 --- !u!114 &11413054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,7 +155,7 @@ MonoBehaviour:
   stats:
     damage: 3
     movementSpeed: 2
-    maxHealth: 7
+    maxHealth: 5
     itemDropChance: 0
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!212 &21290198
@@ -195,7 +197,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: items.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: items.Array.data[0]
@@ -253,6 +255,20 @@ Prefab:
       propertyPath: items.Array.data[8]
       value: 
       objectReference: {fileID: 11400110, guid: 5c5701567c6d25e408db89fc67969931,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[9]
+      value: 
+      objectReference: {fileID: 11462736, guid: 294f1681a520b4d4ca70e2b514fde312,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: stats.maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: items.Array.data[10]
+      value: 
+      objectReference: {fileID: 11418878, guid: 82651ab2c71b0b144b6b55cb032a610c,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
