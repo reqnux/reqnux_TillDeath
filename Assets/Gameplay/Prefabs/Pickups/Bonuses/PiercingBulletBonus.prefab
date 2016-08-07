@@ -127,7 +127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 110122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34bb4307cd7e06a48884cb3e512985bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 7320006c7917f924ca28ceafc2b4bcfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
@@ -189,7 +189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1168976775
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5a07d4537700d744d8c8f3149525ecdd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8df1f6a985447844ba282d153bb78bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -199,7 +199,20 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: piercingBulletPrefab
+      value: 
+      objectReference: {fileID: 5003984, guid: df714037685dfa24fb0a34181374c595, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8df1f6a985447844ba282d153bb78bb,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 110122}

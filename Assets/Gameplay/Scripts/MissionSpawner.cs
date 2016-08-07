@@ -7,7 +7,7 @@ public class MissionSpawner : MonoBehaviour {
     [SerializeField]  int totalMonstersInMission = 0;
     [SerializeField]  float initialMonstersPerMinute = 20;
     [SerializeField]  float MpMPerMinuteGrow = 5; // MonstersPerMinute per minute grow
-    [SerializeField]  Enemy[] enemyPrefabs = 0;
+	[SerializeField]  Enemy[] enemyPrefabs = null;
 
     float monstersPerMinute;
     float timeBetweenSpawns; // in seconds
