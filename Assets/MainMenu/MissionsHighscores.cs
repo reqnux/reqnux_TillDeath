@@ -11,7 +11,6 @@ public class MissionsHighscores : Highscores {
         MissionsHsData missionsHighscores = sfm.loadMissionsHighscores();
         if (missionNumber > MISSIONS_COUNT || missionNumber < 1)
             Debug.LogError("MissionsHighscores : Wrong missionNumber! missionNumber = " + missionNumber);
-
         return score > missionsHighscores.scores[missionNumber - 1];
     }
 
@@ -31,7 +30,6 @@ public class MissionsHighscores : Highscores {
         MissionsHsData missionsHighscores = sfm.loadMissionsHighscores();
         if (missionNumber > MISSIONS_COUNT || missionNumber < 1)
             Debug.LogError("MissionsHighscores : Wrong missionNumber! missionNumber = " + missionNumber);
-        
         return missionsHighscores.scores[missionNumber - 1];
     }
 }

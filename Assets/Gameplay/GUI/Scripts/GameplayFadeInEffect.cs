@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameplayFadeInEffect : MonoBehaviour {
 
-    [SerializeField] float fadeInTime;
+	[SerializeField] float fadeInTime = 0;
     Image image;
     float tick = 0.005f;
     float timeBetweenTicks;

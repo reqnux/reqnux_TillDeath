@@ -4,14 +4,13 @@ using System.Collections;
 
 public class MissionEndGamePanel : EndGamePanel {
 
-    [SerializeField] Text panelTitle;
-    [SerializeField] Text timeText;
-    [SerializeField] Text scoreText;
-    [SerializeField] Text enemiesKilledText;
+    [SerializeField] Text panelTitle = null;
+    [SerializeField] Text timeText = null;
+    [SerializeField] Text scoreText = null;
+    [SerializeField] Text enemiesKilledText = null;
 
     void OnEnable()
     {
-        Debug.Log("enejbel;");
         displayStats();
         if (GameObject.FindObjectOfType<Player>().isAlive())
         {
@@ -20,7 +19,6 @@ public class MissionEndGamePanel : EndGamePanel {
         }
         else
         {
-            Debug.Log("enejbel false");
             panelTitle.text = "MISSION FAILED";
             transform.FindChild("NextMissionButton").gameObject.SetActive(false);
         }

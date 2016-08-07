@@ -4,9 +4,9 @@ using System.Collections;
 
 public class SurvivalEndGamePanel : EndGamePanel {
 
-    [SerializeField] Text timeSurvivedText;
-    [SerializeField] Text scoreText;
-    [SerializeField] Text enemiesKilledText;
+	[SerializeField] Text timeSurvivedText = null;
+    [SerializeField] Text scoreText = null;
+	[SerializeField] Text enemiesKilledText = null;
 
     void OnEnable()
     {

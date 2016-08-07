@@ -6,7 +6,7 @@ public class SurvivalSpawner : MonoBehaviour {
     [SerializeField]  bool isActive = true;
     [SerializeField]  float initialMonstersPerMinute = 20;
     [SerializeField]  float MpMPerMinuteGrow = 5; // MonstersPerMinute per minute grow
-    [SerializeField]  Enemy[] enemyPrefabs;
+	[SerializeField]  Enemy[] enemyPrefabs = null;
 
     float monstersPerMinute;
     float timeBetweenSpawns; // in seconds

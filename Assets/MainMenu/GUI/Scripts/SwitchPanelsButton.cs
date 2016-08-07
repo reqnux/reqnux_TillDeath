@@ -7,12 +7,6 @@ public class SwitchPanelsButton : MonoBehaviour
 	public GameObject turnOffPanel;
 	public GameObject turnOnPanel;
 
-	// Use this for initialization
-	void Awake () 
-    {
-	
-	}
-
 	public void switchPanels() 
     {
 		if (turnOnPanel && turnOffPanel) 

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ItemsDrop : MonoBehaviour {
 
-    [SerializeField] int itemDropChance; // in %
-    [SerializeField] PickableItem[] items;
+    [SerializeField] int itemDropChance = 0; // in %
+	[SerializeField] PickableItem[] items = null;
 
     void Start () {
 	

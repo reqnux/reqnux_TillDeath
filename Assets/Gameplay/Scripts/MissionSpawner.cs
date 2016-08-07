@@ -4,10 +4,10 @@ using System.Collections;
 public class MissionSpawner : MonoBehaviour {
 
     [SerializeField]  bool isActive = true;
-    [SerializeField]  int totalMonstersInMission;
+    [SerializeField]  int totalMonstersInMission = 0;
     [SerializeField]  float initialMonstersPerMinute = 20;
     [SerializeField]  float MpMPerMinuteGrow = 5; // MonstersPerMinute per minute grow
-    [SerializeField]  Enemy[] enemyPrefabs;
+    [SerializeField]  Enemy[] enemyPrefabs = 0;
 
     float monstersPerMinute;
     float timeBetweenSpawns; // in seconds
@@ -41,7 +41,6 @@ public class MissionSpawner : MonoBehaviour {
             }
             else
                 gameObject.SetActive(false);
-
         }
     }
 

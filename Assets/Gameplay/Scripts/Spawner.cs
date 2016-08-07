@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-    [SerializeField]  Enemy[] enemyPrefabs;
+	[SerializeField]  Enemy[] enemyPrefabs = null;
     [SerializeField]  bool isActive = true;
     float lastSpawnTime;
-    float timeBetweenSpawns;
+    float timeBetweenSpawns = 0;
 	
     void Start()
     {

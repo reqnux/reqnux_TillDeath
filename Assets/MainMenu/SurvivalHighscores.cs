@@ -17,7 +17,6 @@ public class SurvivalHighscores : Highscores {
             if (p.second < timeSurvived || (p.second == timeSurvived && p.first < score))
                return true;
         }
-
         return currentHighscores.scores.Count < HIGHSCORES_COUNT;
     }
 
@@ -33,7 +32,6 @@ public class SurvivalHighscores : Highscores {
 
         sfm.saveSurvivalHighscores(currentHighscores);
     }
-
 
     int findNewScoreIndex(List<Pair> scores, int score, int timeSurvived)
     {

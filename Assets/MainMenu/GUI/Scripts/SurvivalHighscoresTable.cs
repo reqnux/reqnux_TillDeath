@@ -6,7 +6,6 @@ public class SurvivalHighscoresTable : MonoBehaviour {
 
 	void OnEnable () 
     {
-        
         loadHighscores();
 	}
 	

@@ -4,9 +4,9 @@ using System.Collections;
 public class CameraMovement : MonoBehaviour {
 
     [SerializeField]
-    private float xMovementRange, yMovementRange; // Camera movement boundaries
+    private float xMovementRange, yMovementRange = 0; // Camera movement boundaries
     [SerializeField]
-    private Transform player;
+    private Transform player = null;
 
     void Update()
     {

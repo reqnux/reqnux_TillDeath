@@ -12,7 +12,6 @@ public class StatsFilesManager {
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + survivalDataPath);
-        Debug.Log("Data saved count " + data.scores.Count);
         bf.Serialize(file, data);
         file.Close();
         Debug.Log("saved in " + Application.persistentDataPath + survivalDataPath);
@@ -25,11 +24,9 @@ public class StatsFilesManager {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + survivalDataPath, FileMode.Open);
             SurvivalHsData data = (SurvivalHsData)bf.Deserialize(file);
-            Debug.Log("Data loaded count " + data.scores.Count);
             file.Close();
             return data;
         }
-        Debug.LogWarning("StatsFilesManager : Can't load survival highscores! File doesn't exists!");
         SurvivalHsData emptyData = new SurvivalHsData(0);
         return emptyData;
     }
@@ -53,7 +50,6 @@ public class StatsFilesManager {
             file.Close();
             return data;
         }
-        Debug.LogWarning("StatsFilesManager : Can't load missions highscores! File doesn't exists!");
         MissionsHsData emptyData = new MissionsHsData(0);
         return emptyData;
     }
