@@ -128,6 +128,10 @@ Prefab:
       propertyPath: pausePanel
       value: 
       objectReference: {fileID: 1710998101}
+    - target: {fileID: 11468196, guid: d959e53db4033284ca69157cfd786978, type: 2}
+      propertyPath: endGamePanel
+      value: 
+      objectReference: {fileID: 928298111}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d959e53db4033284ca69157cfd786978, type: 2}
   m_IsPrefabParent: 0
@@ -588,6 +592,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbd25069ab6600b4f814d3983a17c13d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &928298111 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11472334, guid: fa09432c215d5bd40be8bc34e5b8ea40,
+    type: 2}
+  m_PrefabInternal: {fileID: 1906209445}
+  m_Script: {fileID: 11500000, guid: d9b3df8a29e83124bb79b1b8dc0d3033, type: 3}
 --- !u!1001 &928785434
 Prefab:
   m_ObjectHideFlags: 0
@@ -674,7 +684,7 @@ Transform:
   - {fileID: 227731618}
   - {fileID: 192154971}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1378449871
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 191046, guid: fa09432c215d5bd40be8bc34e5b8ea40, type: 2}
       propertyPath: m_Name
-      value: MissionEndGamePanel (1)
+      value: MissionEndGamePanel
       objectReference: {fileID: 0}
     - target: {fileID: 22430482, guid: fa09432c215d5bd40be8bc34e5b8ea40, type: 2}
       propertyPath: m_AnchorMin.y
