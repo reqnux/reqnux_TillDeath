@@ -15,6 +15,7 @@ public class MissionGridButton : MonoBehaviour {
     {
         if (unlocked)
         {
+			//MissionGridButton - 17 letters
             int missionNumber = int.Parse(gameObject.name.Substring(17,gameObject.name.Length-17));
             selectedMissionPanel.loadMissionInfo(missionNumber);
 
