@@ -12,15 +12,17 @@ public abstract class Weapon : PickableItem {
 
     protected Player player;
 
-    [SerializeField] protected Rigidbody2D bulletPrefab;
     protected Transform gunEnding;
     protected WeaponSound weaponSound;
 
     [SerializeField] protected int damage;
     protected int currentAmmo;
     [SerializeField] protected int clipSize;
-    protected bool flagReloading;
+	[SerializeField] protected BulletType bulletType;
+	[SerializeField] protected FireMode fireMode;
 
+	protected int bulletsPerShot;
+	protected bool flagReloading;
     [SerializeField] protected float reloadTime;
     [SerializeField] protected float delayBetweenShots;
     protected float lastShotTime;
@@ -40,7 +42,15 @@ public abstract class Weapon : PickableItem {
         base.Start();
     }
 
-    protected abstract void spawnBullet();
+	protected void spawnBullet()
+	{
+		Bullet bullet = BulletsPool.pool.getBullet(bulletType);
+		bullet.transform.position = gunEnding.transform.position;
+		bullet.transform.rotation = gunEnding.transform.rotation;
+		bullet.gameObject.SetActive (true);
+		bullet.GetComponent<Rigidbody2D>().velocity = gunEnding.transform.up * bulletSpeed;
+		bullet.GetComponent<Bullet>().Weapon = this;
+	}
     public virtual void shoot()
     {
         if (canShoot())
@@ -114,9 +124,14 @@ public abstract class Weapon : PickableItem {
         get{return gunEnding;}
     }
 
-    public Rigidbody2D BulletPrefab
-    {
-        get{ return bulletPrefab;}
-        set{ bulletPrefab = value;}
-    }
+	public BulletType Bullet
+	{
+		get{ return bulletType;}
+		set{ bulletType = value;}
+	}
+	public FireMode Mode
+	{
+		get{ return fireMode;}
+		set{ fireMode = value;}
+	}
 }

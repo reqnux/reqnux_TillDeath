@@ -7,11 +7,11 @@ public class BulletsPool : MonoBehaviour {
 	public static BulletsPool pool;
 
 	[SerializeField] Bullet standardPrefab;
-	[SerializeField] Bullet piercingPrefab;
+	[SerializeField] PiercingBullet piercingPrefab;
 	[SerializeField] int standardPoolSize = 30;
 	[SerializeField] int piercingPoolSize = 30;
 	[SerializeField] List<Bullet> standardPool;
-	[SerializeField] List<Bullet> piercingPool;
+	[SerializeField] List<PiercingBullet> piercingPool;
 
 	void Awake() {
 		pool = this;
@@ -21,20 +21,27 @@ public class BulletsPool : MonoBehaviour {
 		for (int i = 0; i < standardPoolSize; i++) {
 			addStandardToPool ();
 		}
-		piercingPool = new List<Bullet> ();
+		piercingPool = new List<PiercingBullet> ();
 		for (int i = 0; i < piercingPoolSize; i++) {
 			addPiercingToPool ();
 		}
 	}
 
-	public Bullet getStandardBullet() {
+	public Bullet getBullet(BulletType type) {
+		if (type == BulletType.STANDARD)
+			return getStandardBullet ();
+		else
+			return getPiercingBullet ();
+	}
+
+	Bullet getStandardBullet() {
 		for (int i = 0; i < standardPool.Count; i++) {
 			if (!standardPool [i].gameObject.activeInHierarchy)
 				return standardPool [i];
 		}
 		return addStandardToPool ();
 	}
-	public Bullet getPiercingBullet() {
+	PiercingBullet getPiercingBullet() {
 		for (int i = 0; i < piercingPool.Count; i++) {
 			if (!piercingPool [i].gameObject.activeInHierarchy)
 				return piercingPool [i];
@@ -47,13 +54,15 @@ public class BulletsPool : MonoBehaviour {
 		Bullet obj = (Bullet)Instantiate (standardPrefab);
 		obj.gameObject.SetActive (false);
 		standardPool.Add (obj);
+		obj.transform.SetParent (transform);
 		return obj;
 	}
 
-	Bullet addPiercingToPool() {
-		Bullet obj = (Bullet)Instantiate (piercingPrefab);
+	PiercingBullet addPiercingToPool() {
+		PiercingBullet obj = (PiercingBullet)Instantiate (piercingPrefab);
 		obj.gameObject.SetActive (false);
 		piercingPool.Add (obj);
+		obj.transform.SetParent (transform);
 		return obj;
 	}
 }

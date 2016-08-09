@@ -19,8 +19,8 @@ public class PiercingBulletBonus  : Bonus {
         if (activated && currentWeapon != player.CurrentWeapon)
         {
             currentWeapon = player.CurrentWeapon;
-            currentWeaponBullet = currentWeapon.BulletPrefab;
-            currentWeapon.BulletPrefab = piercingBulletPrefab;
+            //currentWeaponBullet = currentWeapon.BulletPrefab;
+            //currentWeapon.BulletPrefab = piercingBulletPrefab;
         }
     }
 
@@ -33,12 +33,12 @@ public class PiercingBulletBonus  : Bonus {
     {
         base.activate();
         currentWeapon = player.CurrentWeapon;
-        currentWeaponBullet = currentWeapon.BulletPrefab;
-        currentWeapon.BulletPrefab = piercingBulletPrefab;
+       // currentWeaponBullet = currentWeapon.BulletPrefab;
+       // currentWeapon.BulletPrefab = piercingBulletPrefab;
     }
     public override void deactivate()
     {
-        player.CurrentWeapon.BulletPrefab = currentWeaponBullet;
+       // player.CurrentWeapon.BulletPrefab = currentWeaponBullet;
 
     }
 }

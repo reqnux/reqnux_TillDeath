@@ -26,8 +26,5 @@ public class ElectricityGun : Weapon {
 
         }
     }
-
     public override void reload(){} //electricityGun cant be reloaded
-    protected override void spawnBullet(){}
-
 }

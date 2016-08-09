@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class SniperBullet : Bullet {
+public class PiercingBullet : Bullet {
 
     private List<Enemy> hitEnemies;
 
-    protected override void Start() {
-        base.Start();
-        hitEnemies = new List<Enemy>();
-        Destroy(gameObject, bulletLifeTime);
+	void Awake() {
+		hitEnemies = new List<Enemy>();
+	}
+
+    protected override void OnEnable() {
+		base.OnEnable();
+		hitEnemies.Clear ();
     }
 
     void OnTriggerEnter2D(Collider2D col) {

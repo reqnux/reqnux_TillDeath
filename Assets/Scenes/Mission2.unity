@@ -427,7 +427,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487822, guid: ccfa31b91c695e24d8b4a7aecf9b6332, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407164, guid: ccfa31b91c695e24d8b4a7aecf9b6332, type: 2}
+      propertyPath: standardPoolSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407164, guid: ccfa31b91c695e24d8b4a7aecf9b6332, type: 2}
+      propertyPath: piercingPoolSize
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccfa31b91c695e24d8b4a7aecf9b6332, type: 2}
@@ -808,7 +816,7 @@ Transform:
   - {fileID: 227731618}
   - {fileID: 192154971}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
 --- !u!1 &1378449871
 GameObject:
   m_ObjectHideFlags: 0

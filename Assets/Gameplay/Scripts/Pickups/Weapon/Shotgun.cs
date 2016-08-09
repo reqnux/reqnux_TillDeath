@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Shotgun : Weapon {
 
-    [SerializeField] int bulletsPerShot = 7;
+    [SerializeField] new int bulletsPerShot = 7;
     [SerializeField] int shotConeWidth = 30; // degrees
 
     protected override void Awake () 
@@ -30,13 +30,4 @@ public class Shotgun : Weapon {
                 reload();
         }
     }
-
-    protected override void spawnBullet()
-    {
-        Rigidbody2D bullet = (Rigidbody2D) Instantiate(bulletPrefab, gunEnding.transform.position, gunEnding.transform.rotation);
-        bullet.velocity = gunEnding.transform.up * bulletSpeed;
-
-        bullet.GetComponent<Bullet>().Weapon = this;
-    }
-
 }
