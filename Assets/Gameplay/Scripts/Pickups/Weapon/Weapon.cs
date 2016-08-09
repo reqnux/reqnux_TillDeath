@@ -3,6 +3,13 @@ using System.Collections;
 
 public abstract class Weapon : PickableItem {
 
+	public enum FireMode
+	{
+		SINGLE,
+		MULTIPLE_FIXED, // multiple bullets shot in cone, every bullet shot with fixed angle
+		MULTIPLE_RANDOM // multiple bullets shot in cone, every bullet shot with random angle
+	}
+
     protected Player player;
 
     [SerializeField] protected Rigidbody2D bulletPrefab;
