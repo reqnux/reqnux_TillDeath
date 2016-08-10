@@ -50,9 +50,9 @@ public abstract class Weapon : PickableItem {
 		Bullet bullet = BulletsPool.pool.getBullet(bulletType);
 		bullet.transform.position = gunEnding.transform.position;
 		bullet.transform.rotation = gunEnding.transform.rotation;
+		bullet.GetComponent<Bullet>().Weapon = this;
 		bullet.gameObject.SetActive (true);
 		bullet.GetComponent<Rigidbody2D>().velocity = gunEnding.transform.up * bulletSpeed;
-		bullet.GetComponent<Bullet>().Weapon = this;
 	}
 	void spawnMultipleBullets(int randomAngle)
 	{
@@ -135,6 +135,10 @@ public abstract class Weapon : PickableItem {
 
 	public Transform GunEnding {
 		get{ return gunEnding; }
+	}
+
+	public float BulletSpeed {
+		get{ return bulletSpeed;}
 	}
 
 	public BulletType BulletType {

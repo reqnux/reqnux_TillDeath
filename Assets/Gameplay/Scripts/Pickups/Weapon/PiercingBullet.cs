@@ -27,4 +27,9 @@ public class PiercingBullet : Bullet {
 
         }
     }
+	public override Weapon Weapon 
+	{
+		set { weapon = value;
+			GetComponentInChildren<ParticleSystem> ().startSpeed = weapon.BulletSpeed*0.75f;}
+	}
 }

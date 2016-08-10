@@ -312,7 +312,7 @@ MonoBehaviour:
   damage: 6
   clipSize: 6
   bulletType: 0
-  fireMode: 0
+  fireMode: 2
   reloadTime: 3
   delayBetweenShots: 1
   bulletSpeed: 20

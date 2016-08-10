@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour {
 		gameObject.SetActive (false);
 	}
 
-    public Weapon Weapon 
+	public virtual Weapon Weapon 
     {
         set { weapon = value;}
     }

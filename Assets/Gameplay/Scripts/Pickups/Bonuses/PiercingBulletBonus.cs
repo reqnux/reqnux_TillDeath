@@ -3,10 +3,8 @@ using System.Collections;
 
 public class PiercingBulletBonus  : Bonus {
 
-    [SerializeField] Rigidbody2D piercingBulletPrefab;
-
     Weapon currentWeapon;
-    Rigidbody2D currentWeaponBullet;
+	BulletType currentWeaponBulletType;
 
     protected override void Start()
     {
@@ -19,8 +17,8 @@ public class PiercingBulletBonus  : Bonus {
         if (activated && currentWeapon != player.CurrentWeapon)
         {
             currentWeapon = player.CurrentWeapon;
-            //currentWeaponBullet = currentWeapon.BulletPrefab;
-            //currentWeapon.BulletPrefab = piercingBulletPrefab;
+			currentWeaponBulletType = currentWeapon.BulletType;
+			currentWeapon.BulletType = BulletType.PIERCING;
         }
     }
 
@@ -32,13 +30,13 @@ public class PiercingBulletBonus  : Bonus {
     public override void activate()
     {
         base.activate();
-        currentWeapon = player.CurrentWeapon;
-       // currentWeaponBullet = currentWeapon.BulletPrefab;
-       // currentWeapon.BulletPrefab = piercingBulletPrefab;
+		currentWeapon = player.CurrentWeapon;
+		currentWeaponBulletType = currentWeapon.BulletType;
+		currentWeapon.BulletType = BulletType.PIERCING;
     }
     public override void deactivate()
     {
-       // player.CurrentWeapon.BulletPrefab = currentWeaponBullet;
+		player.CurrentWeapon.BulletType = currentWeaponBulletType;
 
     }
 }
