@@ -381,12 +381,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489296, guid: 702de74fd331882448bf28c798e16148, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148, type: 2}
       propertyPath: currentWeapon
       value: 
       objectReference: {fileID: 98299976}
+    - target: {fileID: 425618, guid: 702de74fd331882448bf28c798e16148, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 702de74fd331882448bf28c798e16148, type: 2}
   m_IsPrefabParent: 0
@@ -691,7 +695,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 488868, guid: dbd25069ab6600b4f814d3983a17c13d, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 158832, guid: dbd25069ab6600b4f814d3983a17c13d, type: 2}
       propertyPath: m_Name

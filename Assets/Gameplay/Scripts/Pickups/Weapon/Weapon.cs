@@ -22,6 +22,7 @@ public abstract class Weapon : PickableItem {
 	[SerializeField] protected FireMode fireMode;
 
 	protected int bulletsPerShot;
+	protected int shotConeWidth; // degrees
 	protected bool flagReloading;
     [SerializeField] protected float reloadTime;
     [SerializeField] protected float delayBetweenShots;
@@ -35,8 +36,10 @@ public abstract class Weapon : PickableItem {
         currentAmmo = clipSize;
         gunEnding = GameObject.Find("GunEnding").transform;
         weaponSound = transform.GetComponentInChildren<WeaponSound>();
-
+		bulletsPerShot = 3;
+		shotConeWidth = 30;
     }
+
     protected override void Start()
     {
         base.Start();
@@ -51,16 +54,32 @@ public abstract class Weapon : PickableItem {
 		bullet.GetComponent<Rigidbody2D>().velocity = gunEnding.transform.up * bulletSpeed;
 		bullet.GetComponent<Bullet>().Weapon = this;
 	}
+	void spawnMultipleBullets(int randomAngle)
+	{
+		gunEnding.Rotate(new Vector3(0, 0, -shotConeWidth / 2));
+		for (int i = 0; i < bulletsPerShot; i++)
+		{
+			spawnBullet();
+			gunEnding.RotateAround(gunEnding.position, Vector3.forward, shotConeWidth / bulletsPerShot + Random.Range(-randomAngle, randomAngle));
+		}
+		gunEnding.localRotation = Quaternion.identity;
+	}
     public virtual void shoot()
     {
         if (canShoot())
         {
-            spawnBullet();
-            weaponSound.playShotSound();
-            lastShotTime = Time.time;
-            currentAmmo--;
-            if (currentAmmo == 0)
-                reload();
+			if (fireMode == FireMode.SINGLE)
+				spawnBullet();
+			else if (fireMode == FireMode.MULTIPLE_FIXED)
+				spawnMultipleBullets (0);
+			else if (fireMode == FireMode.MULTIPLE_RANDOM)
+				spawnMultipleBullets (3);
+			
+			weaponSound.playShotSound();
+			lastShotTime = Time.time;
+			currentAmmo--;
+			if (currentAmmo == 0)
+				reload();
         }
     }
 
@@ -85,53 +104,46 @@ public abstract class Weapon : PickableItem {
             && Time.time > lastShotTime + delayBetweenShots*(1.0f - player.Stats.ReducedTimeBetweenShots);
     }
 
-    public int CurrentAmmo
-    {
-        get { return currentAmmo;}
-    }
-    public int ClipSize
-    {
-        get { return clipSize;}
-    }
-    public int Damage
-    { 
-        get{ return damage;}
-    }
-
-    public bool Reloading
-    { 
-        get{ return flagReloading;}
-    }
-
-    public Player Player
-    {
-        get{return player;}
-        set{player = value;}
-    }
-
-    public float ReloadTime 
-    {
-        get{return reloadTime;}
-    }
-
-    public float TimeToReloadEnd 
-    {
-        get{return timeToReloadEnd;}
-    }
-
-    public Transform GunEnding 
-    {
-        get{return gunEnding;}
-    }
-
-	public BulletType Bullet
-	{
-		get{ return bulletType;}
-		set{ bulletType = value;}
+    public int CurrentAmmo {
+		get { return currentAmmo; }
 	}
-	public FireMode Mode
-	{
-		get{ return fireMode;}
-		set{ fireMode = value;}
+
+	public int ClipSize {
+		get { return clipSize; }
+	}
+
+	public int Damage { 
+		get{ return damage; }
+	}
+
+	public bool Reloading { 
+		get{ return flagReloading; }
+	}
+
+	public Player Player {
+		get{ return player; }
+		set{ player = value; }
+	}
+
+	public float ReloadTime {
+		get{ return reloadTime; }
+	}
+
+	public float TimeToReloadEnd {
+		get{ return timeToReloadEnd; }
+	}
+
+	public Transform GunEnding {
+		get{ return gunEnding; }
+	}
+
+	public BulletType Bullet {
+		get{ return bulletType; }
+		set{ bulletType = value; }
+	}
+
+	public FireMode Mode {
+		get{ return fireMode; }
+		set{ fireMode = value; }
 	}
 }

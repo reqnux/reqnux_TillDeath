@@ -24,7 +24,6 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void deactivate() {
-		Debug.Log ("asd");
 		gameObject.SetActive (false);
 	}
 
