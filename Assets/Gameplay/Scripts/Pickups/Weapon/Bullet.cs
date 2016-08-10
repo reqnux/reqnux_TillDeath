@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum BulletType
+{
+	STANDARD,
+	PIERCING
+}
+
 public class Bullet : MonoBehaviour {
 
     protected Weapon weapon;
@@ -31,10 +37,4 @@ public class Bullet : MonoBehaviour {
     {
         set { weapon = value;}
     }
-}
-
-public enum BulletType
-{
-	STANDARD,
-	PIERCING
 }

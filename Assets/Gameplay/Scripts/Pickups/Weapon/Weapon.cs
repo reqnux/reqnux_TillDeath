@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Weapon : PickableItem {
+public enum FireMode
+{
+	SINGLE,
+	MULTIPLE_FIXED, // multiple bullets shot in cone, every bullet shot with fixed angle
+	MULTIPLE_RANDOM // multiple bullets shot in cone, every bullet shot with random angle
+}
 
-	public enum FireMode
-	{
-		SINGLE,
-		MULTIPLE_FIXED, // multiple bullets shot in cone, every bullet shot with fixed angle
-		MULTIPLE_RANDOM // multiple bullets shot in cone, every bullet shot with random angle
-	}
+public abstract class Weapon : PickableItem {
 
     protected Player player;
 
@@ -36,7 +36,7 @@ public abstract class Weapon : PickableItem {
         currentAmmo = clipSize;
         gunEnding = GameObject.Find("GunEnding").transform;
         weaponSound = transform.GetComponentInChildren<WeaponSound>();
-		bulletsPerShot = 3;
+		bulletsPerShot = 1;
 		shotConeWidth = 30;
     }
 
@@ -137,13 +137,18 @@ public abstract class Weapon : PickableItem {
 		get{ return gunEnding; }
 	}
 
-	public BulletType Bullet {
+	public BulletType BulletType {
 		get{ return bulletType; }
 		set{ bulletType = value; }
 	}
 
-	public FireMode Mode {
+	public FireMode FireMode {
 		get{ return fireMode; }
 		set{ fireMode = value; }
 	}
+	public int BulletsPerShot {
+		get{ return bulletsPerShot; }
+		set{ bulletsPerShot = value; }
+	}
 }
+
