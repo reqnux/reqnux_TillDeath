@@ -6,6 +6,7 @@ public class Zombie : Enemy {
     public override void Awake () 
     {
         base.Awake();
+		type = EnemyType.ZOMBIE;
     }
 	
 

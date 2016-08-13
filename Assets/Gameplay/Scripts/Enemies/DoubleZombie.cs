@@ -9,6 +9,7 @@ public class DoubleZombie : Enemy {
     public override void Awake () 
     {
         base.Awake();
+		type = EnemyType.DOUBLE_ZOMBIE;
     }
 
     public override void death() 

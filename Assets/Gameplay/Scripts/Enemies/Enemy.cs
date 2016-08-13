@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum EnemyType {ZOMBIE, FAST_ZOMBIE, STRONG_ZOMBIE, DOUBLE_ZOMBIE}
+
 public class Enemy : Unit {
 
     public delegate void EnemyDeathEvent(Enemy enemy);
     public static event EnemyDeathEvent enemyDeathEvent;
 
     [SerializeField] Blood bloodPrefab;
+	protected EnemyType type;
     protected ItemsDrop itemsDrop;
 
 
@@ -38,4 +41,8 @@ public class Enemy : Unit {
         if (enemyDeathEvent != null)
             enemyDeathEvent(this);
     }
+
+	public EnemyType Type {
+		get{ return type;}
+	}
 }
