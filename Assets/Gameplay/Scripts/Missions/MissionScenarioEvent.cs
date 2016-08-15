@@ -4,15 +4,16 @@ using System.Collections;
 [System.Serializable]
 public class MissionScenarioEvent {
 
-	enum SpawnType {INSTANT, OVER_TIME}
+	public enum SpawnType {INSTANT, OVER_TIME}
 
-	[SerializeField] float startTime;
-	[SerializeField] SpawnType spawnType;
-	[SerializeField] float duration;
-	[SerializeField] float timeBetweenSpawns;
-	[SerializeField] EnemyType enemyType;
-	[SerializeField] int enemyCount;
+	public float startTime;
+	public SpawnType spawnType;
+	public float duration;
+	public EnemyType enemyType;
+	public int enemyCount;
+
 	MissionSpawner spawner;
+	float timeBetweenSpawns;
 	float lastSpawnTime;
 	bool finished;
 

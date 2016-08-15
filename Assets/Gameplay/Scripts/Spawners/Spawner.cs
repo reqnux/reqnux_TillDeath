@@ -20,7 +20,7 @@ public abstract class Spawner : MonoBehaviour {
 
     protected void spawnRandomEnemy()
     {
-        Enemy enemy = (Enemy) Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], transform.position, transform.rotation);
+		Enemy enemy = (Enemy) Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], getSpawnPosition(), transform.rotation);
     }
 
 	protected Vector3 getSpawnPosition()

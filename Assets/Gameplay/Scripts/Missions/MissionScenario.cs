@@ -17,7 +17,7 @@ public class MissionScenario : MonoBehaviour {
 	void Update() {
 		foreach (MissionScenarioEvent e in scenarioEvents) {
 			if (e.isActive()) {
-				
+				e.execute ();
 			}
 		}
 	}

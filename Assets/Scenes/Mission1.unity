@@ -1054,12 +1054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72355b4f32a733647a0171ee715f2551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
-  totalMonstersInMission: 5
-  initialMonstersPerMinute: 20
-  MpMPerMinuteGrow: 5
   enemyPrefabs:
   - {fileID: 11456192, guid: 85b82a0a053c9ba4284138d0c0953167, type: 2}
+  isActive: 1
 --- !u!4 &1500680524 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448092, guid: e23e321a0eb41334087fc6a7e3d49775, type: 2}
@@ -1105,28 +1102,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenarioEvents:
-  - time: 0
+  - startTime: 1.45
     spawnType: 0
     duration: 0
     enemyType: 0
-    enemyCount: 0
-  - time: 0
-    spawnType: 0
+    enemyCount: 5
+  - startTime: 0
+    spawnType: 1
     duration: 0
     enemyType: 0
     enemyCount: 0
-  - time: 0
-    spawnType: 0
-    duration: 0
-    enemyType: 0
-    enemyCount: 0
-  - time: 0
-    spawnType: 0
-    duration: 0
-    enemyType: 0
-    enemyCount: 0
-  - time: 0
-    spawnType: 0
+  - startTime: 0
+    spawnType: 1
     duration: 0
     enemyType: 0
     enemyCount: 0
