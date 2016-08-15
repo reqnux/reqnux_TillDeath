@@ -14,27 +14,28 @@ public class ScenarioEventDrawer : PropertyDrawer {
 		EditorGUI.BeginProperty(position, label, property);
 
 		// Draw label
-		Rect contentPosition = EditorGUI.PrefixLabel(position, label);
+		Rect pos = EditorGUI.PrefixLabel(position, label);
 		// Don't make child fields be indented
 		int indent = EditorGUI.indentLevel;
 		EditorGUI.indentLevel = 0;
 
 		float rowHeight = 16;// = contentPosition.height / rows;
-		float rowWidth = contentPosition.width;
-
+		float rowWidth = pos.width;
+		float enumWidth = 150;
+		float floatWidth = 80;
 		// Calculate rects
-		Rect startTimeRect = new Rect(contentPosition.x , contentPosition.y, rowWidth, rowHeight);
-		Rect spawnTypeRect = new Rect(contentPosition.x, contentPosition.y + rowHeight +2, rowWidth*0.45f, rowHeight);
-		Rect durationRect = new Rect(contentPosition.x+rowWidth/2, contentPosition.y + rowHeight+2, rowWidth/2, rowHeight);
-		Rect enemyTypeRect = new Rect(contentPosition.x, contentPosition.y + 2*rowHeight+4, rowWidth/2, rowHeight);
-		Rect enemyCountRect = new Rect(contentPosition.x+rowWidth/2, contentPosition.y + 2*rowHeight+4, rowWidth/2, rowHeight);
+		Rect startTimeRect = new Rect(pos.x , pos.y, rowWidth, rowHeight);
+		Rect spawnTypeRect = new Rect(pos.x, pos.y + rowHeight +2, enumWidth, rowHeight);
+		Rect durationRect = new Rect(pos.x+enumWidth + 2, pos.y + rowHeight+2, floatWidth, rowHeight);
+		Rect enemyTypeRect = new Rect(pos.x, pos.y + 2*rowHeight+4, enumWidth, rowHeight);
+		Rect enemyCountRect = new Rect(pos.x+enumWidth+2, pos.y + 2*rowHeight+4, floatWidth, rowHeight);
 
 		// Draw fields - passs GUIContent.none to each so they are drawn without labels
 		EditorGUI.PropertyField(startTimeRect, property.FindPropertyRelative ("startTime"));
+		EditorGUI.indentLevel = 1;
 		EditorGUI.PropertyField(spawnTypeRect, property.FindPropertyRelative ("spawnType"),GUIContent.none);
-
-		if((MissionScenarioEvent.SpawnType)property.FindPropertyRelative ("spawnType").enumValueIndex 
-			== MissionScenarioEvent.SpawnType.OVER_TIME)
+		if ((MissionScenarioEvent.SpawnType)property.FindPropertyRelative ("spawnType").enumValueIndex
+		   == MissionScenarioEvent.SpawnType.OVER_TIME)
 			EditorGUI.PropertyField(durationRect, property.FindPropertyRelative ("duration"),GUIContent.none);
 		EditorGUI.PropertyField(enemyTypeRect, property.FindPropertyRelative ("enemyType"),GUIContent.none);
 		EditorGUI.PropertyField(enemyCountRect, property.FindPropertyRelative ("enemyCount"),GUIContent.none);

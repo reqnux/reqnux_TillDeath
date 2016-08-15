@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MissionScenario : MonoBehaviour {
 
-	[SerializeField] List<MissionScenarioEvent> scenarioEvents;
+	public List<MissionScenarioEvent> scenarioEvents;
 	MissionSpawner spawner;
 
 	void Awake() {
