@@ -10,19 +10,19 @@ public class Enemy : Unit {
 
     [SerializeField] Blood bloodPrefab;
 	protected EnemyType type;
-    protected ItemsDrop itemsDrop;
+	protected AvailablePickups availablePickups;
 
 
 	public override void Awake () 
     {
         base.Awake();
-        itemsDrop = GetComponent<ItemsDrop>();
+		availablePickups = GameObject.FindObjectOfType<AvailablePickups> ();
         stats.CurrentHealth = stats.MaxHealth;
 	}
 
     public override void death() 
     {
-        itemsDrop.dropRandomItem();
+        dropRandomItem();
         deathEvent();
         Destroy(gameObject);
     }
@@ -41,6 +41,11 @@ public class Enemy : Unit {
         if (enemyDeathEvent != null)
             enemyDeathEvent(this);
     }
+	protected void dropRandomItem()
+	{
+		if(Random.Range(0,100) < stats.ItemDropChance)
+			Instantiate(availablePickups.getRandomItem(), transform.position, Quaternion.identity);
+	}
 
 	public EnemyType Type {
 		get{ return type;}

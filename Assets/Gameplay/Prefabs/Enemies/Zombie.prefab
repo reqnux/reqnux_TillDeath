@@ -28,7 +28,6 @@ GameObject:
   - 58: {fileID: 5868806}
   - 114: {fileID: 11456192}
   - 114: {fileID: 11488054}
-  - 114: {fileID: 11411050}
   - 114: {fileID: 11457088}
   m_Layer: 10
   m_Name: Zombie
@@ -93,30 +92,6 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &11411050
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45159ea16f91f6d4ea6d7952ec3327db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDropChance: 5
-  items:
-  - {fileID: 11424752, guid: 6e9352ba35ad2034590bd87d08a8a9f7, type: 2}
-  - {fileID: 11463664, guid: b4fce2065076a4746af7cc334de9ab93, type: 2}
-  - {fileID: 11496418, guid: dbd25069ab6600b4f814d3983a17c13d, type: 2}
-  - {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8, type: 2}
-  - {fileID: 11434204, guid: bfedcfc1b337c604fb64588594ea2b6a, type: 2}
-  - {fileID: 11410426, guid: 26bdc3d9db40c8c43b8fd39220164c94, type: 2}
-  - {fileID: 11410082, guid: 5bcdaee5ef0c1b24297431e4fd4cc7db, type: 2}
-  - {fileID: 11401378, guid: f2b79ea0bbaf44f42bfd9d62d9177fd4, type: 2}
-  - {fileID: 11400110, guid: 5c5701567c6d25e408db89fc67969931, type: 2}
-  - {fileID: 11462736, guid: 294f1681a520b4d4ca70e2b514fde312, type: 2}
-  - {fileID: 11418878, guid: 4df98a2455ed552488cf1269ac69d8ba, type: 2}
 --- !u!114 &11456192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +107,7 @@ MonoBehaviour:
     damage: 4
     movementSpeed: 1
     maxHealth: 7
-    itemDropChance: 0
+    itemDropChance: 5
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!114 &11457088
 MonoBehaviour:
@@ -291,6 +266,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11418878, guid: 4df98a2455ed552488cf1269ac69d8ba,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: stats.itemDropChance
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199550}

@@ -12,8 +12,8 @@ GameObject:
   - 58: {fileID: 5898504}
   - 114: {fileID: 11478778}
   - 114: {fileID: 11489554}
-  - 114: {fileID: 11444368}
   - 114: {fileID: 11433296}
+  - 114: {fileID: 11419106}
   m_Layer: 10
   m_Name: StarterWeaponMonster
   m_TagString: Enemy
@@ -93,6 +93,18 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &11419106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec1539544bc7b6448ee8b66c7177992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
 --- !u!114 &11433296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,21 +118,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 2
   chaseTime: 2
---- !u!114 &11444368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45159ea16f91f6d4ea6d7952ec3327db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemDropChance: 100
-  items:
-  - {fileID: 11424752, guid: 6e9352ba35ad2034590bd87d08a8a9f7, type: 2}
-  - {fileID: 11458156, guid: c2230475fad533444a3088eb449108d8, type: 2}
 --- !u!114 &11478778
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,5 +7,11 @@ public class MissionSpawner : Spawner {
 	{
 		Enemy enemy = (Enemy) Instantiate(getEnemyByType(type), getSpawnPosition(), transform.rotation);
 	}
+
+	public void spawnEnemies(EnemyType type, int count)
+	{
+		for(int i = 0; i < count; i++)
+			Instantiate(getEnemyByType(type), getSpawnPosition(), transform.rotation);
+	}
    
 }

@@ -8,7 +8,4 @@ public class FastZombie : Enemy {
         base.Awake();
 		type = EnemyType.FAST_ZOMBIE;
     }
-
-
 }
-

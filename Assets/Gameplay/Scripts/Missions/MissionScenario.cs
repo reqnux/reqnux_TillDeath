@@ -8,9 +8,10 @@ public class MissionScenario : MonoBehaviour {
 	MissionSpawner spawner;
 
 	void Awake() {
+		// init spawners
 		spawner = GameObject.FindObjectOfType<MissionSpawner> ();
 		foreach (MissionScenarioEvent e in scenarioEvents) {
-			e.Spawner = spawner;
+			e.init(spawner);
 		}
 	}
 

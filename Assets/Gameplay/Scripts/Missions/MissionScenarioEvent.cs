@@ -3,7 +3,7 @@ using System.Collections;
 
 [System.Serializable]
 public class MissionScenarioEvent {
-
+	static int x = 0;
 	public enum SpawnType {INSTANT, OVER_TIME}
 
 	public float startTime;
@@ -17,11 +17,19 @@ public class MissionScenarioEvent {
 	float lastSpawnTime;
 	bool finished;
 
+	public void init(MissionSpawner missionSpawner) {
+		spawner = missionSpawner;
+	}
+
 	public void execute() {
 		if (spawnType == SpawnType.INSTANT)
+			spawner.spawnEnemies (enemyType, enemyCount);
+		else if (Time.timeSinceLevelLoad > lastSpawnTime + getTimeBetweenSpawns ()) {
 			spawner.spawnEnemy (enemyType);
-		else if(Time.timeSinceLevelLoad > lastSpawnTime + timeBetweenSpawns)
-			spawner.spawnEnemy (enemyType);
+			x++;
+			Debug.Log (x);
+			lastSpawnTime = Time.timeSinceLevelLoad;
+		}
 		checkFinish ();
 	}
 
@@ -34,7 +42,7 @@ public class MissionScenarioEvent {
 			finished = true;
 	}
 
-	public MissionSpawner Spawner {
-		set{spawner = value;}
+	float getTimeBetweenSpawns() {
+		return duration / enemyCount;
 	}
 }
