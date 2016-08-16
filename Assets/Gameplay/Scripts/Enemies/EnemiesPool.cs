@@ -149,14 +149,14 @@ public class EnemiesPool : MonoBehaviour {
 	Zombie addRightToPool() {
 		Zombie obj = (Zombie)Instantiate (zombiePartRight);
 		obj.gameObject.SetActive (false);
-		zombiePool.Add (obj);
+		rightPool.Add (obj);
 		obj.transform.SetParent (transform);
 		return obj;
 	}
 	Zombie addLeftToPool() {
 		Zombie obj = (Zombie)Instantiate (zombiePartLeft);
 		obj.gameObject.SetActive (false);
-		zombiePool.Add (obj);
+		leftPool.Add (obj);
 		obj.transform.SetParent (transform);
 		return obj;
 	}
