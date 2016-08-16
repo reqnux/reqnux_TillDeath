@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &145198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400548}
+  - 114: {fileID: 11480680}
+  m_Layer: 0
+  m_Name: _EnemiesPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400548
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.93024886, y: 2.1003273, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11480680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b8743de5368eb47ada467ed5c43782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 11456192, guid: 85b82a0a053c9ba4284138d0c0953167, type: 2}
+  fastZombie: {fileID: 11485056, guid: b931b6e294b4c3240b999738171fe675, type: 2}
+  strongZombie: {fileID: 11487364, guid: 1579cc7250d2f4748b6e62d53642a1a7, type: 2}
+  doubleZombie: {fileID: 11487068, guid: d7857aa3931706c469524c4457dc7a72, type: 2}
+  zombiePartRight: {fileID: 11448510, guid: 8af856b8c630d2e4cad22ab2f02af007, type: 2}
+  zombiePartLeft: {fileID: 11423708, guid: 5d7703c0e4be7dd42aae4dd8b569cc76, type: 2}
+  zombiePoolSize: 30
+  fastPoolSize: 30
+  strongPoolSize: 30
+  doublePoolSize: 30
+  rightPoolSize: 30
+  leftPoolSize: 30
+  zombiePool: []
+  fastPool: []
+  strongPool: []
+  doublePool: []
+  rightPool: []
+  leftPool: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 145198}
+  m_IsPrefabParent: 1

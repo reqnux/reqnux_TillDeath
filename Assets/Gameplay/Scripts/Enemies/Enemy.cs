@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum EnemyType {ZOMBIE, FAST_ZOMBIE, STRONG_ZOMBIE, DOUBLE_ZOMBIE}
+public enum EnemyType {ZOMBIE, FAST_ZOMBIE, STRONG_ZOMBIE, DOUBLE_ZOMBIE, ZOMBIE_PART_RIGHT, ZOMBIE_PART_LEFT}
 
 public class Enemy : Unit {
 
@@ -24,7 +24,7 @@ public class Enemy : Unit {
     {
         dropRandomItem();
         deathEvent();
-        Destroy(gameObject);
+		gameObject.SetActive (false);
     }
     
     public override void takeDamage(int damage)

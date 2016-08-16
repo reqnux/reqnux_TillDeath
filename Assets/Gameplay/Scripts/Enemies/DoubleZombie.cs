@@ -3,9 +3,6 @@ using System.Collections;
 
 public class DoubleZombie : Enemy {
 
-    [SerializeField] Enemy leftPartPrefab;
-    [SerializeField] Enemy rightPartPrefab;
-
     public override void Awake () 
     {
         base.Awake();
@@ -16,13 +13,18 @@ public class DoubleZombie : Enemy {
     {
         float spawnRange = 0.5f;
         Vector3 spawnTranslation = new Vector3(Random.Range(-spawnRange,spawnRange), Random.Range(-spawnRange,spawnRange), 0);
-        Enemy enemy = (Enemy) Instantiate(leftPartPrefab, transform.position + spawnTranslation, transform.rotation);
+		Enemy enemy = EnemiesPool.pool.getEnemy(EnemyType.ZOMBIE_PART_RIGHT);
+		enemy.transform.position = transform.position + spawnTranslation;
+		enemy.transform.rotation = Quaternion.identity;
+		enemy.gameObject.SetActive (true);
         spawnTranslation = new Vector3(Random.Range(-spawnRange,spawnRange), Random.Range(-spawnRange,spawnRange), 0);
-        enemy = (Enemy) Instantiate(rightPartPrefab, transform.position + spawnTranslation, transform.rotation);
+		enemy = EnemiesPool.pool.getEnemy(EnemyType.ZOMBIE_PART_LEFT);
+		enemy.transform.position = transform.position + spawnTranslation;
+		enemy.transform.rotation = Quaternion.identity;
+		enemy.gameObject.SetActive (true);
 
         deathEvent();
-        
-        Destroy(gameObject);
+		gameObject.SetActive (false);
     }
 
 }

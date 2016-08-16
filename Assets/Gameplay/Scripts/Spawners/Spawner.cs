@@ -3,7 +3,6 @@ using System.Collections;
 
 public abstract class Spawner : MonoBehaviour {
 
-	[SerializeField] protected Enemy[] enemyPrefabs = null;
 	[SerializeField] protected bool isActive = true;
 	protected Map map;
 	
@@ -20,7 +19,11 @@ public abstract class Spawner : MonoBehaviour {
 
     protected void spawnRandomEnemy()
     {
-		Enemy enemy = (Enemy) Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], getSpawnPosition(), transform.rotation);
+		//Enemy enemy = (Enemy) Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], getSpawnPosition(), transform.rotation);
+		Enemy enemy = EnemiesPool.pool.getRandomEnemy();
+		enemy.transform.position = getSpawnPosition();
+		enemy.transform.rotation = Quaternion.identity;
+		enemy.gameObject.SetActive (true);
     }
 
 	protected Vector3 getSpawnPosition()
@@ -43,14 +46,14 @@ public abstract class Spawner : MonoBehaviour {
 		return new Vector3(x, y, 0);
 	}
 
-	protected Enemy getEnemyByType(EnemyType type) {
+	/*protected Enemy getEnemyByType(EnemyType type) {
 		foreach (Enemy e in enemyPrefabs) {
 			if (e.Type == type)
 				return e;
 		}
 		Debug.LogError ("MissionSpawner.getEnemyByType() : enemyPrefabs does not contain this type of enemy " + type.ToString ());
 		return null;
-	}
+	}*/
 
     protected void disable()
     {

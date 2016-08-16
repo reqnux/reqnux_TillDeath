@@ -5,13 +5,20 @@ public class MissionSpawner : Spawner {
 
 	public void spawnEnemy(EnemyType type)
 	{
-		Enemy enemy = (Enemy) Instantiate(getEnemyByType(type), getSpawnPosition(), transform.rotation);
+		Enemy enemy = EnemiesPool.pool.getEnemy(type);
+		enemy.transform.position = getSpawnPosition();
+		enemy.transform.rotation = Quaternion.identity;
+		enemy.gameObject.SetActive (true);
 	}
 
 	public void spawnEnemies(EnemyType type, int count)
 	{
-		for(int i = 0; i < count; i++)
-			Instantiate(getEnemyByType(type), getSpawnPosition(), transform.rotation);
+		for (int i = 0; i < count; i++) {
+			Enemy enemy = EnemiesPool.pool.getEnemy(type);
+			enemy.transform.position = getSpawnPosition();
+			enemy.transform.rotation = Quaternion.identity;
+			enemy.gameObject.SetActive (true);
+		}
 	}
    
 }
