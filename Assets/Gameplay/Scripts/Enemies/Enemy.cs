@@ -25,6 +25,7 @@ public class Enemy : Unit {
         dropRandomItem();
         deathEvent();
 		gameObject.SetActive (false);
+		reset ();
     }
     
     public override void takeDamage(int damage)
@@ -46,6 +47,10 @@ public class Enemy : Unit {
 		if (availablePickups.itemsAvailable() && Random.Range (0, 100) < stats.ItemDropChance) {
 			Instantiate(availablePickups.getRandomItem(), transform.position, Quaternion.identity);
 		}
+	}
+
+	protected void reset() {
+		stats.CurrentHealth = stats.MaxHealth;
 	}
 
 	public EnemyType Type {
