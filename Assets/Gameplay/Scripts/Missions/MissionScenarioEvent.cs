@@ -3,7 +3,7 @@ using System.Collections;
 
 [System.Serializable]
 public class MissionScenarioEvent {
-	static int x = 0;
+
 	public enum SpawnType {INSTANT, OVER_TIME}
 
 	public float startTime;
@@ -13,24 +13,43 @@ public class MissionScenarioEvent {
 	public int enemyCount;
 
 	MissionSpawner spawner;
-	float timeBetweenSpawns;
+	float timeBetweenSpawns = 1;
 	float lastSpawnTime;
+	int spawnedEnemies;
 	bool finished;
+
+	int enemiesPerSecondFloor;
+	int enemiesLeft;
+	float lastEnemiesLeftSpawnTime;
+	float timeBetweenEnemiesLeftSpawns;
 
 	public void init(MissionSpawner missionSpawner) {
 		spawner = missionSpawner;
+		enemiesPerSecondFloor = Mathf.FloorToInt(enemyCount / duration);
+		enemiesLeft = enemyCount - Mathf.FloorToInt(enemiesPerSecondFloor * duration);
+		if (enemiesLeft > 0)
+			timeBetweenEnemiesLeftSpawns = duration / enemiesLeft;
 	}
 
 	public void execute() {
 		if (spawnType == SpawnType.INSTANT)
 			spawner.spawnEnemies (enemyType, enemyCount);
-		else if (Time.timeSinceLevelLoad > lastSpawnTime + getTimeBetweenSpawns ()) {
+		else 
+			executeOverTimeEvent ();
+		checkFinish ();
+	}
+
+	void executeOverTimeEvent() {
+		if (enemiesLeft > 0 && Time.timeSinceLevelLoad > lastEnemiesLeftSpawnTime + timeBetweenEnemiesLeftSpawns) {
 			spawner.spawnEnemy (enemyType);
-			x++;
-			Debug.Log (x);
+			lastEnemiesLeftSpawnTime = Time.timeSinceLevelLoad;
+			spawnedEnemies++;
+		}
+		if (Time.timeSinceLevelLoad > lastSpawnTime + timeBetweenSpawns) {
+			spawner.spawnEnemies (enemyType,enemiesPerSecondFloor);
+			spawnedEnemies += enemiesPerSecondFloor;
 			lastSpawnTime = Time.timeSinceLevelLoad;
 		}
-		checkFinish ();
 	}
 
 	public bool isActive() {
@@ -38,11 +57,7 @@ public class MissionScenarioEvent {
 	}
 
 	void checkFinish() {
-		if (spawnType == SpawnType.INSTANT || Time.timeSinceLevelLoad > startTime + duration)
+		if (spawnType == SpawnType.INSTANT || enemyCount >= spawnedEnemies)
 			finished = true;
-	}
-
-	float getTimeBetweenSpawns() {
-		return duration / enemyCount;
 	}
 }

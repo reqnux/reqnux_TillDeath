@@ -6,9 +6,11 @@ public class MissionScenario : MonoBehaviour {
 
 	public List<MissionScenarioEvent> scenarioEvents;
 	MissionSpawner spawner;
+	Player player;
 
 	void Awake() {
 		// init spawners
+		player = GameObject.FindObjectOfType<Player>();
 		spawner = GameObject.FindObjectOfType<MissionSpawner> ();
 		foreach (MissionScenarioEvent e in scenarioEvents) {
 			e.init(spawner);
@@ -16,9 +18,11 @@ public class MissionScenario : MonoBehaviour {
 	}
 
 	void Update() {
-		foreach (MissionScenarioEvent e in scenarioEvents) {
-			if (e.isActive()) {
-				e.execute ();
+		if (player.isAlive ()) {
+			foreach (MissionScenarioEvent e in scenarioEvents) {
+				if (e.isActive()) {
+					e.execute ();
+				}
 			}
 		}
 	}
