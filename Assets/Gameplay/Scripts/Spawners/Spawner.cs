@@ -55,7 +55,7 @@ public abstract class Spawner : MonoBehaviour {
 		return null;
 	}*/
 
-    protected void disable()
+    public void disable()
     {
         isActive = false;
     }

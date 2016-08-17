@@ -57,7 +57,7 @@ public class MissionScenarioEvent {
 	}
 
 	void checkFinish() {
-		if (spawnType == SpawnType.INSTANT || enemyCount >= spawnedEnemies)
+		if (spawnType == SpawnType.INSTANT || enemyCount == spawnedEnemies)
 			finished = true;
 	}
 }

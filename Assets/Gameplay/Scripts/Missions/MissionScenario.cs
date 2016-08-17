@@ -7,6 +7,7 @@ public class MissionScenario : MonoBehaviour {
 	public List<MissionScenarioEvent> scenarioEvents;
 	MissionSpawner spawner;
 	Player player;
+	bool allEventsEnded;
 
 	void Awake() {
 		// init spawners
@@ -19,11 +20,15 @@ public class MissionScenario : MonoBehaviour {
 
 	void Update() {
 		if (player.isAlive ()) {
+			allEventsEnded = true;
 			foreach (MissionScenarioEvent e in scenarioEvents) {
 				if (e.isActive()) {
+					allEventsEnded = false;
 					e.execute ();
 				}
 			}
+			if (allEventsEnded)
+				spawner.disable ();
 		}
 	}
 }
