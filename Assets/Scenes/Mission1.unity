@@ -452,7 +452,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 406954, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: m_LocalPosition.x
@@ -540,11 +540,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].duration
-      value: 3
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].enemyCount
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].spawnType

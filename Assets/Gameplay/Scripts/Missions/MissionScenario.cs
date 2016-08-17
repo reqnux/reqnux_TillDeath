@@ -10,7 +10,6 @@ public class MissionScenario : MonoBehaviour {
 	bool allEventsEnded;
 
 	void Awake() {
-		// init spawners
 		player = GameObject.FindObjectOfType<Player>();
 		spawner = GameObject.FindObjectOfType<MissionSpawner> ();
 		foreach (MissionScenarioEvent e in scenarioEvents) {
@@ -27,8 +26,10 @@ public class MissionScenario : MonoBehaviour {
 					e.execute ();
 				}
 			}
-			if (allEventsEnded)
-				spawner.disable ();
 		}
+	}
+
+	public bool ended() {
+		return allEventsEnded;
 	}
 }

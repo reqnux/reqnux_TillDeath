@@ -4,9 +4,11 @@ using System.Collections;
 public class MissionWinConditions : MonoBehaviour {
 
     GameManager gameManager;
+	MissionScenario scenario;
 
     void Start () {
         gameManager = GetComponent<GameManager>();
+		scenario = GameObject.FindObjectOfType<MissionScenario> ();
 	}
 	
 	void Update () {
@@ -16,11 +18,9 @@ public class MissionWinConditions : MonoBehaviour {
         }
 	}
 
-
     public bool missionCompleted()
     {
-        return GameObject.FindGameObjectsWithTag("Spawner").Length == 0
-            && GameObject.FindGameObjectsWithTag("Enemy").Length == 0;
+		return scenario.ended() && GameObject.FindGameObjectsWithTag("Enemy").Length == 0;
     }
 
 }
