@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc85f595ec1836c4da0badeef0fde988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 1.5
+  aggroRange: 3
   chaseTime: 1
 --- !u!114 &11485056
 MonoBehaviour:
@@ -224,7 +224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: aggroRange
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: items.Array.data[8]

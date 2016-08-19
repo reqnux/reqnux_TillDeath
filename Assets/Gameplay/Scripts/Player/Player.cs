@@ -19,9 +19,9 @@ public class Player : Unit {
 
     void Start()
     {
-        Weapon defaultWeapon = GameObject.Find("DefaultWeapon").GetComponent<Weapon>();
+		GameObject defaultWeapon = GameObject.Find ("DefaultWeapon");
         if (defaultWeapon != null)
-            useWeapon(defaultWeapon);
+			useWeapon(defaultWeapon.GetComponent<Weapon>());
         else
             Debug.LogError("Player : No default weapon found on map!");
     }
