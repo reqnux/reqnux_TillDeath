@@ -8,7 +8,7 @@ public class ElectricityChain : MonoBehaviour {
     Weapon weapon;
 
     [SerializeField]float range = 2.0f;
-    [SerializeField] int maxChainLength = 4;
+    [SerializeField] int maxChainLength = 4; // max number of chain parts
     int chainPartsLeft;
 
     Transform source; 
@@ -78,5 +78,9 @@ public class ElectricityChain : MonoBehaviour {
         e.takeDamage(weapon.Player.Stats.Damage);
         enemiesHit.Add(e);
     }
+
+	public float Range {
+		get{ return range;}
+	}
 
 }

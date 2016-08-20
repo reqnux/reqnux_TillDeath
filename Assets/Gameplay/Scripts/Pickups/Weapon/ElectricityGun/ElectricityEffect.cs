@@ -4,6 +4,7 @@ using System.Collections;
 
 public class ElectricityEffect : MonoBehaviour {
 
+	ElectricityChain chain;
     bool initialized;
     float defaultLength;
     Vector3 defaultDirection;
@@ -22,6 +23,7 @@ public class ElectricityEffect : MonoBehaviour {
     float timeBetweenImageFlip = 0.1f;
 	
 	void Awake () {
+		chain = GetComponent<ElectricityChain> ();
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         startPosition = transform.position;
         defaultDirection = transform.up;
@@ -74,9 +76,10 @@ public class ElectricityEffect : MonoBehaviour {
         }
 
         transform.position = startPosition;
-        lookAtTarget(endPosition);
-        transform.localScale = new Vector3(transform.localScale.x, Vector3.Magnitude(endPosition- startPosition),1);
-
+		if (Vector3.Magnitude (endPosition - startPosition) <= chain.Range * 2f) {
+			lookAtTarget (endPosition);
+			transform.localScale = new Vector3 (transform.localScale.x, Vector3.Magnitude (endPosition - startPosition), 1);
+		}
         flipImage();
 	}
 
