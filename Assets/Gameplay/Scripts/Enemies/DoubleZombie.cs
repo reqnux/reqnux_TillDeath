@@ -11,13 +11,14 @@ public class DoubleZombie : Enemy {
 
     public override void death() 
     {
-        float spawnRange = 0.5f;
-        Vector3 spawnTranslation = new Vector3(Random.Range(-spawnRange,spawnRange), Random.Range(-spawnRange,spawnRange), 0);
+		float splitRange = 0.5f;
+
+		Vector3 spawnTranslation = transform.right * splitRange;
 		Enemy enemy = EnemiesPool.pool.getEnemy(EnemyType.ZOMBIE_PART_RIGHT);
 		enemy.transform.position = transform.position + spawnTranslation;
 		enemy.transform.rotation = Quaternion.identity;
 		enemy.gameObject.SetActive (true);
-        spawnTranslation = new Vector3(Random.Range(-spawnRange,spawnRange), Random.Range(-spawnRange,spawnRange), 0);
+		spawnTranslation = -transform.right * splitRange;
 		enemy = EnemiesPool.pool.getEnemy(EnemyType.ZOMBIE_PART_LEFT);
 		enemy.transform.position = transform.position + spawnTranslation;
 		enemy.transform.rotation = Quaternion.identity;
