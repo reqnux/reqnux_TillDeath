@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DoubleZombie : Enemy {
 
+	float splitRange = 0.5f;
+
     public override void Awake () 
     {
         base.Awake();
@@ -11,13 +13,12 @@ public class DoubleZombie : Enemy {
 
     public override void death() 
     {
-		float splitRange = 0.5f;
-
 		Vector3 spawnTranslation = transform.right * splitRange;
 		Enemy enemy = EnemiesPool.pool.getEnemy(EnemyType.ZOMBIE_PART_RIGHT);
 		enemy.transform.position = transform.position + spawnTranslation;
 		enemy.transform.rotation = Quaternion.identity;
 		enemy.gameObject.SetActive (true);
+
 		spawnTranslation = -transform.right * splitRange;
 		enemy = EnemiesPool.pool.getEnemy(EnemyType.ZOMBIE_PART_LEFT);
 		enemy.transform.position = transform.position + spawnTranslation;
@@ -26,6 +27,7 @@ public class DoubleZombie : Enemy {
 
         deathEvent();
 		gameObject.SetActive (false);
+		reset ();
     }
 
 }

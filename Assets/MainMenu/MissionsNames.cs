@@ -5,14 +5,14 @@ public class MissionsNames {
     public static string[] names =
         {
         "DAY ZERO",
-        "MISSION 2",
-		"MISSION 3",
-		"MISSION 4",
-		"MISSION 5",
-		"MISSION 6",
-		"MISSION 7",
-		"MISSION 8",
-		"MISSION 9",
+        "WARM UP",
+		"MOVE, FASTER",
+		"TOUGH GUYS",
+		"FAVOURITE TOY",
+		"THE MORE, THE BETTER",
+		"SHOCKING DISCOVERY",
+		"TRIANGLE",
+		"TWO HEADS",
 		"MISSION 10",
 		"MISSION 11",
 		"MISSION 12"
