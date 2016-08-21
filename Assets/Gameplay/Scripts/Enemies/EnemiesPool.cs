@@ -12,6 +12,7 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] DoubleZombie doubleZombie;
 	[SerializeField] Zombie zombiePartRight;
 	[SerializeField] Zombie zombiePartLeft;
+	[SerializeField] PoisonZombie poisonZombie;
 
 	[SerializeField] int zombiePoolSize = 30;
 	[SerializeField] int fastPoolSize = 30;
@@ -19,6 +20,7 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] int doublePoolSize = 30;
 	[SerializeField] int rightPoolSize = 30;
 	[SerializeField] int leftPoolSize = 30;
+	[SerializeField] int poisonPoolSize = 30;
 
 	[SerializeField] List<Zombie> zombiePool;
 	[SerializeField] List<FastZombie> fastPool;
@@ -26,6 +28,7 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] List<DoubleZombie> doublePool;
 	[SerializeField] List<Zombie> rightPool;
 	[SerializeField] List<Zombie> leftPool;
+	[SerializeField] List<PoisonZombie> poisonPool;
 
 	void Awake() {
 		pool = this;
@@ -55,6 +58,10 @@ public class EnemiesPool : MonoBehaviour {
 		for (int i = 0; i < leftPoolSize; i++) {
 			addLeftToPool ();
 		}
+		poisonPool = new List<PoisonZombie> ();
+		for (int i = 0; i < poisonPoolSize; i++) {
+			addPoisonToPool ();
+		}
 	}
 
 	public Enemy getEnemy(EnemyType type) {
@@ -64,6 +71,7 @@ public class EnemiesPool : MonoBehaviour {
 			case EnemyType.DOUBLE_ZOMBIE: return getDoubleZombie ();
 			case EnemyType.ZOMBIE_PART_RIGHT: return getZombieRightPart ();
 			case EnemyType.ZOMBIE_PART_LEFT: return getZombieLeftPart ();
+			case EnemyType.POISON_ZOMBIE: return getPoisonZombie ();
 			default : return getZombie ();
 		}
 	}
@@ -116,6 +124,13 @@ public class EnemiesPool : MonoBehaviour {
 		}
 		return addLeftToPool ();
 	}
+	PoisonZombie getPoisonZombie() {
+		for (int i = 0; i < poisonPool.Count; i++) {
+			if (!poisonPool [i].gameObject.activeInHierarchy)
+				return poisonPool [i];
+		}
+		return addPoisonToPool ();
+	}
 
 	Zombie addZombieToPool() {
 		Zombie obj = (Zombie)Instantiate (zombie);
@@ -157,6 +172,13 @@ public class EnemiesPool : MonoBehaviour {
 		Zombie obj = (Zombie)Instantiate (zombiePartLeft);
 		obj.gameObject.SetActive (false);
 		leftPool.Add (obj);
+		obj.transform.SetParent (transform);
+		return obj;
+	}
+	PoisonZombie addPoisonToPool() {
+		PoisonZombie obj = (PoisonZombie)Instantiate (poisonZombie);
+		obj.gameObject.SetActive (false);
+		poisonPool.Add (obj);
 		obj.transform.SetParent (transform);
 		return obj;
 	}
