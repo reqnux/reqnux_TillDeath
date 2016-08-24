@@ -21,10 +21,10 @@ public class MissionScenario : MonoBehaviour {
 		if (player.isAlive ()) {
 			allEventsEnded = true;
 			foreach (MissionScenarioEvent e in scenarioEvents) {
-				if (e.isActive()) {
-					allEventsEnded = false;
+				if (e.isActive())
 					e.execute ();
-				}
+				if (!e.isFinished())
+					allEventsEnded = false;
 			}
 		}
 	}

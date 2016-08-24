@@ -60,4 +60,8 @@ public class MissionScenarioEvent {
 		if (spawnType == SpawnType.INSTANT || enemyCount == spawnedEnemies)
 			finished = true;
 	}
+
+	public bool isFinished() {
+		return finished;
+	}
 }

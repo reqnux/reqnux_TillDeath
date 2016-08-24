@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 441492}
   - 58: {fileID: 5891254}
   - 199: {fileID: 19939000}
+  - 114: {fileID: 11411044}
   - 198: {fileID: 19886536}
   - 95: {fileID: 9530092}
-  - 114: {fileID: 11411044}
   m_Layer: 0
   m_Name: PoisonCloud
   m_TagString: Untagged
@@ -74,8 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b3d8670c512aa41baa6983ea6ef2e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 7
-  damagePerTick: 1
+  duration: 10
+  damagePerTick: 2
   timeBetweenTicks: 0.5
 --- !u!198 &19886536
 ParticleSystem:
@@ -1631,6 +1631,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: duration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damagePerTick
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
