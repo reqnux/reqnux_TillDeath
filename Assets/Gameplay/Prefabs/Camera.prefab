@@ -13,6 +13,8 @@ GameObject:
   - 124: {fileID: 12483176}
   - 81: {fileID: 8167508}
   - 114: {fileID: 11466658}
+  - 114: {fileID: 11444230}
+  - 114: {fileID: 11433408}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -52,7 +54,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -61,7 +63,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -80,6 +82,48 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183802}
   m_Enabled: 1
+--- !u!114 &11433408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.25
+  intensity: 2.5
+  blurSize: 1
+  blurIterations: 1
+  blurType: 0
+  fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
+--- !u!114 &11444230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50e925fb93c78246bf995d9dc3a2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 3
+  adaptiveTextureSize: 256
+  remapCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  exposureAdjustment: 1.21
+  middleGrey: 0.4
+  white: 2
+  adaptionSpeed: 1.5
+  tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
+  validRenderTextureFormat: 1
 --- !u!114 &11466658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,9 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64a8bfccf581a24a8bbc55b501eec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMovementRange: 1.64
-  yMovementRange: 2.82
-  player: {fileID: 0}
+  xMovementRange: 0
+  yMovementRange: 2.375
+  player: {fileID: 489296, guid: 702de74fd331882448bf28c798e16148, type: 2}
 --- !u!124 &12483176
 Behaviour:
   m_ObjectHideFlags: 1
