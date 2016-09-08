@@ -7,9 +7,10 @@ public class Player : Unit {
     public static event PlayerDeathEvent playerDeathEvent;
 
     [SerializeField]  Weapon currentWeapon;
+	int statPoints = 5;
 
-    private float timeBetweenDamage = 0.5f;
-    private float lastDamageTakenTime;
+    float timeBetweenDamage = 0.5f;
+    float lastDamageTakenTime;
 
     public override void Awake () 
     {
@@ -50,9 +51,15 @@ public class Player : Unit {
         stats.BaseDamage = weapon.Damage;
         // recalculate bonusDamage, based on active bonuses
     }
+
     public Weapon CurrentWeapon
     {
         get{return currentWeapon;} 
     }
+
+	public int StatPoints {
+		get{ return statPoints;}
+		set{ statPoints = value;}
+	}
 
 }

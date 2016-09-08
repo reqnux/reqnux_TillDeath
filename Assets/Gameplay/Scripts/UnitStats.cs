@@ -19,14 +19,21 @@ public class UnitStats {
     float bonusReducedReloadTime; // %
     float bonusReducedTimeBetweenShots; // %
 
+	int statPointsMaxHealth;
+	int statPointsMovementSpeed;
+	int statPointsItemDropChance;
+	float statPointsReducedReloadTime;
+	float statPointsIncreasedBonusDuration;
+
 
     public int Damage{ get {return damage + bonusDamage;}}
-    public int MovementSpeed{ get {return movementSpeed + bonusMovementSpeed;}}
+	public int MovementSpeed{ get {return movementSpeed + bonusMovementSpeed + statPointsMovementSpeed;}}
     public int CurrentHealth{ get {return currentHealth;} set{currentHealth = value;}}
-    public int MaxHealth{ get {return maxHealth + bonusMaxHealth;}}
-    public int ItemDropChance{ get {return itemDropChance + bonusItemDropChance;}}
-    public float ReducedReloadTime{ get{return bonusReducedReloadTime;}}
+	public int MaxHealth{ get {return maxHealth + bonusMaxHealth + statPointsMaxHealth;}}
+	public int ItemDropChance{ get {return itemDropChance + bonusItemDropChance + statPointsItemDropChance;}}
+	public float ReducedReloadTime{ get{return bonusReducedReloadTime + statPointsReducedReloadTime;}}
     public float ReducedTimeBetweenShots{ get{return bonusReducedTimeBetweenShots;}}
+	public float IncreasedBonusDuration{get {return statPointsIncreasedBonusDuration;}}
 
     public int BaseDamage{ get {return damage;} set{damage = value;}}
     public int BaseMovementSpeed{ get {return movementSpeed;} set{movementSpeed = value;}}
@@ -39,4 +46,11 @@ public class UnitStats {
     public int BonusItemDropChance{ get {return bonusItemDropChance;} set{bonusItemDropChance = value;}}
     public float BonusReducedReloadTime{ get{return bonusReducedReloadTime;} set{bonusReducedReloadTime = value;}}
     public float BonusReducedTimeBetweenShots{ get{return bonusReducedTimeBetweenShots;} set{bonusReducedTimeBetweenShots = value;}}
+
+	public int StatPointsMaxHealth{ get {return statPointsMaxHealth;} set{statPointsMaxHealth = value;}}
+	public int StatPointsMovementSpeed{ get {return statPointsMovementSpeed;} set{statPointsMovementSpeed = value;}}
+	public int StatPointsItemDropChance{ get {return statPointsItemDropChance;} set{statPointsItemDropChance = value;}}
+	public float StatPointsReducedReloadTime{ get {return statPointsReducedReloadTime;} set{statPointsReducedReloadTime = value;}}
+	public float StatPointsIncreasedBonusDuration{ get {return statPointsIncreasedBonusDuration;} set{statPointsIncreasedBonusDuration = value;}}
+
 }
