@@ -44,7 +44,7 @@ public class Enemy : Unit {
     }
 	protected void dropRandomItem()
 	{
-		if (availablePickups.itemsAvailable() && Random.Range (0, 100) < stats.ItemDropChance) {
+		if (availablePickups.itemsAvailable() && Random.Range (0, 100) < stats.IncreasedItemDropChance) {
 			Instantiate(availablePickups.getRandomItem(), transform.position, Quaternion.identity);
 		}
 	}

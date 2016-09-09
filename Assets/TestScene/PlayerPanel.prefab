@@ -62,7 +62,7 @@ GameObject:
   - 222: {fileID: 22216054}
   - 114: {fileID: 11460298}
   m_Layer: 5
-  m_Name: AbilityRow (2)
+  m_Name: AbilityRow3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,6 +129,7 @@ GameObject:
   - 224: {fileID: 22450000}
   - 222: {fileID: 22279720}
   - 114: {fileID: 11475470}
+  - 114: {fileID: 11480806}
   m_Layer: 5
   m_Name: AvailablePoints
   m_TagString: Untagged
@@ -353,8 +354,9 @@ GameObject:
   - 224: {fileID: 22471328}
   - 222: {fileID: 22249800}
   - 114: {fileID: 11463146}
+  - 114: {fileID: 11415400}
   m_Layer: 5
-  m_Name: StatRow
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +408,7 @@ GameObject:
   - 222: {fileID: 22229070}
   - 114: {fileID: 11478102}
   m_Layer: 5
-  m_Name: AbilityRow (3)
+  m_Name: AbilityRow4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,6 +424,7 @@ GameObject:
   - 224: {fileID: 22436116}
   - 222: {fileID: 22289822}
   - 114: {fileID: 11474006}
+  - 114: {fileID: 11413944}
   m_Layer: 5
   m_Name: AbilityName
   m_TagString: Untagged
@@ -456,8 +459,9 @@ GameObject:
   - 224: {fileID: 22403836}
   - 222: {fileID: 22273036}
   - 114: {fileID: 11434234}
+  - 114: {fileID: 11428504}
   m_Layer: 5
-  m_Name: StatRow (3)
+  m_Name: BonusChance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,6 +546,7 @@ GameObject:
   - 224: {fileID: 22436772}
   - 222: {fileID: 22280754}
   - 114: {fileID: 11498386}
+  - 114: {fileID: 11491726}
   m_Layer: 5
   m_Name: AbilityName
   m_TagString: Untagged
@@ -629,7 +634,7 @@ GameObject:
   - 222: {fileID: 22290202}
   - 114: {fileID: 11468874}
   m_Layer: 5
-  m_Name: AbilityRow (1)
+  m_Name: AbilityRow2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,6 +1019,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &169512
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22478768}
+  - 222: {fileID: 22258526}
+  - 114: {fileID: 11479780}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &170406
 GameObject:
   m_ObjectHideFlags: 1
@@ -1092,6 +1114,7 @@ GameObject:
   - 224: {fileID: 22406310}
   - 222: {fileID: 22224752}
   - 114: {fileID: 11430580}
+  - 114: {fileID: 11425332}
   m_Layer: 5
   m_Name: AbilityName
   m_TagString: Untagged
@@ -1144,7 +1167,7 @@ GameObject:
   - 222: {fileID: 22245914}
   - 114: {fileID: 11436178}
   m_Layer: 5
-  m_Name: AbilityRow
+  m_Name: AbilityRow1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,8 +1183,9 @@ GameObject:
   - 224: {fileID: 22405948}
   - 222: {fileID: 22247306}
   - 114: {fileID: 11486182}
+  - 114: {fileID: 11472166}
   m_Layer: 5
-  m_Name: StatRow (4)
+  m_Name: BonusDuration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1398,8 +1422,9 @@ GameObject:
   - 224: {fileID: 22454840}
   - 222: {fileID: 22291070}
   - 114: {fileID: 11417494}
+  - 114: {fileID: 11466480}
   m_Layer: 5
-  m_Name: StatRow (1)
+  m_Name: MovementSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1458,7 @@ GameObject:
   - 222: {fileID: 22291616}
   - 114: {fileID: 11466698}
   m_Layer: 5
-  m_Name: Title
+  m_Name: AbilityCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1468,8 +1493,9 @@ GameObject:
   - 224: {fileID: 22430918}
   - 222: {fileID: 22249194}
   - 114: {fileID: 11426658}
+  - 114: {fileID: 11452848}
   m_Layer: 5
-  m_Name: StatRow (2)
+  m_Name: ReducedReloadTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1519,6 +1545,7 @@ GameObject:
   - 224: {fileID: 22409090}
   - 222: {fileID: 22285680}
   - 114: {fileID: 11405390}
+  - 114: {fileID: 11431114}
   m_Layer: 5
   m_Name: AbilityName
   m_TagString: Untagged
@@ -1847,9 +1874,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11466480}
+        m_MethodName: addPoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1963,6 +1990,19 @@ MonoBehaviour:
   m_Text: '
 
     +'
+--- !u!114 &11413944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f47e3ea11dd084e93e56eb457edbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionPanel: {fileID: 118718}
+  abilityDescription: dsfsadf
 --- !u!114 &11414534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1990,6 +2030,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11415400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59694f7b17a4ed428b3de141a81d94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statPerPoint: 1
+  maxCap: 55
 --- !u!114 &11416424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2170,9 +2223,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11472166}
+        m_MethodName: removePoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2370,6 +2423,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11425332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f47e3ea11dd084e93e56eb457edbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionPanel: {fileID: 118718}
+  abilityDescription: dsfsadf
 --- !u!114 &11426230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2496,9 +2562,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11466480}
+        m_MethodName: removePoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2536,6 +2602,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11428504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f0c27120d1ed54ebb6c185592ff0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statPerPoint: 1
+  maxCap: 50
 --- !u!114 &11430480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2575,9 +2654,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11428504}
+        m_MethodName: addPoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2648,6 +2727,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 15
+--- !u!114 &11431114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f47e3ea11dd084e93e56eb457edbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionPanel: {fileID: 118718}
+  abilityDescription: dsfsadf
 --- !u!114 &11431236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2766,9 +2858,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11415400}
+        m_MethodName: removePoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2818,9 +2910,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11415400}
+        m_MethodName: addPoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3466,6 +3558,19 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
+--- !u!114 &11452848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff969e55fec6fb445b58e516bb16689e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statPerPoint: 1
+  maxCap: 50
 --- !u!114 &11453164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3514,18 +3619,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a6958fef347b5bd4abf1e15bb53c5186, type: 3}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bonus chance
+  m_Text: Increased bonus chance
 --- !u!114 &11456562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3631,9 +3736,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11472166}
+        m_MethodName: addPoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3710,9 +3815,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11452848}
+        m_MethodName: addPoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3899,6 +4004,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Resume
+--- !u!114 &11466480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16b1b19c7423134191d5aca894b7bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statPerPoint: 1
+  maxCap: 10
 --- !u!114 &11466698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3920,7 +4038,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a6958fef347b5bd4abf1e15bb53c5186, type: 3}
-    m_FontSize: 35
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3931,7 +4049,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: SPECIAL ABILITIES
+  m_Text: 'Ability cost: 5 points'
 --- !u!114 &11467626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4004,9 +4122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11428504}
+        m_MethodName: removePoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4110,6 +4228,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 15
+--- !u!114 &11472166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097a65b9162bccd4d8b82b06b55a6657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statPerPoint: 1
+  maxCap: 50
 --- !u!114 &11472246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4331,9 +4462,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11452848}
+        m_MethodName: removePoint
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4578,6 +4709,50 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 14
+--- !u!114 &11479780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a6958fef347b5bd4abf1e15bb53c5186, type: 3}
+    m_FontSize: 35
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: SPECIAL ABILITIES
+--- !u!114 &11480806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a651152882428e14aae006334df8bf4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11483150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4812,6 +4987,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11491726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f47e3ea11dd084e93e56eb457edbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionPanel: {fileID: 118718}
+  abilityDescription: dsfsadf
 --- !u!114 &11493048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5283,6 +5471,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185874}
+--- !u!222 &22258526
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169512}
 --- !u!222 &22258844
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -5732,7 +5926,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000030518, y: -286}
+  m_AnchoredPosition: {x: 0.000030518, y: -276.01}
   m_SizeDelta: {x: 442, y: 379}
   m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!224 &22420848
@@ -5807,10 +6001,10 @@ RectTransform:
   - {fileID: 22420046}
   m_Father: {fileID: 22490016}
   m_RootOrder: 6
-  m_AnchorMin: {x: 0.014858737, y: 0.112}
-  m_AnchorMax: {x: 0.48256508, y: 0.8684872}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.021364314, y: 0.112}
+  m_AnchorMax: {x: 0.49100003, y: 0.80341}
+  m_AnchoredPosition: {x: 1.0000458, y: 4.2420044}
+  m_SizeDelta: {x: -1.9999695, y: 8.484001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22425246
 RectTransform:
@@ -6502,8 +6696,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 22470856}
+  - {fileID: 22478768}
   - {fileID: 22443108}
+  - {fileID: 22470856}
   m_Father: {fileID: 22490016}
   m_RootOrder: 5
   m_AnchorMin: {x: 0.508, y: 0.112}
@@ -6661,11 +6856,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22459820}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -29.39}
-  m_SizeDelta: {x: 442, y: 30}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 442, y: 20}
   m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!224 &22471328
 RectTransform:
@@ -6812,6 +7007,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -54}
   m_SizeDelta: {x: 442, y: 30}
   m_Pivot: {x: 0.5, y: 0.49999997}
+--- !u!224 &22478768
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22459820}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -29.39}
+  m_SizeDelta: {x: 442, y: 30}
+  m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!224 &22478936
 RectTransform:
   m_ObjectHideFlags: 1
@@ -6827,7 +7039,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.000030518, y: 40}
+  m_AnchoredPosition: {x: -0.000030517, y: 37}
   m_SizeDelta: {x: 200, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22480322
