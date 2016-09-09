@@ -303,6 +303,7 @@ GameObject:
   - 224: {fileID: 22490016}
   - 222: {fileID: 22264366}
   - 114: {fileID: 11490180}
+  - 114: {fileID: 11467938}
   m_Layer: 5
   m_Name: PlayerPanel
   m_TagString: Untagged
@@ -2931,9 +2932,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 190034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95b766fd161411442b6338a6a56c71d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ec4d1e360b274845b3c95949ca363d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 120402}
 --- !u!114 &11434234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4083,6 +4085,17 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 0
   m_Text: _
+--- !u!114 &11467938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb79193505b63b7489d357184db526b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11468714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4577,7 +4590,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11433118}
-        m_MethodName: resume
+        m_MethodName: closePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
