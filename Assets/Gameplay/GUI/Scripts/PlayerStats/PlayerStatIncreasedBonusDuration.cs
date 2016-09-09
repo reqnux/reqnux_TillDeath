@@ -15,6 +15,6 @@ public class PlayerStatIncreasedBonusDuration : PlayerStat {
 	}
 
 	protected override void setValue() {
-		valueText.text = player.Stats.IncreasedBonusDuration.ToString();
+		valueText.text = player.Stats.IncreasedBonusDuration.ToString() + "%";
 	}
 }

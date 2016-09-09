@@ -15,7 +15,7 @@ public class PlayerStatReducedReloadTime : PlayerStat {
 	}
 
 	protected override void setValue() {
-		valueText.text = player.Stats.ReducedReloadTime.ToString();
+		valueText.text = player.Stats.ReducedReloadTime.ToString() + "%";
 		if (player.Stats.BonusReducedReloadTime > 0)
 			valueText.color = Color.green;
 		else

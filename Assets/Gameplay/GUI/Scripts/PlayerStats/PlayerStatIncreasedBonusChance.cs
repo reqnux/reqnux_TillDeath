@@ -15,6 +15,6 @@ public class PlayerStatIncreasedBonusChance : PlayerStat {
 	}
 
 	protected override void setValue() {
-		valueText.text = player.Stats.IncreasedItemDropChance.ToString();
+		valueText.text = player.Stats.IncreasedItemDropChance.ToString() + "%";
 	}
 }
