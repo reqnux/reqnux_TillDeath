@@ -92,6 +92,8 @@ public abstract class Weapon : PickableItem {
     {
         flagReloading = true;
         timeToReloadEnd = reloadTime * (1.0f - player.Stats.ReducedReloadTime);
+		if (player.ActiveAbilities.onReload != null)
+			player.ActiveAbilities.onReload();
         weaponSound.playReloadSound(timeToReloadEnd);
         yield return new WaitForSeconds(timeToReloadEnd);
         flagReloading = false;
@@ -131,6 +133,7 @@ public abstract class Weapon : PickableItem {
 
 	public float TimeToReloadEnd {
 		get{ return timeToReloadEnd; }
+		set{ timeToReloadEnd = value; }
 	}
 
 	public Transform GunEnding {
