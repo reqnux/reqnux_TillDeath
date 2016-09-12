@@ -6,9 +6,11 @@ public abstract class SpecialAbility : MonoBehaviour {
 	public static int POINTS_COST = 5;
 
 	[SerializeField] SpecialAbilityName enumName;
-	
+	protected Player player;
+
 	public virtual void init () {
-		ActiveSpecialAbilities activeAbilities = GameObject.FindObjectOfType<ActiveSpecialAbilities> ();
+		player = GameObject.FindObjectOfType<Player> ();
+		ActiveSpecialAbilities activeAbilities = player.GetComponent<ActiveSpecialAbilities> ();
 		activeAbilities.onReload += onReload;
 		activeAbilities.onBulletHit += onBulletHit;
 		activeAbilities.onDamageTaken += onDamageTaken;

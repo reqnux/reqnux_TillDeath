@@ -7,6 +7,7 @@ public class Player : Unit {
     public static event PlayerDeathEvent playerDeathEvent;
 
     [SerializeField]  Weapon currentWeapon;
+	ActiveSpecialAbilities activeAbilities;
 	int statPoints = 5;
 
     float timeBetweenDamage = 0.5f;
@@ -16,6 +17,7 @@ public class Player : Unit {
     {
         base.Awake();
         stats.CurrentHealth = stats.MaxHealth;
+		activeAbilities = GetComponent<ActiveSpecialAbilities> ();
     }
 
     void Start()
@@ -38,6 +40,8 @@ public class Player : Unit {
         if (Time.time > lastDamageTakenTime + timeBetweenDamage)
         {
             lastDamageTakenTime = Time.time;
+			if(activeAbilities.onDamageTaken != null)
+				activeAbilities.onDamageTaken();
             stats.CurrentHealth -= damage;
             if (stats.CurrentHealth <= 0)
                 death();
@@ -60,6 +64,9 @@ public class Player : Unit {
 	public int StatPoints {
 		get{ return statPoints;}
 		set{ statPoints = value;}
+	}
+	public ActiveSpecialAbilities ActiveAbilities {
+		get{ return activeAbilities;}
 	}
 
 }

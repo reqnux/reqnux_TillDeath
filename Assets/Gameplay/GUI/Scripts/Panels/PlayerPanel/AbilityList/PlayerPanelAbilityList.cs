@@ -3,10 +3,6 @@ using System.Collections.Generic;
 
 public class PlayerPanelAbilityList : MonoBehaviour {
 
-	void Start () {
-	
-	}
-	
 	void OnEnable () {
 		fillListWithRandomAbilities ();
 	}

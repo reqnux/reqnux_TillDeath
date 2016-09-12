@@ -6,7 +6,7 @@ public class SpecialAbilitiesList : MonoBehaviour {
 	[SerializeField] List<SpecialAbility> specialAbilities;
 	List<SpecialAbility> activeAbilities;
 
-	void Awake() {
+	void Start() {
 		activeAbilities = GameObject.FindObjectOfType<ActiveSpecialAbilities> ().ActiveAbilities;
 	}
 

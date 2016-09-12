@@ -5,6 +5,11 @@ using System.Collections;
 public class PlayerPanelAbilityRow : MonoBehaviour {
 
 	SpecialAbility ability;
+	Player player;
+
+	void Awake() {
+		player = GameObject.FindObjectOfType<Player> ();
+	}
 
 	public void setAbility(SpecialAbility abt)	{
 		ability = abt;
@@ -12,10 +17,13 @@ public class PlayerPanelAbilityRow : MonoBehaviour {
 	}
 
 	public void unlockAbility() {
-		if (GameObject.FindObjectOfType<Player> ().StatPoints >= SpecialAbility.POINTS_COST) {
-			GameObject.FindObjectOfType<Player> ().StatPoints -= SpecialAbility.POINTS_COST;
-			GameObject.FindObjectOfType<ActiveSpecialAbilities> ().addAbility (ability);
-			ability.init ();
+		if (player.StatPoints >= SpecialAbility.POINTS_COST) {
+			player.StatPoints -= SpecialAbility.POINTS_COST;
+			SpecialAbility unlockedAbility = Instantiate (ability);
+			unlockedAbility.transform.parent = player.transform.FindChild ("ActiveAbilities");
+			unlockedAbility.transform.localPosition = Vector3.zero;
+			player.ActiveAbilities.addAbility (unlockedAbility);
+			unlockedAbility.init ();
 			transform.parent.GetComponent<PlayerPanelAbilityList> ().fillListWithRandomAbilities ();
 		}
 	}
