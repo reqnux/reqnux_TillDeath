@@ -17,7 +17,7 @@ public abstract class Weapon : PickableItem {
 
     [SerializeField] protected int damage;
     protected int currentAmmo;
-    [SerializeField] protected int clipSize;
+    [SerializeField] protected int magazineSize;
 	[SerializeField] protected BulletType bulletType;
 	[SerializeField] protected FireMode fireMode;
 
@@ -33,7 +33,7 @@ public abstract class Weapon : PickableItem {
 
     protected virtual void Awake () 
     {
-        currentAmmo = clipSize;
+        currentAmmo = magazineSize;
         gunEnding = GameObject.Find("GunEnding").transform;
         weaponSound = transform.GetComponentInChildren<WeaponSound>();
 		bulletsPerShot = 1;
@@ -97,7 +97,7 @@ public abstract class Weapon : PickableItem {
         weaponSound.playReloadSound(timeToReloadEnd);
         yield return new WaitForSeconds(timeToReloadEnd);
         flagReloading = false;
-        currentAmmo = clipSize;
+        currentAmmo = magazineSize;
     }
 
     protected bool canShoot()
@@ -110,8 +110,8 @@ public abstract class Weapon : PickableItem {
 		get { return currentAmmo; }
 	}
 
-	public int ClipSize {
-		get { return clipSize; }
+	public int MagazineSize {
+		get { return magazineSize; }
 	}
 
 	public int Damage { 

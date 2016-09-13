@@ -21,8 +21,8 @@ public class AmmoDisplay : MonoBehaviour {
     private string getAmmoText() 
     {
         if(player.CurrentWeapon.Reloading)
-            return "--/" + player.CurrentWeapon.ClipSize;
+            return "--/" + player.CurrentWeapon.MagazineSize;
         else
-            return player.CurrentWeapon.CurrentAmmo + "/" + player.CurrentWeapon.ClipSize;
+            return player.CurrentWeapon.CurrentAmmo + "/" + player.CurrentWeapon.MagazineSize;
     }
 }
