@@ -5,7 +5,7 @@ public class Player : Unit {
 
     public delegate void PlayerDeathEvent();
     public static event PlayerDeathEvent playerDeathEvent;
-	public static int ExperiencePerLevel = 5000;
+	public static int ExperiencePerLevel = 500;
 
     [SerializeField]  Weapon currentWeapon;
 	ActiveSpecialAbilities activeAbilities;
@@ -14,12 +14,14 @@ public class Player : Unit {
 
     float timeBetweenDamage = 0.5f;
     float lastDamageTakenTime;
+	AudioSource audioSource;
 
     public override void Awake () 
     {
         base.Awake();
         stats.CurrentHealth = stats.MaxHealth;
 		activeAbilities = GetComponent<ActiveSpecialAbilities> ();
+		audioSource = GetComponent<AudioSource> ();
 		Enemy.enemyDeathEvent += getExperienceFromEnemy;
 
 		if (currentWeapon != null)
@@ -67,6 +69,7 @@ public class Player : Unit {
 
 	void levelUp() {
 		level++;
+		audioSource.PlayOneShot (audioSource.clip);
 	}
 
     public Weapon CurrentWeapon
