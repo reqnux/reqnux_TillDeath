@@ -5,10 +5,12 @@ public class Player : Unit {
 
     public delegate void PlayerDeathEvent();
     public static event PlayerDeathEvent playerDeathEvent;
+	public static int ExperiencePerLevel = 5000;
 
     [SerializeField]  Weapon currentWeapon;
 	ActiveSpecialAbilities activeAbilities;
 	int statPoints = 5;
+	int level = 1;
 
     float timeBetweenDamage = 0.5f;
     float lastDamageTakenTime;
@@ -52,11 +54,25 @@ public class Player : Unit {
         stats.BaseDamage = weapon.Damage;
         // recalculate bonusDamage, based on active bonuses
     }
+	public void addExperience(int exp) {
+		int expGained = exp + exp * stats.BonusExperienceGained / 100;
+		stats.Experience += expGained;
+		if (stats.Experience / ExperiencePerLevel >= level)
+			levelUp ();
+	}
+
+	void levelUp() {
+		level++;
+	}
 
     public Weapon CurrentWeapon
     {
         get{return currentWeapon;} 
     }
+
+	public int Level {
+		get{ return level;}
+	}
 
 	public int StatPoints {
 		get{ return statPoints;}

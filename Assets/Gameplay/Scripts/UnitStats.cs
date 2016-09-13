@@ -4,11 +4,12 @@ using System.Collections;
 [System.Serializable]
 public class UnitStats {
 
-    [SerializeField]  int damage;
-    [SerializeField]  int movementSpeed;
+    [SerializeField] int damage;
+    [SerializeField] int movementSpeed;
     private int currentHealth;
-    [SerializeField]  int maxHealth;
-	[SerializeField]  int increasedItemDropChance;
+    [SerializeField] int maxHealth;
+	[SerializeField] int experience;
+	[SerializeField] int increasedItemDropChance;
 
     int bonusDamage;
     int bonusMovementSpeed;
@@ -16,6 +17,7 @@ public class UnitStats {
 	int bonusIncreasedItemDropChance;
 
     //player's stats
+	int bonusExperienceGained; // %
     float bonusReducedReloadTime; // %
     float bonusReducedTimeBetweenShots; // %
 	int bonusIncreasedMagazineSize; // %
@@ -31,6 +33,7 @@ public class UnitStats {
 	public int MovementSpeed{ get {return movementSpeed + bonusMovementSpeed + statPointsMovementSpeed;}}
     public int CurrentHealth{ get {return currentHealth;} set{currentHealth = value;}}
 	public int MaxHealth{ get {return maxHealth + bonusMaxHealth + statPointsMaxHealth;}}
+	public int Experience{ get {return experience;} set{ experience = value;}}
 	public int IncreasedItemDropChance{ get {return increasedItemDropChance + bonusIncreasedItemDropChance + statPointsIncreasedItemDropChance;}}
 	public float ReducedReloadTime{ get{return bonusReducedReloadTime + statPointsReducedReloadTime;}}
     public float ReducedTimeBetweenShots{ get{return bonusReducedTimeBetweenShots;}}
@@ -45,6 +48,7 @@ public class UnitStats {
     public int BonusDamage{ get {return bonusDamage;} set{bonusDamage = value;}}
     public int BonusMovementSpeed{ get {return bonusMovementSpeed;} set{bonusMovementSpeed = value;}}
     public int BonusMaxHealth{ get {return bonusMaxHealth;} set{bonusMaxHealth = value;}}
+	public int BonusExperienceGained{ get {return bonusExperienceGained;} set{bonusExperienceGained = value;}}
     public int BonusIncreasedItemDropChance{ get {return bonusIncreasedItemDropChance;} set{bonusIncreasedItemDropChance = value;}}
     public float BonusReducedReloadTime{ get{return bonusReducedReloadTime;} set{bonusReducedReloadTime = value;}}
     public float BonusReducedTimeBetweenShots{ get{return bonusReducedTimeBetweenShots;} set{bonusReducedTimeBetweenShots = value;}}
