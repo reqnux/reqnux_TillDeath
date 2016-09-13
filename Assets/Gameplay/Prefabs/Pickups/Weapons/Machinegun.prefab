@@ -322,9 +322,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc64bfa788a2a4942b415c9a1ea4f5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5048244, guid: 7359f833c09c38a41aae66a3aa525396, type: 2}
   damage: 10
-  clipSize: 60
+  magazineSize: 60
+  bulletType: 0
+  fireMode: 0
   reloadTime: 5
   delayBetweenShots: 0.2
   bulletSpeed: 30
@@ -422,6 +423,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: magazineSize
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

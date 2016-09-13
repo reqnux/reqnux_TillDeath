@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 6
-  clipSize: 6
+  magazineSize: 6
   bulletType: 0
   fireMode: 2
   reloadTime: 3
@@ -427,6 +427,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fireMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: magazineSize
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
