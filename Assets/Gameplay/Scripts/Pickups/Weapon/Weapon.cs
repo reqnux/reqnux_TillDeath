@@ -33,7 +33,6 @@ public abstract class Weapon : PickableItem {
 
     protected virtual void Awake () 
     {
-        currentAmmo = magazineSize;
         gunEnding = GameObject.Find("GunEnding").transform;
         weaponSound = transform.GetComponentInChildren<WeaponSound>();
 		bulletsPerShot = 1;
@@ -43,6 +42,7 @@ public abstract class Weapon : PickableItem {
     protected override void Start()
     {
         base.Start();
+		currentAmmo = magazineSize;
     }
 
 	protected void spawnBullet()
@@ -97,7 +97,7 @@ public abstract class Weapon : PickableItem {
         weaponSound.playReloadSound(timeToReloadEnd);
         yield return new WaitForSeconds(timeToReloadEnd);
         flagReloading = false;
-        currentAmmo = magazineSize;
+		currentAmmo = MagazineSize;
     }
 
     protected bool canShoot()
@@ -108,10 +108,11 @@ public abstract class Weapon : PickableItem {
 
     public int CurrentAmmo {
 		get { return currentAmmo; }
+		set { currentAmmo = value; }
 	}
 
 	public int MagazineSize {
-		get { return magazineSize; }
+		get { return magazineSize + (magazineSize * player.Stats.BonusIncreasedMagazineSize/100); }
 	}
 
 	public int Damage { 

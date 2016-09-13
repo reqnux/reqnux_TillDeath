@@ -18,15 +18,11 @@ public class Player : Unit {
         base.Awake();
         stats.CurrentHealth = stats.MaxHealth;
 		activeAbilities = GetComponent<ActiveSpecialAbilities> ();
-    }
 
-    void Start()
-    {
-		GameObject defaultWeapon = GameObject.Find ("DefaultWeapon");
-        if (defaultWeapon != null)
-			useWeapon(defaultWeapon.GetComponent<Weapon>());
-        else
-            Debug.LogError("Player : No default weapon found on map!");
+		if (currentWeapon != null)
+			useWeapon(currentWeapon);
+		else
+			Debug.LogError("Player : No default weapon assigned!");
     }
 
     public override void death() 
@@ -52,6 +48,7 @@ public class Player : Unit {
     {
         currentWeapon = weapon;
         weapon.Player = this;
+		weapon.CurrentAmmo = weapon.MagazineSize;
         stats.BaseDamage = weapon.Damage;
         // recalculate bonusDamage, based on active bonuses
     }

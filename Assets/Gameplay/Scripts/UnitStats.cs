@@ -18,6 +18,7 @@ public class UnitStats {
     //player's stats
     float bonusReducedReloadTime; // %
     float bonusReducedTimeBetweenShots; // %
+	int bonusIncreasedMagazineSize; // %
 
 	int statPointsMaxHealth;
 	int statPointsMovementSpeed;
@@ -34,6 +35,7 @@ public class UnitStats {
 	public float ReducedReloadTime{ get{return bonusReducedReloadTime + statPointsReducedReloadTime;}}
     public float ReducedTimeBetweenShots{ get{return bonusReducedTimeBetweenShots;}}
 	public float IncreasedBonusDuration{get {return statPointsIncreasedBonusDuration;}}
+	public float IncreasedMagazineSize{get {return bonusIncreasedMagazineSize;}}
 
     public int BaseDamage{ get {return damage;} set{damage = value;}}
     public int BaseMovementSpeed{ get {return movementSpeed;} set{movementSpeed = value;}}
@@ -46,6 +48,7 @@ public class UnitStats {
     public int BonusIncreasedItemDropChance{ get {return bonusIncreasedItemDropChance;} set{bonusIncreasedItemDropChance = value;}}
     public float BonusReducedReloadTime{ get{return bonusReducedReloadTime;} set{bonusReducedReloadTime = value;}}
     public float BonusReducedTimeBetweenShots{ get{return bonusReducedTimeBetweenShots;} set{bonusReducedTimeBetweenShots = value;}}
+	public int BonusIncreasedMagazineSize{get {return bonusIncreasedMagazineSize;} set{ bonusIncreasedMagazineSize = value;}}
 
 	public int StatPointsMaxHealth{ get {return statPointsMaxHealth;} set{statPointsMaxHealth = value;}}
 	public int StatPointsMovementSpeed{ get {return statPointsMovementSpeed;} set{statPointsMovementSpeed = value;}}
