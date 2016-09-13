@@ -20,6 +20,7 @@ public class Player : Unit {
         base.Awake();
         stats.CurrentHealth = stats.MaxHealth;
 		activeAbilities = GetComponent<ActiveSpecialAbilities> ();
+		Enemy.enemyDeathEvent += getExperienceFromEnemy;
 
 		if (currentWeapon != null)
 			useWeapon(currentWeapon);
@@ -54,7 +55,10 @@ public class Player : Unit {
         stats.BaseDamage = weapon.Damage;
         // recalculate bonusDamage, based on active bonuses
     }
-	public void addExperience(int exp) {
+	void getExperienceFromEnemy(Enemy enemy) {
+		addExperience (enemy.Stats.Experience);
+	}
+	void addExperience(int exp) {
 		int expGained = exp + exp * stats.BonusExperienceGained / 100;
 		stats.Experience += expGained;
 		if (stats.Experience / ExperiencePerLevel >= level)

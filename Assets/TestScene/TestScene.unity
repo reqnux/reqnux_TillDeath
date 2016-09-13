@@ -2006,6 +2006,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11419312, guid: 5db1fd4d3a52dcf4d94a971b3a11fd6c, type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1427944295}
     - target: {fileID: 11428676, guid: 5db1fd4d3a52dcf4d94a971b3a11fd6c, type: 2}
       propertyPath: unit
       value: 
