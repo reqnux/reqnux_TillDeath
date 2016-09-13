@@ -19,10 +19,10 @@ public class PlayerPanelAbilityRow : MonoBehaviour {
 	public void unlockAbility() {
 		if (player.StatPoints >= SpecialAbility.POINTS_COST) {
 			player.StatPoints -= SpecialAbility.POINTS_COST;
+			player.ActiveAbilities.addAbility (ability);
 			SpecialAbility unlockedAbility = Instantiate (ability);
 			unlockedAbility.transform.parent = player.transform.FindChild ("ActiveAbilities");
 			unlockedAbility.transform.localPosition = Vector3.zero;
-			player.ActiveAbilities.addAbility (unlockedAbility);
 			unlockedAbility.init ();
 			transform.parent.GetComponent<PlayerPanelAbilityList> ().fillListWithRandomAbilities ();
 		}
