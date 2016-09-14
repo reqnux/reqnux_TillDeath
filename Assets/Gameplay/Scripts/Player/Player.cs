@@ -5,7 +5,9 @@ public class Player : Unit {
 
     public delegate void PlayerDeathEvent();
     public static event PlayerDeathEvent playerDeathEvent;
-	public static int ExperiencePerLevel = 500;
+	public delegate void PlayerLevelUpEvent();
+	public static event PlayerLevelUpEvent playerLevelUpEvent;
+	public static int ExperiencePerLevel = 5000;
 
     [SerializeField]  Weapon currentWeapon;
 	ActiveSpecialAbilities activeAbilities;
@@ -69,6 +71,9 @@ public class Player : Unit {
 
 	void levelUp() {
 		level++;
+		statPoints++;
+		if(playerLevelUpEvent != null)
+			playerLevelUpEvent ();
 		audioSource.PlayOneShot (audioSource.clip);
 	}
 
