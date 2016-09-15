@@ -10,12 +10,14 @@ public class Enemy : Unit {
 
     [SerializeField] Blood bloodPrefab;
 	protected EnemyType type;
+	protected Player player;
 	protected AvailablePickups availablePickups;
 
 
 	public override void Awake () 
     {
         base.Awake();
+		player = GameManager.Player;
 		availablePickups = GameObject.FindObjectOfType<AvailablePickups> ();
         stats.CurrentHealth = stats.MaxHealth;
 	}
@@ -44,7 +46,8 @@ public class Enemy : Unit {
     }
 	protected void dropRandomItem()
 	{
-		if (availablePickups.itemsAvailable() && Random.Range (0, 100) < stats.IncreasedItemDropChance) {
+		if (availablePickups.itemsAvailable() 
+			&& Random.Range (0, 100) < stats.IncreasedItemDropChance + player.Stats.IncreasedItemDropChance) {
 			Instantiate(availablePickups.getRandomItem(), transform.position, Quaternion.identity);
 		}
 	}
@@ -56,4 +59,5 @@ public class Enemy : Unit {
 	public EnemyType Type {
 		get{ return type;}
 	}
+
 }
