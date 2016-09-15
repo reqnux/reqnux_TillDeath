@@ -7,6 +7,7 @@ public enum SpecialAbilityName {
 	InstantReloadChance,
 	IncreasedMagazineSize,
 	StationaryRegeneration,
+	Economist,
 }
 
 public class SpecialAbilitiesDescriptions {
@@ -17,6 +18,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.InstantReloadChance,"Instant reload chance" },
 		{ SpecialAbilityName.IncreasedMagazineSize,"Increased magazine size" },
 		{ SpecialAbilityName.StationaryRegeneration,"Stationary regeneration" },
+		{ SpecialAbilityName.Economist,"Economist" },
 
 	};
 
@@ -26,6 +28,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.InstantReloadChance,"You have 10% chance to instanly reload your weapon."},
 		{ SpecialAbilityName.IncreasedMagazineSize,"Magazine size in every weapon is increased by 20%"},
 		{ SpecialAbilityName.StationaryRegeneration,"When standing still, you slowly regenerate health."},
+		{ SpecialAbilityName.Economist,"Other special abilities costs only 4 points." },
 
 	};
 }
