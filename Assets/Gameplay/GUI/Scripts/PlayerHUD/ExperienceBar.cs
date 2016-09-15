@@ -3,11 +3,12 @@ using System.Collections;
 
 public class ExperienceBar : StateBar {
 
-	[SerializeField] Player player;
+	Player player;
 	UnitStats stats;
 
 	void Start()
 	{
+		player = GameManager.Player;
 		stats = player.Stats;
 	}
 

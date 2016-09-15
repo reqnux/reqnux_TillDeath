@@ -7,7 +7,7 @@ public class PlayerLevelDisplay : MonoBehaviour {
 	Player player;
 
 	void Awake () {
-		player = GameObject.FindObjectOfType<Player> ();
+		player = GameManager.Player;
 	}
 	
 	void OnEnable () {

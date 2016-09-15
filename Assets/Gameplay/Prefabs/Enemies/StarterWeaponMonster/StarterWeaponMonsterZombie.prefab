@@ -118,7 +118,9 @@ MonoBehaviour:
     damage: 4
     movementSpeed: 1
     maxHealth: 10
-    itemDropChance: 0
+    experience: 100
+    increasedItemDropChance: 0
+  player: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148, type: 2}
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
   starterWeapon: {fileID: 0}
 --- !u!114 &11489554
@@ -168,7 +170,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: stats.experience
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115072}

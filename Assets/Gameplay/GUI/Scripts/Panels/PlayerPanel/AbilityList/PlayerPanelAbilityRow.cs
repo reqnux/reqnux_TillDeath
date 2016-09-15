@@ -8,7 +8,7 @@ public class PlayerPanelAbilityRow : MonoBehaviour {
 	Player player;
 
 	void Awake() {
-		player = GameObject.FindObjectOfType<Player> ();
+		player = GameManager.Player;
 	}
 
 	public void setAbility(SpecialAbility abt)	{

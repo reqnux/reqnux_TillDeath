@@ -13,7 +13,7 @@ public class ReloadIndicator : MonoBehaviour {
 
 	void Start () {
         indicator = GetComponent<Image>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+		player = GameManager.Player;
 	}
 	
 	void Update () {

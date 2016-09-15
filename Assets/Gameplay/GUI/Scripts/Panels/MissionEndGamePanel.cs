@@ -12,7 +12,7 @@ public class MissionEndGamePanel : EndGamePanel {
     void OnEnable()
     {
         displayStats();
-        if (GameObject.FindObjectOfType<Player>().isAlive())
+		if (GameManager.Player.isAlive())
         {
             panelTitle.text = "MISSION COMPLETED";
             transform.FindChild("ReplayMissionButton").gameObject.SetActive(false);

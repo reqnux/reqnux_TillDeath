@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 public class BonusManager : MonoBehaviour {
 
+	Player player;
     List<Bonus> activeBonuses;
     ActiveBonusesPanel bonusesPanel;
 
     List<Bonus> bonusestoRemove;
 
     void Awake () {
+		player = GetComponent<Player> ();
         activeBonuses = new List<Bonus>();
         bonusestoRemove = new List<Bonus>();
 	}
@@ -34,13 +36,14 @@ public class BonusManager : MonoBehaviour {
         Bonus activeBonus = findActiveBonusOfType(bonus);
         if (activeBonus)
         {
-            activeBonus.TimeLeft += bonus.Duration;
+			activeBonus.TimeLeft += bonus.Duration + bonus.Duration * player.Stats.IncreasedBonusDuration;
             bonus.destroy();
         }
         else
         {
             activeBonuses.Add(bonus);
             bonusesPanel.addBonus(bonus);
+			bonus.TimeLeft = bonus.Duration + bonus.Duration * player.Stats.IncreasedBonusDuration;
             bonus.activate();
         }
     }
@@ -49,9 +52,7 @@ public class BonusManager : MonoBehaviour {
         foreach (Bonus b in activeBonuses)
         {
             if (b.GetType() == bonus.GetType())
-            {
                 return b;
-            }
         }
         return null;
     }

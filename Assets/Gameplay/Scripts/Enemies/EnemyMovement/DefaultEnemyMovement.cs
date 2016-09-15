@@ -17,7 +17,7 @@ public class DefaultEnemyMovement : UnitMovement {
 
     void Awake() 
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+		player = GameManager.Player;
         movingUnit = GetComponent<Unit>();
         movementDirection = pointBetweenPlayerAndEnemy();
     }

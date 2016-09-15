@@ -17,7 +17,7 @@ public class RandomEnemyMovement : UnitMovement {
 
     void Awake() 
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+		player = GameManager.Player;
         map = GameObject.FindObjectOfType<Map>();
         movingUnit = GetComponent<Unit>();
         movementDirection = randomPoint();

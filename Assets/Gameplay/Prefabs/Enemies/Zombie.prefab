@@ -109,6 +109,7 @@ MonoBehaviour:
     maxHealth: 7
     experience: 170
     increasedItemDropChance: 0
+  player: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148, type: 2}
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!114 &11457088
 MonoBehaviour:
@@ -275,6 +276,11 @@ Prefab:
       propertyPath: stats.experience
       value: 170
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199550}

@@ -7,7 +7,7 @@ public class DirectToPlayerEnemyMovement : UnitMovement {
 	Unit movingUnit;
 
 	void Start () {
-		player = GameObject.Find("Player").GetComponent<Player>();
+		player = GameManager.Player;
 		movingUnit = GetComponent<Unit>();
 	}
 	

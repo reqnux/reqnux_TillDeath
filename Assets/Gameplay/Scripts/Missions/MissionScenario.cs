@@ -10,7 +10,7 @@ public class MissionScenario : MonoBehaviour {
 	bool allEventsEnded;
 
 	void Awake() {
-		player = GameObject.FindObjectOfType<Player>();
+		player = GameManager.Player;
 		spawner = GameObject.FindObjectOfType<MissionSpawner> ();
 		foreach (MissionScenarioEvent e in scenarioEvents) {
 			e.init(spawner);

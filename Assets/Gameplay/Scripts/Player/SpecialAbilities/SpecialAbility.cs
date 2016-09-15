@@ -9,7 +9,7 @@ public abstract class SpecialAbility : MonoBehaviour {
 	protected Player player;
 
 	public virtual void init () {
-		player = GameObject.FindObjectOfType<Player> ();
+		player = GameManager.Player;
 		ActiveSpecialAbilities activeAbilities = player.GetComponent<ActiveSpecialAbilities> ();
 		activeAbilities.onReload += onReload;
 		activeAbilities.onBulletHit += onBulletHit;

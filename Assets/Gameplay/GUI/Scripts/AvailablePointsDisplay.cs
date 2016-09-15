@@ -7,7 +7,7 @@ public class AvailablePointsDisplay : MonoBehaviour {
 	Player player;
 
 	void Awake() {
-		player = GameObject.FindObjectOfType<Player> ();
+		player = GameManager.Player;
 	}
 
 	void Update () {

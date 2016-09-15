@@ -10,7 +10,7 @@ public class AmmoDisplay : MonoBehaviour {
     void Awake() 
     {
         ammoText = GetComponent<Text>();
-        player = GameObject.Find("Player").GetComponent<Player>();
+		player = GameManager.Player;
     }
 
     void Update () 

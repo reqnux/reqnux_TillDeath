@@ -15,7 +15,7 @@ public abstract class Bonus : PickableItem {
     protected override void Start()
     {
         base.Start();
-        player = GameObject.FindObjectOfType<Player>();
+		player = GameManager.Player;
         timeLeft = duration;
     }
 

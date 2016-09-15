@@ -4,13 +4,14 @@ using System.Collections;
 
 public class LevelUpIndicator : MonoBehaviour {
 
-	[SerializeField] Player player;
+	Player player;
 	Image imageComponent;
 	Button buttonComponent;
 	Text textComponent;
 
 	void Awake () {
 		Player.playerLevelUpEvent += onLevelUp;
+		player = GameManager.Player;
 		imageComponent = GetComponent<Image> ();
 		buttonComponent = GetComponent<Button> ();
 		textComponent = GetComponentInChildren<Text> ();

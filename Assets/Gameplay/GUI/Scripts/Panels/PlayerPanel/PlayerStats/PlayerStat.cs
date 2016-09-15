@@ -21,7 +21,7 @@ public abstract class PlayerStat : MonoBehaviour {
 	protected abstract void setValue ();
 
 	void Awake() {
-		player = GameObject.FindObjectOfType<Player> ();
+		player = GameManager.Player;
 		valueText = transform.FindChild ("Value").GetChild(0).GetComponent<Text> ();
 		plusButton = transform.FindChild ("AddPointButton").gameObject;
 		minusButton = transform.FindChild ("RemovePointButton").gameObject;
