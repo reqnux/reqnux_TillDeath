@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statPerPoint: 1
-  maxCap: 50
+  maxCap: 15
 --- !u!114 &11430480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statPerPoint: 1
-  maxCap: 50
+  maxCap: 30
 --- !u!114 &11453164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statPerPoint: 1
-  maxCap: 10
+  maxCap: 4
 --- !u!114 &11466698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statPerPoint: 1
-  maxCap: 50
+  maxCap: 30
 --- !u!114 &11472246
 MonoBehaviour:
   m_ObjectHideFlags: 1

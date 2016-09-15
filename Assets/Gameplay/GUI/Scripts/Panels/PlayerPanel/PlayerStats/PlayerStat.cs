@@ -31,7 +31,7 @@ public abstract class PlayerStat : MonoBehaviour {
 		setValue ();
 	}
 	public bool showPlusButton() {
-		return player.StatPoints > 0;
+		return player.StatPoints > 0 && totalPointAdded < maxCap;
 	}
 
 	public bool showMinusButton() {

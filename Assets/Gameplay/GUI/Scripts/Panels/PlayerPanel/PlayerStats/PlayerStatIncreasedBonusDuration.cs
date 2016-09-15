@@ -5,11 +5,13 @@ public class PlayerStatIncreasedBonusDuration : PlayerStat {
 
 	public override void addPoint () {
 		pointsAddedWhilePanelOpen++;
+		totalPointAdded++;
 		player.StatPoints--;
 		player.Stats.StatPointsIncreasedBonusDuration += statPerPoint/100;
 	}
 	public override void removePoint () {
 		pointsAddedWhilePanelOpen--;
+		totalPointAdded--;
 		player.StatPoints++;
 		player.Stats.StatPointsIncreasedBonusDuration -= statPerPoint/100;
 	}

@@ -5,11 +5,13 @@ public class PlayerStatMovementSpeed : PlayerStat {
 
 	public override void addPoint () {
 		pointsAddedWhilePanelOpen++;
+		totalPointAdded++;
 		player.StatPoints--;
 		player.Stats.StatPointsMovementSpeed += (int)statPerPoint;
 	}
 	public override void removePoint () {
 		pointsAddedWhilePanelOpen--;
+		totalPointAdded--;
 		player.StatPoints++;
 		player.Stats.StatPointsMovementSpeed -= (int)statPerPoint;
 	}
