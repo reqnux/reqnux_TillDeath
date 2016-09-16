@@ -11,6 +11,7 @@ public enum SpecialAbilityName {
 	LifeSavingExperience,
 	Medic,
 	LonelyReloader,
+	Professor,
 }
 
 public class SpecialAbilitiesDescriptions {
@@ -25,6 +26,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.LifeSavingExperience,"Life saving experience" },
 		{ SpecialAbilityName.Medic,"Medic" },
 		{ SpecialAbilityName.LonelyReloader,"Lonely reloader" },
+		{ SpecialAbilityName.Professor,"Professor" },
 
 	};
 
@@ -38,6 +40,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.LifeSavingExperience,"When leveling up, you recover 5% of your max health." },
 		{ SpecialAbilityName.Medic,"Health bonus recovers 50% more health." },
 		{ SpecialAbilityName.LonelyReloader,"You push enemies away when reloading" },
+		{ SpecialAbilityName.Professor,"You gain 10% more experience" },
 
 	};
 }

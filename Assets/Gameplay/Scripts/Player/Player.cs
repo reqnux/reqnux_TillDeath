@@ -63,7 +63,7 @@ public class Player : Unit {
 		addExperience (enemy.Stats.Experience);
 	}
 	void addExperience(int exp) {
-		int expGained = exp + exp * stats.BonusExperienceGained / 100;
+		int expGained = exp + (exp * stats.BonusExperienceGained) / 100;
 		stats.Experience += expGained;
 		if (stats.Experience / ExperiencePerLevel >= level)
 			levelUp ();
