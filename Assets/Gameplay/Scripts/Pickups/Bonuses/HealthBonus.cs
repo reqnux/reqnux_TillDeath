@@ -21,4 +21,8 @@ public class HealthBonus : Bonus {
         player.heal(health);
     }
 
+	public float HealthRecovered {
+		get{ return healthRecovered;}
+		set{ healthRecovered = value;}
+	}
 }

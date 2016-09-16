@@ -22,6 +22,8 @@ public class ItemsPickup : MonoBehaviour {
 
     void handleItem(PickableItem item)
     {
+		if(player.ActiveAbilities.onItemPickup != null)
+			player.ActiveAbilities.onItemPickup (item);
         if (item.GetComponent<Weapon>())
         {
             if (player.CurrentWeapon)

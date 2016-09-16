@@ -9,6 +9,7 @@ public enum SpecialAbilityName {
 	StationaryRegeneration,
 	Economist,
 	LifeSavingExperience,
+	Medic,
 }
 
 public class SpecialAbilitiesDescriptions {
@@ -21,6 +22,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.StationaryRegeneration,"Stationary regeneration" },
 		{ SpecialAbilityName.Economist,"Economist" },
 		{ SpecialAbilityName.LifeSavingExperience,"Life saving experience" },
+		{ SpecialAbilityName.Medic,"Medic" },
 
 	};
 
@@ -32,6 +34,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.StationaryRegeneration,"When standing still, you slowly regenerate health."},
 		{ SpecialAbilityName.Economist,"Other special abilities costs only 4 points." },
 		{ SpecialAbilityName.LifeSavingExperience,"When leveling up, you recover 5% of your max health." },
+		{ SpecialAbilityName.Medic,"Health bonus recovers 50% more health." },
 
 	};
 }

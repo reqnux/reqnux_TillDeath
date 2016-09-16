@@ -14,11 +14,13 @@ public abstract class SpecialAbility : MonoBehaviour {
 		activeAbilities.onReload += onReload;
 		activeAbilities.onBulletHit += onBulletHit;
 		activeAbilities.onDamageTaken += onDamageTaken;
+		activeAbilities.onItemPickup += onItemPickup;
 	}
 
 	public virtual void onReload(){}
 	public virtual void onBulletHit(Bullet bullet, Enemy enemyHit){}
 	public virtual void onDamageTaken(){}
+	public virtual void onItemPickup(PickableItem item){}
 
 	public SpecialAbilityName EnumName {
 		get{ return enumName;}
