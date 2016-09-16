@@ -8,6 +8,7 @@ public enum SpecialAbilityName {
 	IncreasedMagazineSize,
 	StationaryRegeneration,
 	Economist,
+	LifeSavingExperience,
 }
 
 public class SpecialAbilitiesDescriptions {
@@ -19,6 +20,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.IncreasedMagazineSize,"Increased magazine size" },
 		{ SpecialAbilityName.StationaryRegeneration,"Stationary regeneration" },
 		{ SpecialAbilityName.Economist,"Economist" },
+		{ SpecialAbilityName.LifeSavingExperience,"Life saving experience" },
 
 	};
 
@@ -29,6 +31,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.IncreasedMagazineSize,"Magazine size in every weapon is increased by 20%"},
 		{ SpecialAbilityName.StationaryRegeneration,"When standing still, you slowly regenerate health."},
 		{ SpecialAbilityName.Economist,"Other special abilities costs only 4 points." },
+		{ SpecialAbilityName.LifeSavingExperience,"When leveling up, you recover 5% of your max health." },
 
 	};
 }
