@@ -10,6 +10,7 @@ public enum SpecialAbilityName {
 	Economist,
 	LifeSavingExperience,
 	Medic,
+	LonelyReloader,
 }
 
 public class SpecialAbilitiesDescriptions {
@@ -23,6 +24,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.Economist,"Economist" },
 		{ SpecialAbilityName.LifeSavingExperience,"Life saving experience" },
 		{ SpecialAbilityName.Medic,"Medic" },
+		{ SpecialAbilityName.LonelyReloader,"Lonely reloader" },
 
 	};
 
@@ -35,6 +37,7 @@ public class SpecialAbilitiesDescriptions {
 		{ SpecialAbilityName.Economist,"Other special abilities costs only 4 points." },
 		{ SpecialAbilityName.LifeSavingExperience,"When leveling up, you recover 5% of your max health." },
 		{ SpecialAbilityName.Medic,"Health bonus recovers 50% more health." },
+		{ SpecialAbilityName.LonelyReloader,"You push enemies away when reloading" },
 
 	};
 }
