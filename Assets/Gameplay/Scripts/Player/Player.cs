@@ -11,7 +11,7 @@ public class Player : Unit {
 
     [SerializeField]  Weapon currentWeapon;
 	ActiveSpecialAbilities activeAbilities;
-	int statPoints = 5;
+	int statPoints = 0;
 	int level = 1;
 
     float timeBetweenDamage = 0.5f;
@@ -75,6 +75,10 @@ public class Player : Unit {
 		if(playerLevelUpEvent != null)
 			playerLevelUpEvent ();
 		audioSource.PlayOneShot (audioSource.clip);
+	}
+
+	void OnDisable() {
+		Enemy.enemyDeathEvent -= getExperienceFromEnemy;
 	}
 
     public Weapon CurrentWeapon
