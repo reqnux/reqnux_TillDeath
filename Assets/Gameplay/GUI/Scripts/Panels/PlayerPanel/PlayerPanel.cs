@@ -6,10 +6,11 @@ public class PlayerPanel : MonoBehaviour {
 	LevelUpIndicator levelUpIndicator;
 
 	void Awake() {
-		levelUpIndicator = GameObject.FindObjectOfType<LevelUpIndicator>();
+		levelUpIndicator = GameObject.Find("PlayerHUD").transform.FindChild("LevelUpIndicator").GetComponent<LevelUpIndicator>();
 	}
 
 	void OnEnable() {
-		levelUpIndicator.setVisible (false);
+		if(levelUpIndicator.isActiveAndEnabled)
+			levelUpIndicator.setVisible (false);
 	}
 }
