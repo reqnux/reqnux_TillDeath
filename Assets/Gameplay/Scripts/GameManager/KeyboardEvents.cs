@@ -3,8 +3,13 @@ using System.Collections;
 
 public class KeyboardEvents : MonoBehaviour {
 
-    public GameObject playerPanel;
-	public GameObject pausePanel;
+    GameObject playerPanel;
+	GameObject pausePanel;
+
+	void Awake() {
+		playerPanel = GameObject.Find ("BasePanel").transform.FindChild ("PlayerPanel").gameObject;
+		pausePanel = GameObject.Find ("BasePanel").transform.FindChild ("PausePanel").gameObject;
+	}
 
     void Update () {
 		if (Input.GetKeyDown(KeyCode.Tab))

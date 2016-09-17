@@ -3,7 +3,11 @@ using System.Collections;
 
 public class PlayerPanel : MonoBehaviour {
 
-	[SerializeField] LevelUpIndicator levelUpIndicator;
+	LevelUpIndicator levelUpIndicator;
+
+	void Awake() {
+		levelUpIndicator = GameObject.FindObjectOfType<LevelUpIndicator>();
+	}
 
 	void OnEnable() {
 		levelUpIndicator.setVisible (false);

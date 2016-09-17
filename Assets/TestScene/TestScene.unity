@@ -500,7 +500,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489296, guid: 702de74fd331882448bf28c798e16148, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148, type: 2}
       propertyPath: currentWeapon

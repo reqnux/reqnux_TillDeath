@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa9101a05f0a47499cc913f01cc7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPanel: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!114 &11441058
 MonoBehaviour:
@@ -88,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112155b18a00ccd49b5f836490e89f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endGamePanel: {fileID: 11472334, guid: fa09432c215d5bd40be8bc34e5b8ea40, type: 2}
+  endGamePanel: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

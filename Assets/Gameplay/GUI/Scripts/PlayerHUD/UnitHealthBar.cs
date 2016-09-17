@@ -9,6 +9,7 @@ public class UnitHealthBar : StateBar {
 
     void Start()
     {
+		unit = GameManager.Player;
         unitStats = unit.Stats;
     }
 

@@ -4,7 +4,13 @@ using System.Collections;
 
 public class MissionGameEventsHandler : MonoBehaviour {
 
-    [SerializeField] EndGamePanel endGamePanel;
+    EndGamePanel endGamePanel;
+
+	void Awake() {
+		endGamePanel = GameObject.Find ("BasePanel").transform.FindChild ("MissionEndGamePanel").GetComponent<MissionEndGamePanel> ();
+		if (endGamePanel == null)
+			Debug.Log ("fszysko chuj");
+	}
 
     void Start () {
         Player.playerDeathEvent += onPlayerDeath;

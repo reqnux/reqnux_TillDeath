@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa9101a05f0a47499cc913f01cc7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPanel: {fileID: 0}
   pausePanel: {fileID: 0}
 --- !u!114 &11410986
 MonoBehaviour:
