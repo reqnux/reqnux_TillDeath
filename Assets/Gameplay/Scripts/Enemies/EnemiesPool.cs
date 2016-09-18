@@ -6,6 +6,7 @@ public class EnemiesPool : MonoBehaviour {
 
 	public static EnemiesPool pool;
 
+	[Header("Prefabs")]
 	[SerializeField] Zombie zombie;
 	[SerializeField] FastZombie fastZombie;
 	[SerializeField] StrongZombie strongZombie;
@@ -13,7 +14,9 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] Zombie zombiePartRight;
 	[SerializeField] Zombie zombiePartLeft;
 	[SerializeField] PoisonZombie poisonZombie;
+	[SerializeField] FuriousZombie furiousZombie;
 
+	[Header("Pool sizes")]
 	[SerializeField] int zombiePoolSize = 30;
 	[SerializeField] int fastPoolSize = 30;
 	[SerializeField] int strongPoolSize = 30;
@@ -21,7 +24,9 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] int rightPoolSize = 30;
 	[SerializeField] int leftPoolSize = 30;
 	[SerializeField] int poisonPoolSize = 30;
+	[SerializeField] int furiousPoolSize = 30;
 
+	[Header("Pools")]
 	[SerializeField] List<Zombie> zombiePool;
 	[SerializeField] List<FastZombie> fastPool;
 	[SerializeField] List<StrongZombie> strongPool;
@@ -29,6 +34,7 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] List<Zombie> rightPool;
 	[SerializeField] List<Zombie> leftPool;
 	[SerializeField] List<PoisonZombie> poisonPool;
+	[SerializeField] List<FuriousZombie> furiousPool;
 
 	void Awake() {
 		pool = this;
@@ -62,6 +68,10 @@ public class EnemiesPool : MonoBehaviour {
 		for (int i = 0; i < poisonPoolSize; i++) {
 			addPoisonToPool ();
 		}
+		furiousPool = new List<FuriousZombie> ();
+		for (int i = 0; i < furiousPoolSize; i++) {
+			addFuriousToPool ();
+		}
 	}
 
 	public Enemy getEnemy(EnemyType type) {
@@ -72,6 +82,7 @@ public class EnemiesPool : MonoBehaviour {
 			case EnemyType.ZOMBIE_PART_RIGHT: return getZombieRightPart ();
 			case EnemyType.ZOMBIE_PART_LEFT: return getZombieLeftPart ();
 			case EnemyType.POISON_ZOMBIE: return getPoisonZombie ();
+			case EnemyType.FURIOUS_ZOMBIE: return getFuriousZombie ();
 			default : return getZombie ();
 		}
 	}
@@ -131,6 +142,13 @@ public class EnemiesPool : MonoBehaviour {
 		}
 		return addPoisonToPool ();
 	}
+	FuriousZombie getFuriousZombie() {
+		for (int i = 0; i < furiousPool.Count; i++) {
+			if (!furiousPool [i].gameObject.activeInHierarchy)
+				return furiousPool [i];
+		}
+		return addFuriousToPool ();
+	}
 
 	Zombie addZombieToPool() {
 		Zombie obj = (Zombie)Instantiate (zombie);
@@ -179,6 +197,13 @@ public class EnemiesPool : MonoBehaviour {
 		PoisonZombie obj = (PoisonZombie)Instantiate (poisonZombie);
 		obj.gameObject.SetActive (false);
 		poisonPool.Add (obj);
+		obj.transform.SetParent (transform);
+		return obj;
+	}
+	FuriousZombie addFuriousToPool() {
+		FuriousZombie obj = (FuriousZombie)Instantiate (furiousZombie);
+		obj.gameObject.SetActive (false);
+		furiousPool.Add (obj);
 		obj.transform.SetParent (transform);
 		return obj;
 	}

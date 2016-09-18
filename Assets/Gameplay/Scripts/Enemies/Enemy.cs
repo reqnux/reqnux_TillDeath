@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum EnemyType {ZOMBIE, FAST_ZOMBIE, STRONG_ZOMBIE, DOUBLE_ZOMBIE, ZOMBIE_PART_RIGHT, ZOMBIE_PART_LEFT, POISON_ZOMBIE}
+public enum EnemyType {
+	ZOMBIE, 
+	FAST_ZOMBIE,
+	STRONG_ZOMBIE,
+	DOUBLE_ZOMBIE, ZOMBIE_PART_RIGHT, ZOMBIE_PART_LEFT, 
+	POISON_ZOMBIE, 
+	FURIOUS_ZOMBIE}
 
 public class Enemy : Unit {
 
