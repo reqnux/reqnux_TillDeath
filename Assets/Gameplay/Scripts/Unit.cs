@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Unit : MonoBehaviour 
-{
+public abstract class Unit : MonoBehaviour , IDamageable{
     [SerializeField] protected UnitStats stats;
 
 	protected virtual void Awake() {
+		stats.CurrentHealth = stats.MaxHealth;
     }
 
     public abstract void death();

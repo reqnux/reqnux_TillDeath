@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour {
     {
         if (col.gameObject.tag == "Enemy")
         {
-            col.gameObject.GetComponent<Enemy>().takeDamage(weapon.Player.Stats.Damage);
+			col.gameObject.GetComponent<IDamageable>().takeDamage(weapon.Player.Stats.Damage);
         }
 		deactivate ();
     }

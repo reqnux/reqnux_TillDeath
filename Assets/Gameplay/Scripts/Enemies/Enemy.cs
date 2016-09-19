@@ -25,7 +25,6 @@ public class Enemy : Unit {
         base.Awake();
 		player = GameManager.Player;
 		availablePickups = GameObject.FindObjectOfType<AvailablePickups> ();
-        stats.CurrentHealth = stats.MaxHealth;
 	}
 
     public override void death() 

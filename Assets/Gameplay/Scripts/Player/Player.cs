@@ -21,8 +21,7 @@ public class Player : Unit {
 	protected override void Awake () 
     {
         base.Awake();
-        stats.CurrentHealth = stats.MaxHealth;
-		activeAbilities = GetComponent<ActiveSpecialAbilities> ();
+        activeAbilities = GetComponent<ActiveSpecialAbilities> ();
 		audioSource = GetComponent<AudioSource> ();
 		Enemy.enemyDeathEvent += getExperienceFromEnemy;
 

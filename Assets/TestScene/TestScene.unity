@@ -873,7 +873,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 497840, guid: 198e42b102961384cb394a5f3eecf8b1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.479787
+      value: -12.31
       objectReference: {fileID: 0}
     - target: {fileID: 497840, guid: 198e42b102961384cb394a5f3eecf8b1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1052,7 +1052,7 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880190512}
---- !u!1001 &913708307
+--- !u!1001 &903978991
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1090,6 +1090,10 @@ Prefab:
     - target: {fileID: 433292, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063380, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
+      propertyPath: m_Mass
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}

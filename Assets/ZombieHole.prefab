@@ -130,6 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f731dbae0a706949822df5d673711f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    damage: 0
+    movementSpeed: 0
+    maxHealth: 50
+    experience: 0
+    increasedItemDropChance: 0
+  appearOnMapTime: 0
 --- !u!212 &21223166
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -23,7 +23,7 @@ public class PiercingBullet : Bullet {
                 e.takeDamage(weapon.Player.Stats.Damage);
             }
             */
-            col.gameObject.GetComponent<Enemy>().takeDamage(weapon.Player.Stats.Damage);
+			col.gameObject.GetComponent<IDamageable>().takeDamage(weapon.Player.Stats.Damage);
 
         }
     }
