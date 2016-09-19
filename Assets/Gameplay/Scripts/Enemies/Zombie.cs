@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Zombie : Enemy {
 
-    public override void Awake () 
+	protected override void Awake () 
     {
         base.Awake();
 		type = EnemyType.ZOMBIE;

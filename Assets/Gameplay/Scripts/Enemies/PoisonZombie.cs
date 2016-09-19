@@ -5,7 +5,7 @@ public class PoisonZombie : Enemy {
 
 	[SerializeField] PoisonCloud poisonCloudPrefab;
 
-	public override void Awake () 
+	protected override void Awake () 
 	{
 		base.Awake();
 		type = EnemyType.POISON_ZOMBIE;

@@ -18,7 +18,7 @@ public class Player : Unit {
     float lastDamageTakenTime;
 	AudioSource audioSource;
 
-    public override void Awake () 
+	protected override void Awake () 
     {
         base.Awake();
         stats.CurrentHealth = stats.MaxHealth;

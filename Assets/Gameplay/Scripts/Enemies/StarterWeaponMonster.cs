@@ -5,7 +5,7 @@ public class StarterWeaponMonster : Enemy {
 
 	[SerializeField] Weapon starterWeapon; 
 
-	public override void Awake () 
+	protected override void Awake () 
 	{
 		base.Awake();
 		type = EnemyType.ZOMBIE;

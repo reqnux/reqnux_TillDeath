@@ -5,7 +5,7 @@ public class DoubleZombie : Enemy {
 
 	float splitRange = 0.5f;
 
-    public override void Awake () 
+	protected override void Awake () 
     {
         base.Awake();
 		type = EnemyType.DOUBLE_ZOMBIE;

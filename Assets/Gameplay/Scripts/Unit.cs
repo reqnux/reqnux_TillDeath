@@ -5,8 +5,7 @@ public abstract class Unit : MonoBehaviour
 {
     [SerializeField] protected UnitStats stats;
 
-    public virtual void Awake() 
-    {
+	protected virtual void Awake() {
     }
 
     public abstract void death();

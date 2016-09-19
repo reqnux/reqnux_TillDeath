@@ -7,7 +7,8 @@ public enum EnemyType {
 	STRONG_ZOMBIE,
 	DOUBLE_ZOMBIE, ZOMBIE_PART_RIGHT, ZOMBIE_PART_LEFT, 
 	POISON_ZOMBIE, 
-	FURIOUS_ZOMBIE}
+	FURIOUS_ZOMBIE
+}
 
 public class Enemy : Unit {
 
@@ -20,8 +21,7 @@ public class Enemy : Unit {
 	protected AvailablePickups availablePickups;
 
 
-	public override void Awake () 
-    {
+	protected override void Awake () {
         base.Awake();
 		player = GameManager.Player;
 		availablePickups = GameObject.FindObjectOfType<AvailablePickups> ();
