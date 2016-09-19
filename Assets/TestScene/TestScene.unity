@@ -1095,6 +1095,14 @@ Prefab:
       propertyPath: m_Mass
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5063380, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063380, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
+      propertyPath: m_LinearDrag
+      value: 769.43
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
   m_IsPrefabParent: 0
@@ -1139,7 +1147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 126642, guid: 351b1d6fdacee7c44905ba4b95ca4505, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 351b1d6fdacee7c44905ba4b95ca4505, type: 2}
