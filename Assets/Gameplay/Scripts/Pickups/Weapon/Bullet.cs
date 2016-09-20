@@ -19,11 +19,14 @@ public class Bullet : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Enemy")
-        {
-			col.gameObject.GetComponent<IDamageable>().takeDamage(weapon.Player.Stats.Damage);
-        }
-		deactivate ();
+			hit (col.gameObject.GetComponent<IDamageable> ());
     }
+
+	//called only by ZombieHole
+	public virtual void hit(IDamageable objectHit) {
+		objectHit.takeDamage(weapon.Player.Stats.Damage);
+		deactivate ();
+	}
 
 	void OnDisable() {
 		CancelInvoke ();

@@ -3,32 +3,20 @@ using System.Collections.Generic;
 
 public class PiercingBullet : Bullet {
 
-    private List<Enemy> hitEnemies;
-
-	void Awake() {
-		hitEnemies = new List<Enemy>();
-	}
-
     protected override void OnEnable() {
 		base.OnEnable();
-		hitEnemies.Clear ();
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if(col.gameObject.tag == "Enemy") {
-           /* if(!hitEnemies.Contains(col.gameObject.GetComponent<Enemy>())) {
-                hitEnemies.Add(col.gameObject.GetComponent<Enemy>());
-            }
-            foreach(Enemy e in hitEnemies) {
-                e.takeDamage(weapon.Player.Stats.Damage);
-            }
-            */
+		if(col.gameObject.tag == "Enemy" && !col.isTrigger)
 			col.gameObject.GetComponent<IDamageable>().takeDamage(weapon.Player.Stats.Damage);
-
-        }
     }
-	public override Weapon Weapon 
-	{
+
+	// empty, beacuse PiercingBullet can detect all objects
+	// and hit() is used only by ZombieHole
+	public override void hit(IDamageable objectHit) {}
+
+	public override Weapon Weapon {
 		set { weapon = value;
 			GetComponentInChildren<ParticleSystem> ().startSpeed = weapon.BulletSpeed*0.75f;}
 	}
