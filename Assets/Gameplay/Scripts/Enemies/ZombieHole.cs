@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZombieHole : Unit {
+public class ZombieHole : Enemy {
 
 	[SerializeField] float appearOnMapTime;
 
@@ -18,10 +18,21 @@ public class ZombieHole : Unit {
 	}
 
 	public override void death() {
-		Destroy (gameObject);
+		deathEvent();
+		disappear ();
 	}
 
 	public void appearOnMap() {
-		
+		GetComponent<Animator> ().enabled = true;//.Play ("ZombieHoleAppear");
+		Invoke ("activateSpawner", GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length);
 	}
+	void disappear() {
+		GetComponent<Animator>().Play ("ZombieHoleDisappear");
+		Destroy (gameObject, 1f);
+	}
+
+	void activateSpawner() {
+		GetComponent<ZombieHoleSpawner> ().enabled = true;
+	}
+
 }

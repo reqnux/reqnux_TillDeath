@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc64bfa788a2a4942b415c9a1ea4f5b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 7
   magazineSize: 60
   bulletType: 0
   fireMode: 0
@@ -427,6 +427,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: magazineSize
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
