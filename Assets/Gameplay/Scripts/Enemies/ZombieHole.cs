@@ -27,8 +27,10 @@ public class ZombieHole : Enemy {
 		Invoke ("activateSpawner", GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length);
 	}
 	void disappear() {
+		GetComponent<CircleCollider2D> ().enabled = false;
 		GetComponent<Animator>().Play ("ZombieHoleDisappear");
-		Destroy (gameObject, 1f);
+		GetComponent<AudioSource> ().Play ();
+		Destroy (gameObject, GetComponent<AudioSource> ().clip.length);
 	}
 
 	void activateSpawner() {
