@@ -13,4 +13,7 @@ public class LifeSavingExperienceAbility : SpecialAbility {
 	void onLevelUp() {
 		player.heal (player.Stats.MaxHealth * lifeRecoveredPercentage / 100);
 	}
+	void OnDisable() {
+		Player.playerLevelUpEvent -= onLevelUp;
+	}
 }

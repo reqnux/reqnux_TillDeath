@@ -26,5 +26,10 @@ public class LevelUpIndicator : MonoBehaviour {
 	void onLevelUp() {
 		setVisible(true);
 	}
+
+	void OnDestroy() {
+		Player.playerLevelUpEvent -= onLevelUp;
+	}
+
 }
 
