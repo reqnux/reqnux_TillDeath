@@ -60,8 +60,13 @@ public class RandomEnemyMovement : UnitMovement {
 
     private Vector3 randomPoint() 
     {
-        return new Vector3(Random.Range (-map.XMovementRange, map.XMovementRange),
-            Random.Range (-map.YMovementRange, map.YMovementRange), 0);
+		float x = player.transform.position.x + Random.Range (-map.XMovementRange / 2, map.XMovementRange / 2);
+		x = Mathf.Clamp (x, -map.XMovementRange, map.XMovementRange);
+		float y = player.transform.position.y + Random.Range (-map.YMovementRange / 2, map.YMovementRange / 2);
+		y = Mathf.Clamp (y, -map.YMovementRange, map.YMovementRange);
+		return new Vector3 (x, y, 0);
+        //return new Vector3(Random.Range (-map.XMovementRange, map.XMovementRange),
+        //    Random.Range (-map.YMovementRange, map.YMovementRange), 0);
     }
 
     private bool ifPlayerInAggro()

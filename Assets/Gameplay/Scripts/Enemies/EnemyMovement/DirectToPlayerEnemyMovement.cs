@@ -9,6 +9,7 @@ public class DirectToPlayerEnemyMovement : UnitMovement {
 	void Start () {
 		player = GameManager.Player;
 		movingUnit = GetComponent<Unit>();
+		unitRigidbody = GetComponent<Rigidbody2D> ();
 	}
 	
 	protected override void OnEnable()
@@ -24,6 +25,6 @@ public class DirectToPlayerEnemyMovement : UnitMovement {
 	protected override void move() 
 	{
 		lookAtTarget(player.transform.position);
-		GetComponent<Rigidbody2D>().velocity = transform.up * movingUnit.Stats.MovementSpeed;
+		unitRigidbody.velocity = transform.up * movingUnit.Stats.MovementSpeed;
 	}
 }

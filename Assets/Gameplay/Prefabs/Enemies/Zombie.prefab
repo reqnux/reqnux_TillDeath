@@ -28,7 +28,7 @@ GameObject:
   - 58: {fileID: 5868806}
   - 114: {fileID: 11456192}
   - 114: {fileID: 11488054}
-  - 114: {fileID: 11457088}
+  - 114: {fileID: 11490668}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy
@@ -110,19 +110,6 @@ MonoBehaviour:
     experience: 170
     increasedItemDropChance: 5
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
---- !u!114 &11457088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc85f595ec1836c4da0badeef0fde988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aggroRange: 3
-  chaseTime: 1
 --- !u!114 &11488054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +121,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb850f83fbcdb40bfd4f6485e459e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11490668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673ec896cf00e56449f2bec5f37f4bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroRange: 3
+  chaseTime: 1
+  bigRadius: 0
+  smallRadius: 0
 --- !u!212 &21231562
 SpriteRenderer:
   m_ObjectHideFlags: 1

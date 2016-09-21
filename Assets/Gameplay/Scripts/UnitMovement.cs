@@ -3,6 +3,8 @@ using System.Collections;
 
 public class UnitMovement : MonoBehaviour {
 
+	protected Rigidbody2D unitRigidbody;
+
     protected virtual void OnEnable()
     {
         GameManager.gameStopEvent += disableMovement;
