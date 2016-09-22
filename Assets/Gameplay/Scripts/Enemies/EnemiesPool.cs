@@ -88,7 +88,7 @@ public class EnemiesPool : MonoBehaviour {
 	}
 	public Enemy getRandomEnemy() {
 		EnemyType random = (EnemyType)Random.Range (0, EnemyType.GetNames (typeof(EnemyType)).Length);
-		while(random == EnemyType.ZOMBIE_PART_LEFT || random == EnemyType.ZOMBIE_PART_RIGHT)
+		while(random == EnemyType.ZOMBIE_PART_LEFT || random == EnemyType.ZOMBIE_PART_RIGHT || random == EnemyType.FURIOUS_ZOMBIE)
 			random = (EnemyType)Random.Range (0, EnemyType.GetNames (typeof(EnemyType)).Length);
 		return getEnemy (random);
 	}
