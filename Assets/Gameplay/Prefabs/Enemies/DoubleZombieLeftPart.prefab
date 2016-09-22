@@ -137,12 +137,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 133994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a67f5ab6e3541245ac468ab5cf29d2c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cd73b04b37a2894bb5f036bfcd844b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 5
-  chaseTime: 4
-  targetResetDistance: 5
 --- !u!212 &21267458
 SpriteRenderer:
   m_ObjectHideFlags: 1

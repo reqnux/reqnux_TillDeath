@@ -28,7 +28,7 @@ GameObject:
   - 60: {fileID: 6065478}
   - 114: {fileID: 11487068}
   - 114: {fileID: 11456998}
-  - 114: {fileID: 11440276}
+  - 114: {fileID: 11445124}
   m_Layer: 10
   m_Name: DoubleZombie
   m_TagString: Enemy
@@ -104,7 +104,7 @@ PolygonCollider2D:
       - {x: -0.5889275, y: 0.11876319}
       - {x: -0.60811305, y: 0.35914248}
       - {x: -0.51454365, y: 0.37851334}
---- !u!114 &11440276
+--- !u!114 &11445124
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -112,11 +112,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 157678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc85f595ec1836c4da0badeef0fde988, type: 3}
+  m_Script: {fileID: 11500000, guid: 673ec896cf00e56449f2bec5f37f4bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aggroRange: 3
   chaseTime: 1
+  bigRadius: 0
+  smallRadius: 0
 --- !u!114 &11456998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +147,6 @@ MonoBehaviour:
     maxHealth: 15
     experience: 0
     increasedItemDropChance: 0
-  player: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148, type: 2}
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!212 &21256672
 SpriteRenderer:

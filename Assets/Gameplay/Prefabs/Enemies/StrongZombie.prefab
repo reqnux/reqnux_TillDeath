@@ -12,7 +12,7 @@ GameObject:
   - 58: {fileID: 5820824}
   - 114: {fileID: 11487364}
   - 114: {fileID: 11442704}
-  - 114: {fileID: 11489814}
+  - 114: {fileID: 11420828}
   m_Layer: 10
   m_Name: StrongZombie
   m_TagString: Enemy
@@ -92,6 +92,21 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &11420828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673ec896cf00e56449f2bec5f37f4bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroRange: 3
+  chaseTime: 1
+  bigRadius: 0
+  smallRadius: 0
 --- !u!114 &11442704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,19 +136,6 @@ MonoBehaviour:
     experience: 230
     increasedItemDropChance: 7
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
---- !u!114 &11489814
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc85f595ec1836c4da0badeef0fde988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aggroRange: 3
-  chaseTime: 1
 --- !u!212 &21244472
 SpriteRenderer:
   m_ObjectHideFlags: 1

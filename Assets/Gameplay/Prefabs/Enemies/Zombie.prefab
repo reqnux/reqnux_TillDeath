@@ -27,8 +27,8 @@ GameObject:
   - 50: {fileID: 5024212}
   - 58: {fileID: 5868806}
   - 114: {fileID: 11456192}
-  - 114: {fileID: 11488054}
   - 114: {fileID: 11490668}
+  - 114: {fileID: 11488054}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy

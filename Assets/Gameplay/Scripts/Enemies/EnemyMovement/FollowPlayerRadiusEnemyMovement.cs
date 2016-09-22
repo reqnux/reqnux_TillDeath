@@ -6,32 +6,28 @@ public class FollowPlayerRadiusEnemyMovement : UnitMovement {
     Player player;
     Unit movingUnit;
 
-    [SerializeField]  float aggroRange = 3;
-    [SerializeField]  float chaseTime = 1; //chase time after entering aggroRange
+    [SerializeField] float aggroRange = 3;
+    [SerializeField] float chaseTime = 1; //chase time after entering aggroRange
 
-	[SerializeField]float bigRadius; // map.XMovementRange / 2
-	[SerializeField]float smallRadius;
-	float currentRadius;
+	float baseRadius; // map.XMovementRange / 2
+	Vector3 basePointToFollow;
 	Vector3 currentPointToFollow;
-
-	enum Radius {big,small};
-	Radius radius;
 
 	Map map;
 	Vector3 movementDirection;
     bool flagChasing;
     float chaseAwakeTime;
 
-    void Awake() 
-    {
+    void Awake() {
 		player = GameManager.Player;
         movingUnit = GetComponent<Unit>();
 		unitRigidbody = GetComponent<Rigidbody2D> ();
 		map = GameObject.FindObjectOfType<Map>();
-		bigRadius = map.XMovementRange/2;
-		smallRadius = bigRadius * 0.75f;
+		baseRadius = map.XMovementRange/2;
 
-		setPointToFollow();
+		randomizeMovement ();
+		setBasePointToFollow();
+		setCurrentPointToFollow (distanceToPlayer ());
 		movementDirection = player.transform.position + currentPointToFollow;
     }
 
@@ -57,16 +53,14 @@ public class FollowPlayerRadiusEnemyMovement : UnitMovement {
             if(flagChasing) {
                 if(Time.time > chaseAwakeTime + chaseTime) {
                     flagChasing = false;
-					setPointToFollow ();
+					setCurrentPointToFollow (distanceToPlayer ());
 					movementDirection = player.transform.position + currentPointToFollow;
                 } else {
                     movementDirection = player.transform.position;
                 }
             } 
             else {
-				if (checkFollowPointChange ()) {
-					setPointToFollow ();
-				}
+				setCurrentPointToFollow (distanceToPlayer ());
 				movementDirection = player.transform.position + currentPointToFollow;
             }
         }
@@ -74,29 +68,24 @@ public class FollowPlayerRadiusEnemyMovement : UnitMovement {
 		unitRigidbody.velocity = transform.up * movingUnit.Stats.MovementSpeed;
     }
 
-	bool checkFollowPointChange() {
-		return (transform.position - movementDirection).magnitude < 0.3f
-			|| (distanceToPlayer () <= smallRadius && radius == Radius.big)
-			|| (distanceToPlayer () > smallRadius && radius == Radius.small);
-	}
-
-	void setPointToFollow() {
-		setCurrentRadius ();
-		float x = Random.Range (-currentRadius, currentRadius);
-		float y = Random.Range (-currentRadius, currentRadius);
+	void setBasePointToFollow() {
+		float x = Random.Range (-baseRadius, baseRadius);
+		float y = Random.Range (-baseRadius, baseRadius);
 		Vector3 direction = new Vector3 (x, y, 0);
 		direction.Normalize();
-		currentPointToFollow = direction * currentRadius;
+		basePointToFollow = direction * baseRadius;
+	}
+	void setCurrentPointToFollow(float radius) {
+		radius = Mathf.Clamp (radius, aggroRange, baseRadius);
+		radius -= 0.3f;
+		currentPointToFollow = basePointToFollow.normalized * radius;
 	}
 
-	void setCurrentRadius() {
-		if (distanceToPlayer () > smallRadius) {
-			currentRadius = bigRadius + Random.Range (-bigRadius / 10, bigRadius / 10);
-			radius = Radius.big;
-		} else {
-			currentRadius = smallRadius + Random.Range (-smallRadius / 10, smallRadius / 10);
-			radius = Radius.small;
-		}
+	void randomizeMovement() {
+		float randomisationPercentage = 0.20f;
+		baseRadius = baseRadius + Random.Range (-baseRadius * randomisationPercentage, baseRadius * randomisationPercentage);
+		aggroRange = aggroRange + Random.Range (-aggroRange * randomisationPercentage, aggroRange * randomisationPercentage);
+		chaseTime = chaseTime + Random.Range (-chaseTime * randomisationPercentage, chaseTime * randomisationPercentage); 
 	}
 
     bool ifPlayerInAggro() {
