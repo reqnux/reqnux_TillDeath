@@ -600,7 +600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].enemyCount
-      value: 110
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].spawnType
@@ -612,7 +612,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].enemyCount
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].startTime

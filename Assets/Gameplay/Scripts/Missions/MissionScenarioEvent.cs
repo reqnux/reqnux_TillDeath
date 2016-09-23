@@ -11,6 +11,7 @@ public class MissionScenarioEvent {
 	public float duration;
 	public EnemyType enemyType;
 	public int enemyCount;
+	public SpawnSide spawnSide;
 
 	MissionSpawner spawner;
 	float timeBetweenSpawns = 1;
@@ -33,7 +34,7 @@ public class MissionScenarioEvent {
 
 	public void execute() {
 		if (spawnType == SpawnType.INSTANT)
-			spawner.spawnEnemies (enemyType, enemyCount);
+			spawner.spawnEnemies (enemyType, enemyCount,spawnSide);
 		else 
 			executeOverTimeEvent ();
 		checkFinish ();
@@ -41,12 +42,12 @@ public class MissionScenarioEvent {
 
 	void executeOverTimeEvent() {
 		if (enemiesLeft > 0 && Time.timeSinceLevelLoad > lastEnemiesLeftSpawnTime + timeBetweenEnemiesLeftSpawns) {
-			spawner.spawnEnemy (enemyType);
+			spawner.spawnEnemy (enemyType,spawnSide);
 			lastEnemiesLeftSpawnTime = Time.timeSinceLevelLoad;
 			spawnedEnemies++;
 		}
 		if (Time.timeSinceLevelLoad > lastSpawnTime + timeBetweenSpawns) {
-			spawner.spawnEnemies (enemyType,enemiesPerSecondFloor);
+			spawner.spawnEnemies (enemyType,enemiesPerSecondFloor,spawnSide);
 			spawnedEnemies += enemiesPerSecondFloor;
 			lastSpawnTime = Time.timeSinceLevelLoad;
 		}

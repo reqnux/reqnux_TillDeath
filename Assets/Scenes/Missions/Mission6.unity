@@ -665,7 +665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].enemyCount
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[4].spawnType
@@ -681,7 +681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[4].enemyCount
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[5].spawnType
@@ -697,7 +697,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[5].enemyCount
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].startTime

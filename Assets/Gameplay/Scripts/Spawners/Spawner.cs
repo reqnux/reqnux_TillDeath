@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum SpawnSide {ANY, TOP, BOT, RIGHT, LEFT}
+
 public abstract class Spawner : MonoBehaviour {
 
 	[SerializeField] protected bool isActive = true;
@@ -17,43 +19,34 @@ public abstract class Spawner : MonoBehaviour {
         GameManager.gameStopEvent -= disable;
     }
 
-    protected void spawnRandomEnemy()
+	protected void spawnRandomEnemy(SpawnSide side)
     {
-		//Enemy enemy = (Enemy) Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], getSpawnPosition(), transform.rotation);
 		Enemy enemy = EnemiesPool.pool.getRandomEnemy();
-		enemy.transform.position = getSpawnPosition();
+		enemy.transform.position = getSpawnPosition(side);
 		enemy.transform.rotation = Quaternion.identity;
 		enemy.gameObject.SetActive (true);
     }
 
-	protected Vector3 getSpawnPosition()
+	protected Vector3 getSpawnPosition(SpawnSide side)
 	{
-		float x, y;
-		if (Random.value > 0.5f)
-		{
-			x = map.XMovementRange + 1;
-			y = Random.Range(-map.YMovementRange - 1, map.YMovementRange + 1);
-			if (Random.value > 0.5f)
-				x *= -1;
-		}
-		else
-		{
-			x = Random.Range(-map.XMovementRange - 1, map.XMovementRange + 1);
-			y = map.YMovementRange + 1;
-			if (Random.value > 0.5f)
-				y *= -1;
+		float x = 0;
+		float y = 0;
+
+		if (side == SpawnSide.ANY)
+			side = (SpawnSide)Random.Range (1, SpawnSide.GetNames (typeof(SpawnSide)).Length);
+
+		switch (side) {
+			case SpawnSide.TOP:
+				y = map.YMovementRange + 1; x = Random.Range(-map.XMovementRange - 1, map.XMovementRange + 1); break;
+			case SpawnSide.BOT:
+				y = -map.YMovementRange - 1; x = Random.Range(-map.XMovementRange - 1, map.XMovementRange + 1); break;
+			case SpawnSide.RIGHT: 
+				x = map.XMovementRange + 1; y = Random.Range(-map.YMovementRange - 1, map.YMovementRange + 1); break;
+			case SpawnSide.LEFT:
+				x = -map.XMovementRange - 1; y = Random.Range(-map.YMovementRange - 1, map.YMovementRange + 1); break;
 		}
 		return new Vector3(x, y, 0);
 	}
-
-	/*protected Enemy getEnemyByType(EnemyType type) {
-		foreach (Enemy e in enemyPrefabs) {
-			if (e.Type == type)
-				return e;
-		}
-		Debug.LogError ("MissionSpawner.getEnemyByType() : enemyPrefabs does not contain this type of enemy " + type.ToString ());
-		return null;
-	}*/
 
     public void disable()
     {

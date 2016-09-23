@@ -20,7 +20,7 @@ public class SurvivalSpawner : Spawner {
     {
         if (isActive && Time.timeSinceLevelLoad > lastSpawnTime + getTimeBetweenSpawns())
         {
-            spawnRandomEnemy();
+			spawnRandomEnemy(SpawnSide.ANY);
             lastSpawnTime = Time.timeSinceLevelLoad;
             monstersPerMinute = getMonstersPerMinute();
         }

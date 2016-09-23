@@ -5,7 +5,7 @@ using System.Collections;
 [CustomPropertyDrawer(typeof(MissionScenarioEvent))]
 public class ScenarioEventDrawer : PropertyDrawer {
 
-	int rows = 3;
+	int rows = 4;
 
 	// Draw the property inside the given rect
 	public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -29,6 +29,7 @@ public class ScenarioEventDrawer : PropertyDrawer {
 		Rect durationRect = new Rect(pos.x+enumWidth + 2, pos.y + rowHeight+2, floatWidth, rowHeight);
 		Rect enemyTypeRect = new Rect(pos.x, pos.y + 2*rowHeight+4, enumWidth, rowHeight);
 		Rect enemyCountRect = new Rect(pos.x+enumWidth+2, pos.y + 2*rowHeight+4, floatWidth, rowHeight);
+		Rect spawnSideRect = new Rect(pos.x, pos.y + 3*rowHeight+6, floatWidth, rowHeight);
 
 		// Draw fields - passs GUIContent.none to each so they are drawn without labels
 		EditorGUI.PropertyField(startTimeRect, property.FindPropertyRelative ("startTime"));
@@ -39,6 +40,7 @@ public class ScenarioEventDrawer : PropertyDrawer {
 			EditorGUI.PropertyField(durationRect, property.FindPropertyRelative ("duration"),GUIContent.none);
 		EditorGUI.PropertyField(enemyTypeRect, property.FindPropertyRelative ("enemyType"),GUIContent.none);
 		EditorGUI.PropertyField(enemyCountRect, property.FindPropertyRelative ("enemyCount"),GUIContent.none);
+		EditorGUI.PropertyField(spawnSideRect, property.FindPropertyRelative ("spawnSide"),GUIContent.none);
 
 		// Set indent back to what it was
 		EditorGUI.indentLevel = indent;
