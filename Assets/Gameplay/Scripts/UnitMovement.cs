@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnitMovement : MonoBehaviour {
+public abstract class UnitMovement : MonoBehaviour {
 
 	protected Rigidbody2D unitRigidbody;
 
@@ -20,9 +20,7 @@ public class UnitMovement : MonoBehaviour {
         move();
     }
 
-    protected virtual void move() {
-
-    }
+	protected abstract void move ();
 
     protected void lookAtTarget(Vector3 targetLocation) {
         Vector3 diff =  targetLocation - transform.position;

@@ -38,7 +38,7 @@ public class DodgingEnemyMovement : UnitMovement {
 	{
 		lookAtTarget(player.transform.position);
 		transform.Rotate (new Vector3 (0, 0, dodgeDirection * dodgeAreaWidth *Mathf.Sin (distanceToPlayer ())));
-		GetComponent<Rigidbody2D>().velocity = transform.up * movingUnit.Stats.MovementSpeed;
+		GetComponent<Rigidbody2D>().velocity = transform.up * movingUnit.Stats.MovementSpeed/10;
 		tryDirectionChange ();
 	}
 

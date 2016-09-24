@@ -47,7 +47,7 @@ public class PlayerController : UnitMovement {
         else
             verticalMovement = 0;
 
-        playerRigidbody.velocity = new Vector2(horizontalMovement,verticalMovement).normalized *(player.Stats.MovementSpeed);
+        playerRigidbody.velocity = new Vector2(horizontalMovement,verticalMovement).normalized *player.Stats.MovementSpeed/10;
         playerRigidbody.position = new Vector2 (Mathf.Clamp (playerRigidbody.position.x, -map.XMovementRange, map.XMovementRange),
                                                 Mathf.Clamp (playerRigidbody.position.y, -map.YMovementRange, map.YMovementRange));
         lookAtTarget(Camera.main.ScreenToWorldPoint (Input.mousePosition));

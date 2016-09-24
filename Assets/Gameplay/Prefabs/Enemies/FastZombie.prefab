@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     damage: 3
-    movementSpeed: 2
+    movementSpeed: 25
     maxHealth: 5
     experience: 180
     itemDropChance: 5
@@ -257,7 +257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: stats.movementSpeed
-      value: 2
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: stats.itemDropChance

@@ -25,6 +25,6 @@ public class DirectToPlayerEnemyMovement : UnitMovement {
 	protected override void move() 
 	{
 		lookAtTarget(player.transform.position);
-		unitRigidbody.velocity = transform.up * movingUnit.Stats.MovementSpeed;
+		unitRigidbody.velocity = transform.up * movingUnit.Stats.MovementSpeed/10;
 	}
 }

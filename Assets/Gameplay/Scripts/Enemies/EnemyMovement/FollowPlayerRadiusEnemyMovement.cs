@@ -65,7 +65,7 @@ public class FollowPlayerRadiusEnemyMovement : UnitMovement {
             }
         }
         lookAtTarget(movementDirection);
-		unitRigidbody.velocity = transform.up * movingUnit.Stats.MovementSpeed;
+		unitRigidbody.velocity = transform.up * movingUnit.Stats.MovementSpeed/10;
     }
 
 	void setBasePointToFollow() {

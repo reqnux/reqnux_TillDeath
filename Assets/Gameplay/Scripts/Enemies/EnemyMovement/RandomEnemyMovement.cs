@@ -55,7 +55,7 @@ public class RandomEnemyMovement : UnitMovement {
             
         }
         lookAtTarget(movementDirection);
-        GetComponent<Rigidbody2D>().velocity = transform.up * movingUnit.Stats.MovementSpeed;
+        GetComponent<Rigidbody2D>().velocity = transform.up * movingUnit.Stats.MovementSpeed/10;
     }
 
     private Vector3 randomPoint() 
@@ -65,8 +65,6 @@ public class RandomEnemyMovement : UnitMovement {
 		float y = player.transform.position.y + Random.Range (-map.YMovementRange / 2, map.YMovementRange / 2);
 		y = Mathf.Clamp (y, -map.YMovementRange, map.YMovementRange);
 		return new Vector3 (x, y, 0);
-        //return new Vector3(Random.Range (-map.XMovementRange, map.XMovementRange),
-        //    Random.Range (-map.YMovementRange, map.YMovementRange), 0);
     }
 
     private bool ifPlayerInAggro()

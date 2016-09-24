@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 10
-  speedBoost: 0.7
+  speedBoost: 0.6
 --- !u!212 &21231904
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -205,7 +205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speedBoost
-      value: 0.7
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
