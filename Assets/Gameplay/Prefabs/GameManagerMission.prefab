@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11446592}
   - 114: {fileID: 11411876}
   - 114: {fileID: 11415590}
+  - 114: {fileID: 11482316}
   m_Layer: 0
   m_Name: GameManagerMission
   m_TagString: GameManager
@@ -54,8 +55,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa9101a05f0a47499cc913f01cc7d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPanel: {fileID: 0}
-  pausePanel: {fileID: 0}
 --- !u!114 &11441058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +88,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112155b18a00ccd49b5f836490e89f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endGamePanel: {fileID: 0}
+--- !u!114 &11482316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef8c2f5a572e614c8e627e0728e0918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

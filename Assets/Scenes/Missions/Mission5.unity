@@ -570,6 +570,26 @@ Prefab:
       propertyPath: scenarioEvents.Array.data[1].spawnSide
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11464418, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
+      propertyPath: weapons.Array.data[0].available
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464418, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
+      propertyPath: weapons.Array.data[4].available
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464418, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
+      propertyPath: weapons.Array.data[2].available
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464418, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
+      propertyPath: bonuses.Array.data[1].available
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464418, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
+      propertyPath: bonuses.Array.data[5].available
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
   m_IsPrefabParent: 0
@@ -704,53 +724,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 858549aa0f41e7e4280c6ecbd5ee8293, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1801444883
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -16.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 428858, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11446554, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
-      propertyPath: starterWeapon
-      value: 
-      objectReference: {fileID: 11463664, guid: b4fce2065076a4746af7cc334de9ab93,
-        type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: bb980ef29f3b58c4bb13db5320e2738c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1874022814
 Prefab:

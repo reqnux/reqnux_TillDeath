@@ -29,8 +29,8 @@ public class Enemy : Unit {
 
     public override void death() 
     {
+		deathEvent();
         dropRandomItem();
-        deathEvent();
 		gameObject.SetActive (false);
 		reset ();
     }
@@ -51,8 +51,8 @@ public class Enemy : Unit {
     }
 	protected void dropRandomItem()
 	{
-		if (availablePickups.itemsAvailable() 
-			&& Random.Range (0, 100) < stats.IncreasedItemDropChance + player.Stats.IncreasedItemDropChance) {
+		if (availablePickups.anyItemsAvailable() 
+			&& Random.Range (0, 100) < stats.ItemDropChance + player.Stats.ItemDropChance) {
 			Instantiate(availablePickups.getRandomItem(), transform.position, Quaternion.identity);
 		}
 	}

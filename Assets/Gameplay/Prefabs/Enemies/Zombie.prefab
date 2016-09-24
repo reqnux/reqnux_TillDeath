@@ -108,7 +108,7 @@ MonoBehaviour:
     movementSpeed: 1
     maxHealth: 7
     experience: 170
-    increasedItemDropChance: 5
+    itemDropChance: 5
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!114 &11488054
 MonoBehaviour:
@@ -134,8 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 3
   chaseTime: 1
-  bigRadius: 0
-  smallRadius: 0
 --- !u!212 &21231562
 SpriteRenderer:
   m_ObjectHideFlags: 1

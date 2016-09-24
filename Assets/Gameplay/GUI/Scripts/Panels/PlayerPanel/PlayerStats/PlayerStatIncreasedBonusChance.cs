@@ -7,16 +7,16 @@ public class PlayerStatIncreasedBonusChance : PlayerStat {
 		pointsAddedWhilePanelOpen++;
 		totalPointAdded++;
 		player.StatPoints--;
-		player.Stats.StatPointsIncreasedItemDropChance += (int)statPerPoint;
+		player.Stats.StatPointsItemDropChance += (int)statPerPoint;
 	}
 	public override void removePoint () {
 		pointsAddedWhilePanelOpen--;
 		totalPointAdded--;
 		player.StatPoints++;
-		player.Stats.StatPointsIncreasedItemDropChance -= (int)statPerPoint;
+		player.Stats.StatPointsItemDropChance -= (int)statPerPoint;
 	}
 
 	protected override void setValue() {
-		valueText.text = player.Stats.IncreasedItemDropChance.ToString() + "%";
+		valueText.text = player.Stats.ItemDropChance.ToString() + "%";
 	}
 }

@@ -399,7 +399,7 @@ MonoBehaviour:
     damage: 0
     movementSpeed: 0
     maxHealth: 200
-    experience: 400
+    experience: 1000
     increasedItemDropChance: 0
   bloodPrefab: {fileID: 0}
   appearOnMapTime: 2
@@ -4964,6 +4964,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: stats.experience
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

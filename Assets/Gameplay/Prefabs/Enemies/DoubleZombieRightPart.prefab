@@ -140,7 +140,7 @@ MonoBehaviour:
     movementSpeed: 3
     maxHealth: 5
     experience: 170
-    increasedItemDropChance: 5
+    itemDropChance: 5
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!212 &21251374
 SpriteRenderer:

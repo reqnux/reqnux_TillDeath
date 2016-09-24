@@ -123,7 +123,7 @@ MonoBehaviour:
     movementSpeed: 4
     maxHealth: 5
     experience: 200
-    increasedItemDropChance: 5
+    itemDropChance: 7
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
 --- !u!114 &11486188
 MonoBehaviour:
@@ -198,6 +198,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: stats.itemDropChance
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 171200}
