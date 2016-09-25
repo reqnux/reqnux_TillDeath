@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AdrenalineRushAbility : SpecialAbility {
 
-	[SerializeField] int speedGained;
+	[SerializeField][Range(0,1)] float speedPercentageGained;
 	[SerializeField] float duration;
 
 	public override void onDamageTaken() {
@@ -11,8 +11,8 @@ public class AdrenalineRushAbility : SpecialAbility {
 	}
 
 	IEnumerator inreaseSpeed() {
-		player.Stats.BonusMovementSpeed += speedGained;
+		player.Stats.BonusMovementSpeed += player.Stats.BonusMovementSpeed*speedPercentageGained;
 		yield return new WaitForSeconds (duration);
-		player.Stats.BonusMovementSpeed -= speedGained;
+		player.Stats.BonusMovementSpeed -= player.Stats.BonusMovementSpeed*speedPercentageGained;
 	}
 }
