@@ -4,7 +4,8 @@ using System.Collections;
 public enum BulletType
 {
 	STANDARD,
-	PIERCING
+	PIERCING,
+	GRANDADE
 }
 
 public class Bullet : MonoBehaviour {
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour {
 			hit (col.gameObject.GetComponent<IDamageable> ());
     }
 
-	//called only by ZombieHole
+	//called from outside only by ZombieHole
 	public virtual void hit(IDamageable objectHit) {
 		objectHit.takeDamage(weapon.Player.Stats.Damage);
 		deactivate ();
@@ -32,7 +33,7 @@ public class Bullet : MonoBehaviour {
 		CancelInvoke ();
 	}
 
-	void deactivate() {
+	protected void deactivate() {
 		gameObject.SetActive (false);
 	}
 

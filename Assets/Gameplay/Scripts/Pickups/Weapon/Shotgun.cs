@@ -19,7 +19,6 @@ public class Shotgun : Weapon {
 	public override void shoot() {
 		if (canShoot())
 		{
-			Debug.Log ("local pos = " + gunEndingPos);
 			gunEnding.Rotate(new Vector3(0, 0, -shotConeWidth / 2));
 			for (int i = 0; i < bulletsPerShot; i++)
 			{

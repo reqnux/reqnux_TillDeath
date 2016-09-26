@@ -10,7 +10,7 @@ public class ZombieHole : Enemy {
 		Invoke ("appearOnMap", appearOnMapTime);
 	}
 
-	// Bullet detection here, because kinematic rigidbody colliders(bullets int this case) can't detect 
+	// Bullet detection here, because kinematic rigidbody colliders(bullets in this case) can't detect 
 	// collision with another kinematic rigidbodies, so ZombieHole has to detect bullets on it's own.
 	// ZombieHole triggers only StandardBullets, because PiercingBullets can detect ZombieHole.
 	void OnTriggerEnter2D(Collider2D col) {

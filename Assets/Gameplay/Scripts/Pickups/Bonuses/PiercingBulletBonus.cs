@@ -32,7 +32,9 @@ public class PiercingBulletBonus  : Bonus {
         base.activate();
 		currentWeapon = player.CurrentWeapon;
 		currentWeaponBulletType = currentWeapon.BulletType;
-		currentWeapon.BulletType = BulletType.PIERCING;
+		if (currentWeapon.BulletType != BulletType.GRANDADE) {
+			currentWeapon.BulletType = BulletType.PIERCING;
+		}
     }
     public override void deactivate()
     {

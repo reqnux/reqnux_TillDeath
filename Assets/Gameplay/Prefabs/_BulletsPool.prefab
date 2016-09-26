@@ -41,10 +41,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardPrefab: {fileID: 11458474, guid: 7359f833c09c38a41aae66a3aa525396, type: 2}
   piercingPrefab: {fileID: 11413234, guid: 01df2b83e0b71024cbd03f1ad024c5e1, type: 2}
+  granadePrefab: {fileID: 11424238, guid: dc2aaefcef5f3b441aff281fff9669ae, type: 2}
+  explosionPrefab: {fileID: 11490578, guid: 056baa3114544514e92bfbd557e92a40, type: 2}
   standardPoolSize: 30
   piercingPoolSize: 30
+  granadePoolSize: 20
+  explosionPoolSize: 20
   standardPool: []
   piercingPool: []
+  granadePool: []
+  explosionPool: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
