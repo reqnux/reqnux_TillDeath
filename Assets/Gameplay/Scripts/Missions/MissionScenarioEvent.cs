@@ -4,7 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class MissionScenarioEvent {
 
-	public enum SpawnType {INSTANT, OVER_TIME}
+	public enum SpawnType {INSTANT, OVER_TIME, UNTIL_SPECIAL_ENEMY_DEATH}
 
 	public float startTime;
 	public SpawnType spawnType;
@@ -24,12 +24,19 @@ public class MissionScenarioEvent {
 	float lastEnemiesLeftSpawnTime;
 	float timeBetweenEnemiesLeftSpawns;
 
+	EnemiesSpawningUntilDeath[] specialEnemies;
+
 	public void init(MissionSpawner missionSpawner) {
 		spawner = missionSpawner;
 		enemiesPerSecondFloor = Mathf.FloorToInt(enemyCount / duration);
 		enemiesLeft = enemyCount - Mathf.FloorToInt(enemiesPerSecondFloor * duration);
 		if (enemiesLeft > 0)
 			timeBetweenEnemiesLeftSpawns = duration / enemiesLeft;
+		if (spawnType == SpawnType.UNTIL_SPECIAL_ENEMY_DEATH) {
+			//enemyCount set to -1 so enemyCount == spawnedEnemies will never be true
+			enemyCount = -1;
+			specialEnemies = GameObject.FindObjectsOfType<EnemiesSpawningUntilDeath> ();
+		}
 	}
 
 	public void execute() {
@@ -58,8 +65,18 @@ public class MissionScenarioEvent {
 	}
 
 	void checkFinish() {
-		if (spawnType == SpawnType.INSTANT || enemyCount == spawnedEnemies)
+		if (spawnType == SpawnType.INSTANT || 
+			spawnType == SpawnType.OVER_TIME && enemyCount == spawnedEnemies ||
+			spawnType == SpawnType.UNTIL_SPECIAL_ENEMY_DEATH && checkSpecialEnemiesDead())
 			finished = true;
+	}
+	bool checkSpecialEnemiesDead() {
+		bool allDead = true;
+		for (int i = 0; i < specialEnemies.Length; i++) {
+			if (specialEnemies [i] != null && specialEnemies [i].isActiveAndEnabled)
+				allDead = false;
+		}
+		return allDead;
 	}
 
 	public bool isFinished() {

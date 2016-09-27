@@ -36,7 +36,7 @@ public class ScenarioEventDrawer : PropertyDrawer {
 		EditorGUI.indentLevel = 1;
 		EditorGUI.PropertyField(spawnTypeRect, property.FindPropertyRelative ("spawnType"),GUIContent.none);
 		if ((MissionScenarioEvent.SpawnType)property.FindPropertyRelative ("spawnType").enumValueIndex
-		   == MissionScenarioEvent.SpawnType.OVER_TIME)
+			!= MissionScenarioEvent.SpawnType.INSTANT)
 			EditorGUI.PropertyField(durationRect, property.FindPropertyRelative ("duration"),GUIContent.none);
 		EditorGUI.PropertyField(enemyTypeRect, property.FindPropertyRelative ("enemyType"),GUIContent.none);
 		EditorGUI.PropertyField(enemyCountRect, property.FindPropertyRelative ("enemyCount"),GUIContent.none);
