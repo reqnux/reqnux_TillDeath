@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8329015, y: 0.7587658, z: 0}
+  m_LocalPosition: {x: -3.4604735, y: -2.2421966, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467404}
@@ -140,7 +140,7 @@ MonoBehaviour:
     experience: 200
     itemDropChance: 5
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
-  poisonCloudPrefab: {fileID: 11411044, guid: 76d1d1f2a260fbb47b51de71a4091b2b, type: 2}
+  poisonCloudPrefab: {fileID: 11486730, guid: fea9fa3ae5ef44e468229fc543918f78, type: 2}
 --- !u!114 &11410328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,7 +254,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 0.3
+      scalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -380,10 +380,10 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 167797760
+        rgba: 2516608000
       minMaxState: 0
     startSize:
-      scalar: 0.25
+      scalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -524,7 +524,7 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 0
     gravityModifier: 0
-    maxNumParticles: 3000
+    maxNumParticles: 100
     rotation3D: 0
   ShapeModule:
     serializedVersion: 2
@@ -551,7 +551,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 1000
+      scalar: 50
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -744,7 +744,7 @@ ParticleSystem:
       minMaxState: 0
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       maxGradient:
         key0:
@@ -752,7 +752,7 @@ ParticleSystem:
           rgba: 4294967295
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 2650800127
         key2:
           serializedVersion: 2
           rgba: 0
@@ -1761,7 +1761,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: poisonCloudPrefab
       value: 
-      objectReference: {fileID: 11411044, guid: 76d1d1f2a260fbb47b51de71a4091b2b,
+      objectReference: {fileID: 11486730, guid: fea9fa3ae5ef44e468229fc543918f78,
         type: 2}
     - target: {fileID: 0}
       propertyPath: bloodPrefab
