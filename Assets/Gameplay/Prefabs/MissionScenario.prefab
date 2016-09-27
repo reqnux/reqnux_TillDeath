@@ -56,6 +56,8 @@ MonoBehaviour:
     available: 0
   - item: {fileID: 11424514, guid: fc1c3dde69f2f824389b007700250084, type: 2}
     available: 0
+  - item: {fileID: 11458450, guid: 59879bd55948be44f8d3c467a2212af1, type: 2}
+    available: 0
   bonuses:
   - item: {fileID: 11410426, guid: 26bdc3d9db40c8c43b8fd39220164c94, type: 2}
     available: 1
@@ -100,7 +102,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: weapons.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bonuses.Array.data[0].item
@@ -182,6 +184,11 @@ Prefab:
       propertyPath: weapons.Array.data[6].item
       value: 
       objectReference: {fileID: 11424514, guid: fc1c3dde69f2f824389b007700250084,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: weapons.Array.data[7].item
+      value: 
+      objectReference: {fileID: 11458450, guid: 59879bd55948be44f8d3c467a2212af1,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
