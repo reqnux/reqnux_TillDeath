@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11487068}
   - 114: {fileID: 11456998}
   - 114: {fileID: 11445124}
+  - 114: {fileID: 11474720}
   m_Layer: 10
   m_Name: DoubleZombie
   m_TagString: Enemy
@@ -128,6 +129,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adb850f83fbcdb40bfd4f6485e459e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11474720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fc66efb778b1b44955457fcccd7a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPercenage: 0.2
+  speedPercenage: 0.15
+  sizePercenage: 0.1
+  colorPercentage: 0.1
 --- !u!114 &11487068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,6 +212,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11418872, guid: 702de74fd331882448bf28c798e16148,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: colorPercentage
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157678}

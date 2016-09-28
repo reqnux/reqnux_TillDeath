@@ -14,7 +14,7 @@ GameObject:
   - 198: {fileID: 19889056}
   - 95: {fileID: 9501618}
   m_Layer: 0
-  m_Name: OptimisedPoisonCloud
+  m_Name: PoisonCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11487364}
   - 114: {fileID: 11442704}
   - 114: {fileID: 11420828}
+  - 114: {fileID: 11440104}
   m_Layer: 10
   m_Name: StrongZombie
   m_TagString: Enemy
@@ -105,6 +106,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 3
   chaseTime: 1
+--- !u!114 &11440104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fc66efb778b1b44955457fcccd7a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPercenage: 0.2
+  speedPercenage: 0.15
+  sizePercenage: 0.1
+  colorPercentage: 0.1
 --- !u!114 &11442704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,6 +261,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: stats.increasedItemDropChance
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorPercentage
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

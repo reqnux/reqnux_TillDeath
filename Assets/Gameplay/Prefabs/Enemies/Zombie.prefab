@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11456192}
   - 114: {fileID: 11490668}
   - 114: {fileID: 11488054}
+  - 114: {fileID: 11404386}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Enemy
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0407324, y: -0.05431485, z: 0}
+  m_LocalPosition: {x: -6.698274, y: -1.4700983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 402394}
@@ -92,6 +93,21 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &11404386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fc66efb778b1b44955457fcccd7a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPercenage: 0.2
+  speedPercenage: 0.15
+  sizePercenage: 0.1
+  colorPercentage: 0.1
 --- !u!114 &11456192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,6 +299,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: stats.increasedItemDropChance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthPercenage
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speedPercenage
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sizePercenage
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorPercentage
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11485056}
   - 114: {fileID: 11413054}
   - 114: {fileID: 11459676}
+  - 114: {fileID: 11487842}
   m_Layer: 10
   m_Name: FastZombie
   m_TagString: Enemy
@@ -134,6 +135,21 @@ MonoBehaviour:
     experience: 180
     itemDropChance: 5
   bloodPrefab: {fileID: 11498464, guid: 7f79435fd97ec644aaacaa429eec6035, type: 2}
+--- !u!114 &11487842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fc66efb778b1b44955457fcccd7a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPercenage: 0.2
+  speedPercenage: 0.15
+  sizePercenage: 0.1
+  colorPercentage: 0.1
 --- !u!212 &21290198
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -275,6 +291,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: stats.increasedItemDropChance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colorPercentage
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
