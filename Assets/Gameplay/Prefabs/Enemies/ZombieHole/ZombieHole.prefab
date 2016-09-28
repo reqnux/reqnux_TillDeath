@@ -44,6 +44,7 @@ GameObject:
   - 58: {fileID: 5843982}
   - 114: {fileID: 11402752}
   - 114: {fileID: 11408502}
+  - 114: {fileID: 11487186}
   - 95: {fileID: 9523982}
   - 82: {fileID: 8257350}
   m_Layer: 13
@@ -400,7 +401,7 @@ MonoBehaviour:
     movementSpeed: 0
     maxHealth: 200
     experience: 1000
-    increasedItemDropChance: 0
+    itemDropChance: 0
   bloodPrefab: {fileID: 0}
   appearOnMapTime: 2
 --- !u!114 &11408502
@@ -416,6 +417,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: 0000000002000000
   timeBetweenSpawns: 2
+--- !u!114 &11487186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53daafecfb138d54995600e77c174718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19806060
 ParticleSystem:
   m_ObjectHideFlags: 1
