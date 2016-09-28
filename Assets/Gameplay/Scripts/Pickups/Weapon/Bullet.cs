@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
 			hit (col.gameObject.GetComponent<IDamageable> ());
     }
 
-	//called from outside only by ZombieHole
+	//called from outside only by KinematicEnemy script
 	public virtual void hit(IDamageable objectHit) {
 		objectHit.takeDamage(weapon.Player.Stats.Damage);
 		deactivate ();

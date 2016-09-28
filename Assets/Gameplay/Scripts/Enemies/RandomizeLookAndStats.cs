@@ -30,7 +30,7 @@ public class RandomizeLookAndStats : MonoBehaviour {
 
 	void randomizeStats () {
 		if (healthPercenage != 0) {
-			int randomHealth = (int)(defaultHealth * Random.Range (-healthPercenage, healthPercenage));
+			int randomHealth = (int)(defaultHealth * Random.Range (0, healthPercenage));
 			enemy.Stats.BaseMaxHealth += randomHealth;
 			enemy.Stats.CurrentHealth = enemy.Stats.MaxHealth;
 		}

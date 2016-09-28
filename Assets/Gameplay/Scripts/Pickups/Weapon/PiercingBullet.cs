@@ -13,7 +13,7 @@ public class PiercingBullet : Bullet {
     }
 
 	// empty, beacuse PiercingBullet can detect all objects
-	// and hit() is used only by ZombieHole
+	// and hit() is used only by KinematicEnemy script to detect kinematic objects
 	public override void hit(IDamageable objectHit) {}
 
 	public override Weapon Weapon {
