@@ -18,7 +18,9 @@ public class PiercingBulletBonus  : Bonus {
         {
             currentWeapon = player.CurrentWeapon;
 			currentWeaponBulletType = currentWeapon.BulletType;
-			currentWeapon.BulletType = BulletType.PIERCING;
+			if (currentWeapon.BulletType != BulletType.GRANDADE) {
+				currentWeapon.BulletType = BulletType.PIERCING;
+			}
         }
     }
 
