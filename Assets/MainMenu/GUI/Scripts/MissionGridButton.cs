@@ -6,17 +6,19 @@ public class MissionGridButton : MonoBehaviour {
 
     [SerializeField] bool unlocked;
     SelectedMissionPanel selectedMissionPanel;
+	int missionNumber;
 
 	void Start () {
         selectedMissionPanel = GameObject.FindObjectOfType<SelectedMissionPanel>();
+		//MissionGridButton - 17 letters
+		missionNumber = int.Parse(gameObject.name.Substring(17,gameObject.name.Length-17));
+		transform.FindChild ("Text").gameObject.GetComponent<Text> ().text = MissionsNames.names [missionNumber-1];
 	}
 
     public void onMissionSelect()
     {
         if (unlocked)
         {
-			//MissionGridButton - 17 letters
-            int missionNumber = int.Parse(gameObject.name.Substring(17,gameObject.name.Length-17));
             selectedMissionPanel.loadMissionInfo(missionNumber);
 
             transform.parent.GetComponent<MissionsGridPage>().SelectedButton = this;

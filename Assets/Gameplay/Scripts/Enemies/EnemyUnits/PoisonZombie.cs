@@ -14,7 +14,7 @@ public class PoisonZombie : Enemy {
 	public override void death() 
 	{
 		Instantiate (poisonCloudPrefab,transform.position,Quaternion.identity);
-
+		dropRandomItem();
 		deathEvent();
 		gameObject.SetActive (false);
 		reset ();

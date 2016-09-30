@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class MissionsHighscores : Highscores {
 
-    public const int MISSIONS_COUNT = 12;
+    public const int MISSIONS_COUNT = 30;
 
     public bool checkMissionNewTopScore(int missionNumber, int score)
     {
@@ -43,5 +43,7 @@ public class MissionsHsData
     public MissionsHsData(int x) // use this constructor for empty highscores list
     {
         scores = new int[MissionsHighscores.MISSIONS_COUNT];
+		for (int i = 0; i < scores.Length; i++)
+			scores [i] = 0;
     } 
 }
