@@ -5,4 +5,9 @@ public class GlobalSettings {
 
 	public static Difficulty missionDifficulty = Difficulty.Normal;
 	public static Difficulty survivalDifficulty = Difficulty.Normal;
+
+	public static float masterVolume;
+	public static float sfxVolume;
+	public static float gameMusicVolume;
+	public static float menuMusicVolume;
 }
