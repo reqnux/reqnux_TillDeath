@@ -35,10 +35,10 @@ public class MissionGridButton : MonoBehaviour {
 
     public void setSelectedFrameColor(bool selected)
     {
-        if (selected)
-            GetComponent<Image>().color = new Color(1, 0, 0, 0.58f); //red color preset
-        else
-            GetComponent<Image>().color = new Color(0.2f, 0.2f, 0.2f, 1.0f); // dark grey color preset
+		if (selected)
+			GetComponent<Image> ().color = ColorPresets.menuRed;
+		else
+			GetComponent<Image> ().color = ColorPresets.menuDarkGrey;
     }
 
 }

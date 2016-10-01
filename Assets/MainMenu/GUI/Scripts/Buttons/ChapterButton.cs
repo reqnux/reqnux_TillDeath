@@ -34,9 +34,9 @@ public class ChapterButton : MonoBehaviour {
 
 	void setSelectedFrameColor(bool selected) {
 		if (selected)
-			GetComponent<Image>().color = new Color(1, 0, 0, 0.58f); //red color preset
+			GetComponent<Image>().color =  ColorPresets.menuRed;
 		else
-			GetComponent<Image>().color = new Color(0.2f, 0.2f, 0.2f, 1.0f); // dark grey color preset
+			GetComponent<Image>().color =  ColorPresets.menuDarkGrey;
 	}
 
 	int getLastCompletedMissionNumber() {
