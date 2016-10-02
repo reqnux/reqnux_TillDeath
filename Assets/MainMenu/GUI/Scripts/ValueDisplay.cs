@@ -14,6 +14,8 @@ public class ValueDisplay : MonoBehaviour {
 		text.text = ((int)value).ToString ();
 	}
 	public void displayValue(Slider slider) {
+		if( text== null)
+			text = GetComponent<Text> ();
 		text.text = ((int)slider.value).ToString ();
 	}
 }
