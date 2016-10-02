@@ -11,6 +11,7 @@ GameObject:
   - 82: {fileID: 8204686}
   - 82: {fileID: 8213612}
   - 114: {fileID: 11450798}
+  - 114: {fileID: 11414014}
   m_Layer: 9
   m_Name: weaponAudioSource
   m_TagString: Untagged
@@ -318,6 +319,18 @@ MonoBehaviour:
   bulletSpeed: 0
   effectPrefab: {fileID: 11444018, guid: 65802c059da983a48beecb5b73b83a16, type: 2}
   range: 2
+--- !u!114 &11414014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3844f63cfc9846b4eabbbef0bd2db402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 1
 --- !u!114 &11450798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,6 +430,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: magazineSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: soundType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

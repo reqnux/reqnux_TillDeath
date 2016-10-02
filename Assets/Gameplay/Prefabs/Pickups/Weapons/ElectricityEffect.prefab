@@ -27,6 +27,7 @@ GameObject:
   - 114: {fileID: 11433274}
   - 114: {fileID: 11444018}
   - 82: {fileID: 8217980}
+  - 114: {fileID: 11490524}
   m_Layer: 11
   m_Name: ElectricityEffect
   m_TagString: Bullets
@@ -158,6 +159,18 @@ MonoBehaviour:
   effectPrefab: {fileID: 11444018}
   range: 2
   maxChainLength: 4
+--- !u!114 &11490524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3844f63cfc9846b4eabbbef0bd2db402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 1
 --- !u!212 &21218904
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -215,6 +228,10 @@ Prefab:
       propertyPath: effectPrefab
       value: 
       objectReference: {fileID: 11444018}
+    - target: {fileID: 0}
+      propertyPath: soundType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159372}

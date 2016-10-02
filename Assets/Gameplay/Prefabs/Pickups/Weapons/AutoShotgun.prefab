@@ -44,6 +44,7 @@ GameObject:
   - 82: {fileID: 8257298}
   - 82: {fileID: 8265704}
   - 114: {fileID: 11474324}
+  - 114: {fileID: 11484126}
   m_Layer: 9
   m_Name: weaponAudioSource
   m_TagString: Untagged
@@ -329,6 +330,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourceShot: {fileID: 8257298}
   audioSourceReload: {fileID: 8265704}
+--- !u!114 &11484126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3844f63cfc9846b4eabbbef0bd2db402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 1
 --- !u!212 &21281720
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -395,7 +408,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: soundType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167414}

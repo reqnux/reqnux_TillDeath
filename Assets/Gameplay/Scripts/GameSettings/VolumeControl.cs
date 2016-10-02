@@ -7,10 +7,10 @@ public enum SoundType {Master, SFX, GameMusic, MenuMusic}
 public class VolumeControl : MonoBehaviour {
 
 	[SerializeField] SoundType soundType;
-	AudioSource audioSource;
+	AudioSource[] audioSources;
 
 	void Awake() {
-		audioSource = GetComponent<AudioSource> ();
+		audioSources = GetComponents<AudioSource> ();
 	}
 
 	void OnEnable () {
@@ -20,10 +20,14 @@ public class VolumeControl : MonoBehaviour {
 
 	public void updateVolume() {
 		switch (soundType) {
-			case SoundType.SFX:	audioSource.volume = GlobalSettings.sfxVolume * GlobalSettings.masterVolume; break;
-			case SoundType.GameMusic: audioSource.volume = GlobalSettings.gameMusicVolume * GlobalSettings.masterVolume; break;
-			case SoundType.MenuMusic: audioSource.volume = GlobalSettings.menuMusicVolume * GlobalSettings.masterVolume; break;
+			case SoundType.SFX:	setVolume(GlobalSettings.sfxVolume * GlobalSettings.masterVolume); break;
+			case SoundType.GameMusic: setVolume(GlobalSettings.gameMusicVolume * GlobalSettings.masterVolume); break;
+			case SoundType.MenuMusic: setVolume(GlobalSettings.menuMusicVolume * GlobalSettings.masterVolume); break;
 		}
+	}
+	void setVolume(float value) {
+		foreach(AudioSource audio in audioSources)
+			audio.volume = value;
 	}
 
 	void OnDisable () {

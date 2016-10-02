@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 489538}
   - 82: {fileID: 8269570}
+  - 114: {fileID: 11475436}
   m_Layer: 0
   m_Name: explosionSound
   m_TagString: Untagged
@@ -133,6 +134,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11475436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3844f63cfc9846b4eabbbef0bd2db402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 1
 --- !u!114 &11490578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1641,7 +1654,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: soundType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100484}
