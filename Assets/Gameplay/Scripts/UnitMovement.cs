@@ -10,7 +10,6 @@ public abstract class UnitMovement : MonoBehaviour {
         GameManager.gameStopEvent += disableMovement;
     }
 
-
     protected virtual void OnDisable()
     {
         GameManager.gameStopEvent -= disableMovement;
