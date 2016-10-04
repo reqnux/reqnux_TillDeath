@@ -1,22 +1,31 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class CursorImage : MonoBehaviour {
+public class CursorImageController : MonoBehaviour {
 
-    public Texture2D cursorTexture;
+    public Texture2D defaultCursorTexture;
+	public Texture2D aimingCursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
-    public Vector2 hotSpot = Vector2.zero;
+	public Vector2 defaultCursorHotSpot = Vector2.zero;
+	public Vector2 aimingCursorHotSpot = new Vector2(12.5f,12.5f);
 
-    void Start()
-    {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-        
+	void Awake() {
+		setAimingCursor ();
     }
+
     void OnMouseEnter() {
     }
     void OnMouseExit() {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
+
+	public void setAimingCursor() {
+		Cursor.SetCursor(aimingCursorTexture, aimingCursorHotSpot, cursorMode);
+	}
+	public void setDefaultCursor() {
+		Cursor.SetCursor(defaultCursorTexture, defaultCursorHotSpot, cursorMode);
+	}
 
 
     /*

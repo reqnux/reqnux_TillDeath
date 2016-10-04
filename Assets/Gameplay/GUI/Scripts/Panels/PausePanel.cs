@@ -13,11 +13,13 @@ public class PausePanel : MonoBehaviour {
     {
         Time.timeScale = 0;
 		playerController.enabled = false;
+		GameObject.FindObjectOfType<CursorImageController> ().setDefaultCursor ();
     }
 
     void OnDisable()
     {
         Time.timeScale = 1;
+		GameObject.FindObjectOfType<CursorImageController> ().setAimingCursor ();
 		playerController.enabled = true;
     }
 

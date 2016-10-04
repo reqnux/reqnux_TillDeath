@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11410372}
   - 114: {fileID: 11441634}
   - 114: {fileID: 11400576}
-  - 114: {fileID: 11430836}
+  - 114: {fileID: 11448150}
   m_Layer: 0
   m_Name: GameManagerSurvival
   m_TagString: GameManager
@@ -98,18 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c829bd77fe2724e84545e9ea06606a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11430836
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a139256613f9440aeebf63b4f1ca35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scaleChange: 0.25
 --- !u!114 &11441634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +109,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef8c2f5a572e614c8e627e0728e0918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11448150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7140147f7c8919b4596302e9eee5da91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultCursorTexture: {fileID: 2800000, guid: 791c16ad6ce8dd244adbc2215a256d96,
+    type: 3}
+  aimingCursorTexture: {fileID: 2800000, guid: d2c06fb6df042194f88df54d216897b7, type: 3}
+  cursorMode: 1
+  defaultCursorHotSpot: {x: 0, y: 0}
+  aimingCursorHotSpot: {x: 12.5, y: 12.5}
 --- !u!114 &11470618
 MonoBehaviour:
   m_ObjectHideFlags: 1

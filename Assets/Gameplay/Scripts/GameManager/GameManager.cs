@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 
 	void Awake() {
 		player = GameObject.FindObjectOfType<Player> ();
+		GameObject.FindObjectOfType<CursorImageController> ().setAimingCursor ();
 	}
 
 	public static Player Player {

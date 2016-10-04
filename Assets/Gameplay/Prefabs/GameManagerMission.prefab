@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11411876}
   - 114: {fileID: 11415590}
   - 114: {fileID: 11482316}
+  - 114: {fileID: 11445998}
   m_Layer: 0
   m_Name: GameManagerMission
   m_TagString: GameManager
@@ -66,6 +67,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcf3b7f00da964448158305026ec3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11445998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7140147f7c8919b4596302e9eee5da91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultCursorTexture: {fileID: 2800000, guid: 791c16ad6ce8dd244adbc2215a256d96,
+    type: 3}
+  aimingCursorTexture: {fileID: 2800000, guid: d2c06fb6df042194f88df54d216897b7, type: 3}
+  cursorMode: 1
+  defaultCursorHotSpot: {x: 0, y: 0}
+  aimingCursorHotSpot: {x: 12.5, y: 12.5}
 --- !u!114 &11446592
 MonoBehaviour:
   m_ObjectHideFlags: 1

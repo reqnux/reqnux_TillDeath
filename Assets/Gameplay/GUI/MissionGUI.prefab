@@ -1509,7 +1509,6 @@ GameObject:
   - 224: {fileID: 22489860}
   - 222: {fileID: 22295402}
   - 114: {fileID: 11411914}
-  - 114: {fileID: 11456724}
   m_Layer: 5
   m_Name: PlayerHUD
   m_TagString: Untagged
@@ -5939,20 +5938,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11456724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a97aad70154ad47b1f41970fae665f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: d2c06fb6df042194f88df54d216897b7, type: 3}
-  cursorMode: 1
-  hotSpot: {x: 12.5, y: 12.5}
 --- !u!114 &11457174
 MonoBehaviour:
   m_ObjectHideFlags: 1
