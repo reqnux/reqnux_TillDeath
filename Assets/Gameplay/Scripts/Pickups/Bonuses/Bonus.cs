@@ -26,7 +26,7 @@ public abstract class Bonus : PickableItem {
 
     protected virtual void Update()
     {
-        if (activated && duration > 0)
+		if (activated && duration > 0 && player.isAlive())
         {
             if (Time.timeSinceLevelLoad > lastTickTime + tickRate)
             {
