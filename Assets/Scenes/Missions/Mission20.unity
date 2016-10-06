@@ -766,6 +766,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
+--- !u!1001 &1432307170
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.2607496
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.90903735
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 470666, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 106052, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+      propertyPath: m_Name
+      value: _BloodPool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5db431d4dfd059d4fabc531e33088613, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1500680524 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448092, guid: e23e321a0eb41334087fc6a7e3d49775, type: 2}
