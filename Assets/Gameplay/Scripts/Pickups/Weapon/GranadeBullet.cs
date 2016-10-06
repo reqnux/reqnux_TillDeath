@@ -11,8 +11,10 @@ public class GranadeBullet : Bullet {
 	public override void hit(IDamageable objectHit) {
 		enemiesInRange = Physics2D.OverlapCircleAll(transform.position, explosionRange);
 		foreach(Collider2D e in enemiesInRange) {
-			if (e.tag == "Enemy" && !e.isTrigger)
+			if (e.tag == "Enemy" && !e.isTrigger) {
 				e.GetComponent<Enemy> ().takeDamage (weapon.Player.Stats.Damage);
+				spawnBloodSplashEffect (e.gameObject);
+			}
 		}
 		explosion = BulletsPool.pool.getExplosion ();
 		explosion.transform.position = transform.position;

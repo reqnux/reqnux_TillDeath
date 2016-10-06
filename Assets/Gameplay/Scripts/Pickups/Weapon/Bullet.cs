@@ -26,7 +26,15 @@ public class Bullet : MonoBehaviour {
 	//called from outside only by KinematicEnemy script
 	public virtual void hit(IDamageable objectHit) {
 		objectHit.takeDamage(weapon.Player.Stats.Damage);
+		spawnBloodSplashEffect (((Unit)objectHit).gameObject);
 		deactivate ();
+	}
+
+	protected void spawnBloodSplashEffect(GameObject objectHit) {
+		BloodSplashEffect effect = BloodPool.pool.getBloodSplashEffect ();
+		effect.transform.position = objectHit.transform.position;
+		effect.transform.rotation =  UnitMovement.lootAtTarget(effect.transform.position, GameManager.Player.transform.position);
+		effect.gameObject.SetActive (true);
 	}
 
 	void OnDisable() {
