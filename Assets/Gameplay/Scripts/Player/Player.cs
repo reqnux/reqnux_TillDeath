@@ -44,7 +44,8 @@ public class Player : Unit {
             lastDamageTakenTime = Time.time;
 			if(activeAbilities.onDamageTaken != null)
 				activeAbilities.onDamageTaken();
-            stats.CurrentHealth -= damage;
+			stats.CurrentHealth -= (int)(damage * DifficultyLevel.damageTakenMultipler(GameManager.difficulty));
+			Debug.Log ("Damage taken by player: " + damage * DifficultyLevel.damageTakenMultipler (GameManager.difficulty));
             if (stats.CurrentHealth <= 0)
                 death();
         }
@@ -55,7 +56,7 @@ public class Player : Unit {
         currentWeapon = weapon;
         weapon.Player = this;
 		weapon.CurrentAmmo = weapon.MagazineSize;
-        stats.BaseDamage = weapon.Damage;
+		stats.BaseDamage = (int)(weapon.Damage * DifficultyLevel.damageDealtMultipler(GameManager.difficulty));
         // recalculate bonusDamage, based on active bonuses
     }
 	void getExperienceFromEnemy(Enemy enemy) {

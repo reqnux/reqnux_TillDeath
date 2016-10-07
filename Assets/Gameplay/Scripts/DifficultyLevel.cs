@@ -11,4 +11,10 @@ public static class DifficultyLevel {
 			default: return 1.5f;
 		}
 	}
+	public static float damageDealtMultipler(Difficulty dif) {
+		switch (dif) {
+			case Difficulty.Easy: return 1.5f;
+			default: return 1f;
+		}
+	}
 }

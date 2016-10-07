@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour {
 
 	//called from outside only by KinematicEnemy script
 	public virtual void hit(IDamageable objectHit) {
+		Debug.Log ("damage dealt by player: " + weapon.Player.Stats.Damage);
 		objectHit.takeDamage(weapon.Player.Stats.Damage);
 		spawnBloodSplashEffect (((Unit)objectHit).gameObject);
 		deactivate ();

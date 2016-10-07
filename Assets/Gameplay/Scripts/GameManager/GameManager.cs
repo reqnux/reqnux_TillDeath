@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -8,9 +9,9 @@ public class GameManager : MonoBehaviour {
 
 	public static bool gameStopped = false;
 	public static bool gamePaused = false;
+	public static Difficulty difficulty;
 
 	static Player player;
-
 	static CursorImageController cursorImageController;
 
 	void Awake() {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour {
 		gamePaused = false;
 		gameStopped = false;
 		player = GameObject.FindObjectOfType<Player> ();
+		setDifficulty ();
 		cursorImageController = GameObject.FindObjectOfType<CursorImageController> ();
 		cursorImageController.setAimingCursor ();
 	}
@@ -54,4 +56,11 @@ public class GameManager : MonoBehaviour {
 		if(gameStopEvent != null)
         	gameStopEvent();
     }
+
+	void setDifficulty() {
+		if(SceneManager.GetActiveScene().name == "Survival")
+			difficulty = GlobalSettings.survivalDifficulty;
+		else
+			difficulty = GlobalSettings.missionDifficulty;
+	}
 }
