@@ -6,10 +6,10 @@ public class GameManager : MonoBehaviour {
     public delegate void GameStopEvent();
     public static event GameStopEvent gameStopEvent;
 
+	public static bool gameStopped = false;
 	public static bool gamePaused = false;
 
 	static Player player;
-    bool game_stopped = false;
 
 	void Awake() {
 		player = GameObject.FindObjectOfType<Player> ();
@@ -29,12 +29,9 @@ public class GameManager : MonoBehaviour {
 
 	public void gameStop()
     {
-        game_stopped = true;
+        gameStopped = true;
         gameStopEvent();
     }
 
-    public bool gameStopped()
-    {
-        return game_stopped;
-    }
+
 }

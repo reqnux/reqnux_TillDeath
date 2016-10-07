@@ -12,7 +12,7 @@ public class MissionWinConditions : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (!gameManager.gameStopped() && missionCompleted())
+        if (!GameManager.gameStopped && missionCompleted())
         {
             GetComponent<MissionGameEventsHandler>().onMissionComplete();
         }
