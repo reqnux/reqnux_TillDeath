@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
     public delegate void GameStopEvent();
     public static event GameStopEvent gameStopEvent;
 
+	public static bool gamePaused = false;
+
 	static Player player;
     bool game_stopped = false;
 

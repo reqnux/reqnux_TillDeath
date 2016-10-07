@@ -382,9 +382,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 11458658}
+        m_MethodName: onClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3e5fafe39d55d48b73a5a90c7b21d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPanel: {fileID: 11440762, guid: 199070732ce9c724a8c5bd70d144f6a7, type: 2}
 --- !u!114 &11462772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -922,6 +923,23 @@ Prefab:
       propertyPath: bonusRowPrefab
       value: 
       objectReference: {fileID: 11479098, guid: 24363b54d903ba64c8c5de87bd679c02,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11458658}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerPanel
+      value: 
+      objectReference: {fileID: 11440762, guid: 199070732ce9c724a8c5bd70d144f6a7,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

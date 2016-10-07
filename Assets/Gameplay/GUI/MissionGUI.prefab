@@ -79,6 +79,7 @@ GameObject:
   - 222: {fileID: 22288316}
   - 114: {fileID: 11468814}
   - 114: {fileID: 11410452}
+  - 114: {fileID: 11400132}
   m_Layer: 5
   m_Name: MissionEndGamePanel
   m_TagString: EndGamePanel
@@ -2460,6 +2461,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb79193505b63b7489d357184db526b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11400728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2623,9 +2635,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 137590}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 11470734}
+        m_MethodName: onClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6788,6 +6800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3e5fafe39d55d48b73a5a90c7b21d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPanel: {fileID: 11450234}
 --- !u!114 &11471826
 MonoBehaviour:
   m_ObjectHideFlags: 1

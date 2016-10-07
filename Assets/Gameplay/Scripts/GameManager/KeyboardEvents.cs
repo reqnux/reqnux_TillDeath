@@ -12,9 +12,15 @@ public class KeyboardEvents : MonoBehaviour {
 	}
 
     void Update () {
-		if (Input.GetKeyDown(KeyCode.Tab))
-			playerPanel.SetActive(!playerPanel.activeInHierarchy);
-        if (Input.GetKeyDown(KeyCode.Escape))
-            pausePanel.SetActive(!pausePanel.activeInHierarchy);
+		if (Input.GetKeyDown (KeyCode.Tab)) {
+			if(!GameManager.gamePaused || GameManager.gamePaused && playerPanel.activeInHierarchy)
+				playerPanel.SetActive(!playerPanel.activeInHierarchy);
+		}
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (playerPanel.activeInHierarchy) {
+				playerPanel.SetActive (false);
+			}
+			pausePanel.SetActive(!pausePanel.activeInHierarchy);
+		}
     }
 }

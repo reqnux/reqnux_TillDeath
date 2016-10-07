@@ -4,6 +4,8 @@ using System.Collections;
 
 public class LevelUpIndicator : MonoBehaviour {
 
+	[SerializeField] PlayerPanel playerPanel;
+
 	Player player;
 	Image imageComponent;
 	Button buttonComponent;
@@ -16,7 +18,13 @@ public class LevelUpIndicator : MonoBehaviour {
 		buttonComponent = GetComponent<Button> ();
 		textComponent = GetComponentInChildren<Text> ();
 	}
-	
+
+	public void onClick() {
+		if (!GameManager.gamePaused) {
+			playerPanel.gameObject.SetActive (true);
+		}
+	}
+
 	public void setVisible(bool value) {
 		imageComponent.enabled = value;
 		buttonComponent.enabled = value;
