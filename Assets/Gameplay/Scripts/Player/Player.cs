@@ -45,7 +45,6 @@ public class Player : Unit {
 			if(activeAbilities.onDamageTaken != null)
 				activeAbilities.onDamageTaken();
 			stats.CurrentHealth -= (int)(damage * DifficultyLevel.damageTakenMultipler(GameManager.difficulty));
-			Debug.Log ("Damage taken by player: " + damage * DifficultyLevel.damageTakenMultipler (GameManager.difficulty));
             if (stats.CurrentHealth <= 0)
                 death();
         }

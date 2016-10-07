@@ -17,10 +17,13 @@ public class DifficultySelectButton : MonoBehaviour {
 	}
 
 	public void onSelect() {
-		if (missionMode)
+		if (missionMode) {
 			GlobalSettings.missionDifficulty = difficulty;
-		else
+			PlayerPrefs.SetInt ("missionDifficulty", (int)difficulty);
+		} else {
 			GlobalSettings.survivalDifficulty = difficulty;
+			PlayerPrefs.SetInt ("survivalDifficulty", (int)difficulty);
+		}
 		transform.FindChild ("TitlePanel").GetComponent<Image> ().color = ColorPresets.menuRed;
 		deselectOtherButtons ();
 	}
