@@ -16,7 +16,7 @@ public class SurvivalGameEventsHandler : MonoBehaviour {
 
     void onPlayerDeath()
     {
-        GetComponent<GameManager>().gameStop();
+		GameManager.stopGame();
         checkForNewHighscore();
         StartCoroutine(showEndGamePanel());
     }

@@ -8,7 +8,7 @@ public class KeyboardEvents : MonoBehaviour {
 
 	void Awake() {
 		playerPanel = GameObject.Find ("BasePanel").transform.FindChild ("PlayerPanel").gameObject;
-		pausePanel = GameObject.Find ("BasePanel").transform.FindChild ("PausePanel").gameObject;
+		pausePanel = GameObject.Find ("BasePanel").transform.FindChild ("EscPanel").gameObject;
 	}
 
     void Update () {

@@ -19,6 +19,9 @@ public class CursorImageController : MonoBehaviour {
     void OnMouseExit() {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
+	void OnDestroy() {
+		setDefaultCursor ();
+	}
 
 	public void setAimingCursor() {
 		Cursor.SetCursor(aimingCursorTexture, aimingCursorHotSpot, cursorMode);

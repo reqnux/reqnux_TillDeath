@@ -3,11 +3,9 @@ using System.Collections;
 
 public class MissionWinConditions : MonoBehaviour {
 
-    GameManager gameManager;
 	MissionScenario scenario;
 
     void Start () {
-        gameManager = GetComponent<GameManager>();
 		scenario = GameObject.FindObjectOfType<MissionScenario> ();
 	}
 	

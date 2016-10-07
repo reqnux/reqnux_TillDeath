@@ -273,7 +273,7 @@ GameObject:
   - 222: {fileID: 22272540}
   - 114: {fileID: 11482344}
   - 114: {fileID: 11404586}
-  - 114: {fileID: 11494138}
+  - 114: {fileID: 11460516}
   m_Layer: 5
   m_Name: GoToMainMenuButton
   m_TagString: Untagged
@@ -745,7 +745,7 @@ GameObject:
   - 114: {fileID: 11436762}
   - 114: {fileID: 11423980}
   m_Layer: 5
-  m_Name: PausePanel
+  m_Name: EscPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1286,7 +1286,7 @@ GameObject:
   - 222: {fileID: 22248290}
   - 114: {fileID: 11414846}
   - 114: {fileID: 11466398}
-  - 114: {fileID: 11442452}
+  - 114: {fileID: 11474452}
   m_Layer: 5
   m_Name: GoToMainMenuButton
   m_TagString: Untagged
@@ -2739,9 +2739,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11494138}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11460516}
+        m_MethodName: goToMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5092,17 +5092,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statPerPoint: 1
   maxCap: 30
---- !u!114 &11442452
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23af7a78f5c08f34b8c1cd24a5b62348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11443072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6160,6 +6149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088e0f291f6e1b45b94648aea78fd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11460516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b43a0c8304585348b8449d8b8eba4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11460702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6570,9 +6570,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11442452}
-        m_MethodName: loadScene
-        m_Mode: 5
+      - m_Target: {fileID: 11474452}
+        m_MethodName: goToMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6946,6 +6946,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Ability description here.
+--- !u!114 &11474452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b43a0c8304585348b8449d8b8eba4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11475926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7760,17 +7771,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11494138
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23af7a78f5c08f34b8c1cd24a5b62348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11494518
 MonoBehaviour:
   m_ObjectHideFlags: 1

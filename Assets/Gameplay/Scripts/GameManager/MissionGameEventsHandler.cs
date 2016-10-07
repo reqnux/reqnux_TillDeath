@@ -23,14 +23,14 @@ public class MissionGameEventsHandler : MonoBehaviour {
 
     public void onMissionComplete()
     {
-        GetComponent<GameManager>().gameStop();
+		GameManager.stopGame();
         checkForNewHighscore();
         StartCoroutine(showEndGamePanel());
     }
 
     void onPlayerDeath()
     {
-        GetComponent<GameManager>().gameStop();
+		GameManager.stopGame();
         StartCoroutine(showEndGamePanel());
     }
 

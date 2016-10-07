@@ -11,9 +11,15 @@ public class GameManager : MonoBehaviour {
 
 	static Player player;
 
+	static CursorImageController cursorImageController;
+
 	void Awake() {
+		Time.timeScale = 1;
+		gamePaused = false;
+		gameStopped = false;
 		player = GameObject.FindObjectOfType<Player> ();
-		GameObject.FindObjectOfType<CursorImageController> ().setAimingCursor ();
+		cursorImageController = GameObject.FindObjectOfType<CursorImageController> ();
+		cursorImageController.setAimingCursor ();
 	}
 
 	public static Player Player {
@@ -27,11 +33,25 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public void gameStop()
-    {
+	public static void pauseGame() {
+		Time.timeScale = 0;
+		gamePaused = true;
+		player.GetComponent<PlayerController>().enabled = false;
+		cursorImageController.setDefaultCursor ();
+	}
+
+	public static void unpauseGame() {
+		if (!gameStopped) {
+			Time.timeScale = 1;
+			gamePaused = false;
+			cursorImageController.setAimingCursor ();
+			player.GetComponent<PlayerController> ().enabled = true;
+		}
+	}
+
+	public static void stopGame() {
         gameStopped = true;
-        gameStopEvent();
+		if(gameStopEvent != null)
+        	gameStopEvent();
     }
-
-
 }

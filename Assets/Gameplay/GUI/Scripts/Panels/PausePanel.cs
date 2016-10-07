@@ -3,30 +3,16 @@ using System.Collections;
 
 public class PausePanel : MonoBehaviour {
 	
-	PlayerController playerController;
-	CursorImageController cursorImageController;
-
-	void Awake() {
-		playerController = GameManager.Player.GetComponent<PlayerController> ();
-		cursorImageController = GameObject.FindObjectOfType<CursorImageController> ();
-	}
-
     void OnEnable()
     {
-        Time.timeScale = 0;
-		GameManager.gamePaused = true;
-		playerController.enabled = false;
-		cursorImageController.setDefaultCursor ();
+		if(!GameManager.gamePaused)
+			GameManager.pauseGame ();
     }
 
     void OnDisable()
     {
-		Time.timeScale = 1;
-		if (!GameManager.gameStopped) {
-			GameManager.gamePaused = false;
-			cursorImageController.setAimingCursor ();
-			playerController.enabled = true;
-		}
+		if (GameManager.gamePaused)
+			GameManager.unpauseGame ();
     }
 
 }
