@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Formatter {
+public static class Formatter {
 
     public static int clockTextToSeconds(string clockText) // 12:34 format expected
     {
@@ -34,4 +34,13 @@ public class Formatter {
         Debug.LogError("Formatter : sceneNameToMissionNumber parsing error!");
         return -1;
     }
+
+	public static bool intToBool(int intBool) 
+	{
+		return intBool == 1;
+	}
+	public static int boolToInt(bool b) 
+	{
+		return b ? 1 : 0;
+	}
 }
