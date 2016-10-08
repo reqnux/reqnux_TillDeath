@@ -39,7 +39,8 @@ public class Enemy : Unit {
     public override void takeDamage(int damage)
     {
         stats.CurrentHealth -= damage;
-        Instantiate(bloodPrefab, transform.position, transform.localRotation);
+		if(GlobalSettings.bloodOnGround)
+        	Instantiate(bloodPrefab, transform.position, transform.localRotation);
 
         if (stats.CurrentHealth <= 0)
             death();

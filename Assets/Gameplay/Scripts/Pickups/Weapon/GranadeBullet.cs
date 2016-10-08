@@ -13,7 +13,8 @@ public class GranadeBullet : Bullet {
 		foreach(Collider2D e in enemiesInRange) {
 			if (e.tag == "Enemy" && !e.isTrigger) {
 				e.GetComponent<Enemy> ().takeDamage (weapon.Player.Stats.Damage);
-				spawnBloodSplashEffect (e.gameObject);
+				if(GlobalSettings.bloodSplash)
+					spawnBloodSplashEffect (e.gameObject);
 			}
 		}
 		explosion = BulletsPool.pool.getExplosion ();

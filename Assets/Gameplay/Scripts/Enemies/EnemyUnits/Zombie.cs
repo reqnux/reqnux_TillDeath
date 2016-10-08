@@ -8,6 +8,4 @@ public class Zombie : Enemy {
         base.Awake();
 		type = EnemyType.ZOMBIE;
     }
-	
-
 }
