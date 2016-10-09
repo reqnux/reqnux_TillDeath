@@ -898,19 +898,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447910, guid: 8bfb06546f48cc540b3ff5e24b78c5da, type: 2}
       propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19845708, guid: 8bfb06546f48cc540b3ff5e24b78c5da, type: 2}
-      propertyPath: InitialModule.maxNumParticles
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 19845708, guid: 8bfb06546f48cc540b3ff5e24b78c5da, type: 2}
-      propertyPath: lengthInSec
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9578644, guid: 8bfb06546f48cc540b3ff5e24b78c5da, type: 2}
-      propertyPath: m_Enabled
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8bfb06546f48cc540b3ff5e24b78c5da, type: 2}

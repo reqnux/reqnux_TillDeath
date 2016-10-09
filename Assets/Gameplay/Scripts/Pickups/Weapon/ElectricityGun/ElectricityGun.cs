@@ -16,11 +16,11 @@ public class ElectricityGun : Weapon {
         if (canShoot())
         {
             lastShotTime = Time.time;
-            RaycastHit2D hit = Physics2D.Raycast(gunEnding.position, gunEnding.up,range);
+			RaycastHit2D hit = Physics2D.Raycast(gunEnding.position, gunEnding.up,range);
             ElectricityChain effect = (ElectricityChain)Instantiate(effectPrefab,gunEnding.position,gunEnding.rotation);
 
-            if (hit.collider != null && hit.collider.tag == "Enemy")
-                effect.initFromWeapon(this, hit.collider.transform);
+			if (hit.collider != null && hit.collider.tag == "Enemy")
+				effect.initFromWeapon (this, hit.collider.transform);
             else 
                 effect.GetComponent<ElectricityEffect>().DefaultLength = range;
 

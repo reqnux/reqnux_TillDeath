@@ -54,7 +54,7 @@ public class ElectricityChain : MonoBehaviour {
 
     Enemy findTarget() // HIGH MEMORY USAGE ?
     {
-        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(target.position, range);
+		Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(target.position, range);
         int i = 0;
         while (i < enemiesInRange.Length)
         {

@@ -9,6 +9,7 @@ TagManager:
   - Bullets
   - GameManager
   - Spawner
+  - EndGamePanel
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Bullets
   - Player
   - ZombieHole
-  - 
+  - PoisonCloud
   - 
   - 
   - 
