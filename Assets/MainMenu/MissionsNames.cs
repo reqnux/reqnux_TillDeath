@@ -26,5 +26,13 @@ public class MissionsNames {
 		"MISSION 20",
 		"MISSION 21",
 		"MISSION 22",
+		"MISSION 23",
+		"MISSION 24",
+		"MISSION 25",
+		"MISSION 26",
+		"MISSION 27",
+		"MISSION 28",
+		"MISSION 29",
+		"TILL DEATH",
         };
 }

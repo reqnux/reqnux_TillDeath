@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ZombieHole : Enemy {
 
-	[SerializeField] float appearOnMapTime;
+	[SerializeField] protected float appearOnMapTime;
 
 	protected override void Awake () {
 		base.Awake();
@@ -21,8 +21,8 @@ public class ZombieHole : Enemy {
 		disappear ();
 	}
 
-	public void appearOnMap() {
-		GetComponent<Animator> ().enabled = true;//.Play ("ZombieHoleAppear");
+	void appearOnMap() {
+		GetComponent<Animator> ().enabled = true;
 		Invoke ("activateSpawner", GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length);
 	}
 
@@ -34,7 +34,7 @@ public class ZombieHole : Enemy {
 		Destroy (gameObject, GetComponent<AudioSource> ().clip.length);
 	}
 
-	void activateSpawner() {
+	protected virtual void activateSpawner() {
 		GetComponents<CircleCollider2D> ()[0].enabled = true;
 		GetComponents<CircleCollider2D> ()[1].enabled = true;
 		GetComponent<ZombieHoleSpawner> ().enabled = true;

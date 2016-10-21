@@ -577,6 +577,56 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59879bd55948be44f8d3c467a2212af1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &378110122
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436548, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: appearOnMapTime
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 114036, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &611655234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,7 +1863,7 @@ GameObject:
   - 114: {fileID: 1431548984}
   - 114: {fileID: 1431548983}
   m_Layer: 5
-  m_Name: PausePanel
+  m_Name: EscPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
