@@ -25,6 +25,14 @@ public class ZombieHoleSpawner : MonoBehaviour {
 		}
 	}
 
+	public void spawnEnemy(EnemyType type) {
+		Enemy enemy = EnemiesPool.pool.getEnemy (type);
+		StartCoroutine ("playSpawnEffect");
+		enemy.transform.position = transform.position;
+		enemy.transform.rotation = Quaternion.identity;
+		enemy.gameObject.SetActive (true);
+	}
+
 	void spawnRandomEnemy() {
 		Enemy enemy = EnemiesPool.pool.getEnemy (enemies[Random.Range (0, enemies.Count)]);
 		StartCoroutine ("playSpawnEffect");

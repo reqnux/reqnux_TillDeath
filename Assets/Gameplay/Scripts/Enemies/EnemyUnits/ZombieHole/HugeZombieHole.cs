@@ -19,6 +19,7 @@ public class HugeZombieHole : ZombieHole {
 	protected override void activateSpawner() {
 		base.activateSpawner ();
 		transform.FindChild ("ZombieHoleShield").gameObject.SetActive (true);
+		Invoke ("spawnFirstHugeZombie", 3);
 	}
 
 	public void onZombieHoleDestroyed() {
@@ -27,4 +28,9 @@ public class HugeZombieHole : ZombieHole {
 			shieldActive = false;
 		}
 	}
+
+	void spawnFirstHugeZombie() {
+		GetComponent<ZombieHoleSpawner> ().spawnEnemy (EnemyType.HUGE_ZOMBIE);
+	}
+
 }

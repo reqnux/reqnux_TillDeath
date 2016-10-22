@@ -15,6 +15,7 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] Zombie zombiePartLeft;
 	[SerializeField] PoisonZombie poisonZombie;
 	[SerializeField] FuriousZombie furiousZombie;
+	[SerializeField] HugeZombie hugeZombie;
 
 	[Header("Pool sizes")]
 	[SerializeField] int zombiePoolSize = 30;
@@ -24,7 +25,8 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] int rightPoolSize = 30;
 	[SerializeField] int leftPoolSize = 30;
 	[SerializeField] int poisonPoolSize = 30;
-	[SerializeField] int furiousPoolSize = 30;
+	[SerializeField] int furiousPoolSize = 10;
+	[SerializeField] int hugePoolSize = 1;
 
 	[Header("Pools")]
 	[SerializeField] List<Zombie> zombiePool;
@@ -35,6 +37,7 @@ public class EnemiesPool : MonoBehaviour {
 	[SerializeField] List<Zombie> leftPool;
 	[SerializeField] List<PoisonZombie> poisonPool;
 	[SerializeField] List<FuriousZombie> furiousPool;
+	[SerializeField] List<HugeZombie> hugePool;
 
 	void Awake() {
 		pool = this;
@@ -72,6 +75,10 @@ public class EnemiesPool : MonoBehaviour {
 		for (int i = 0; i < furiousPoolSize; i++) {
 			addFuriousToPool ();
 		}
+		hugePool = new List<HugeZombie> ();
+		for (int i = 0; i < hugePoolSize; i++) {
+			addHugeToPool ();
+		}
 	}
 
 	public Enemy getEnemy(EnemyType type) {
@@ -83,6 +90,7 @@ public class EnemiesPool : MonoBehaviour {
 			case EnemyType.ZOMBIE_PART_LEFT: return getZombieLeftPart ();
 			case EnemyType.POISON_ZOMBIE: return getPoisonZombie ();
 			case EnemyType.FURIOUS_ZOMBIE: return getFuriousZombie ();
+			case EnemyType.HUGE_ZOMBIE: return getHugeZombie ();
 			default : return getZombie ();
 		}
 	}
@@ -150,6 +158,13 @@ public class EnemiesPool : MonoBehaviour {
 		}
 		return addFuriousToPool ();
 	}
+	HugeZombie getHugeZombie() {
+		for (int i = 0; i < hugePool.Count; i++) {
+			if (!hugePool [i].gameObject.activeInHierarchy)
+				return hugePool [i];
+		}
+		return addHugeToPool ();
+	}
 
 	Zombie addZombieToPool() {
 		Zombie obj = (Zombie)Instantiate (zombie);
@@ -205,6 +220,13 @@ public class EnemiesPool : MonoBehaviour {
 		FuriousZombie obj = (FuriousZombie)Instantiate (furiousZombie);
 		obj.gameObject.SetActive (false);
 		furiousPool.Add (obj);
+		obj.transform.SetParent (transform);
+		return obj;
+	}
+	HugeZombie addHugeToPool() {
+		HugeZombie obj = (HugeZombie)Instantiate (hugeZombie);
+		obj.gameObject.SetActive (false);
+		hugePool.Add (obj);
 		obj.transform.SetParent (transform);
 		return obj;
 	}

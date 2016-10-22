@@ -709,8 +709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 06000000
-  timeBetweenSpawns: 5
+  enemies: 08000000
+  timeBetweenSpawns: 90
 --- !u!114 &11407228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -751,7 +751,7 @@ MonoBehaviour:
     experience: 3000
     itemDropChance: 0
   bloodPrefab: {fileID: 0}
-  appearOnMapTime: 0
+  appearOnMapTime: 8
   shieldActive: 1
 --- !u!114 &11442048
 MonoBehaviour:

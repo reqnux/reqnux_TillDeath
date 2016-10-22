@@ -2058,7 +2058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5.5
 --- !u!114 &235729392
 MonoBehaviour:
@@ -3988,7 +3988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5
 --- !u!114 &425274272
 MonoBehaviour:
@@ -10623,7 +10623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5.5
 --- !u!114 &734954783
 MonoBehaviour:
@@ -10935,7 +10935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5
 --- !u!114 &788120500
 MonoBehaviour:
@@ -20599,7 +20599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5.5
 --- !u!114 &1192697696
 MonoBehaviour:
@@ -23854,7 +23854,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 406954, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: m_LocalPosition.x
@@ -23938,15 +23938,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].spawnType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].duration
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].enemyCount
-      value: 35
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].spawnType
@@ -23954,31 +23954,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].duration
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].enemyCount
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].startTime
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].enemyType
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].enemyType
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
-      propertyPath: scenarioEvents.Array.data[2].spawnType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
+      propertyPath: scenarioEvents.Array.data[2].spawnType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[2].duration
-      value: 11
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[2].enemyType
@@ -23986,27 +23986,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[2].enemyCount
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[2].startTime
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].spawnType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].duration
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].enemyType
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].enemyCount
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[4].spawnType
@@ -24042,7 +24042,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].startTime
-      value: 30
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[4].startTime
@@ -24090,11 +24090,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].startTime
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[0].spawnSide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[1].spawnSide
@@ -24106,7 +24106,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[3].spawnSide
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11475858, guid: 622ab5f5f65cb7b4b9729338aea8757a, type: 2}
       propertyPath: scenarioEvents.Array.data[4].spawnSide
@@ -24295,7 +24295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5.5
 --- !u!114 &1320316937
 MonoBehaviour:
@@ -29064,11 +29064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471690, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
       propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11436548, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
-      propertyPath: stats.maxHealth
-      value: 500
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 012463b39e6978c41bde0a089fe822bc, type: 2}
@@ -34067,7 +34063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5.5
 --- !u!114 &1612752279
 MonoBehaviour:
@@ -34292,7 +34288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5
 --- !u!114 &1615587000
 MonoBehaviour:
@@ -36071,7 +36067,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400548, guid: 858549aa0f41e7e4280c6ecbd5ee8293, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 858549aa0f41e7e4280c6ecbd5ee8293, type: 2}
@@ -45565,7 +45561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5.5
 --- !u!114 &1857958303
 MonoBehaviour:
@@ -47453,7 +47449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae39b576e9b69b242819752d2b5166d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: 08000000
+  enemies: 000000000100000002000000
   timeBetweenSpawns: 5
 --- !u!114 &1939675429
 MonoBehaviour:

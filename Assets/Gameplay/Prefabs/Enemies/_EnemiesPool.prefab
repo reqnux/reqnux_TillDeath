@@ -47,6 +47,7 @@ MonoBehaviour:
   zombiePartLeft: {fileID: 11423708, guid: 5d7703c0e4be7dd42aae4dd8b569cc76, type: 2}
   poisonZombie: {fileID: 11408574, guid: c496f0f97a3d9b84183f8b26920375d2, type: 2}
   furiousZombie: {fileID: 11423602, guid: 198e42b102961384cb394a5f3eecf8b1, type: 2}
+  hugeZombie: {fileID: 11481396, guid: a7f2e7d839af4344486c24ced296d054, type: 2}
   zombiePoolSize: 30
   fastPoolSize: 30
   strongPoolSize: 30
@@ -54,7 +55,8 @@ MonoBehaviour:
   rightPoolSize: 30
   leftPoolSize: 30
   poisonPoolSize: 30
-  furiousPoolSize: 30
+  furiousPoolSize: 10
+  hugePoolSize: 1
   zombiePool: []
   fastPool: []
   strongPool: []
@@ -63,6 +65,7 @@ MonoBehaviour:
   leftPool: []
   poisonPool: []
   furiousPool: []
+  hugePool: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

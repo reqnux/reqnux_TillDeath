@@ -10,6 +10,7 @@ public class SlaveZombieHole : MonoBehaviour {
 	}
 
 	void OnDisable() {
-		masterHole.onZombieHoleDestroyed ();
+		if(masterHole != null && masterHole.gameObject != null)
+			masterHole.onZombieHoleDestroyed ();
 	}
 }
