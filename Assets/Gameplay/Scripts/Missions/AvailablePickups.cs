@@ -36,6 +36,13 @@ public class AvailablePickups : MonoBehaviour {
 		return (Weapon)weapons [i].item;
 	}
 
+	public void disableItemsDrop() {
+		foreach (AvailableItem i in bonuses)
+			i.available = false;
+		foreach (AvailableItem i in weapons)
+			i.available = false;
+	}
+
 	// returns true if at least one item is available
 	public bool anyItemsAvailable() {
 		foreach (AvailableItem i in bonuses) {

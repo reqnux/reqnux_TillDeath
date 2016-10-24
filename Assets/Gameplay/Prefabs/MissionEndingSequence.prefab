@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d51895ca1bb104cad0665ac3f33b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sequenceStartDelay: 3
   hudFadeValue: 0.05
   hudFadeInterval: 0.1
   hudSprites:
@@ -47,6 +48,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  enemiesWaveIntervalPerWave: 8
+  enemiesWaveInterval: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

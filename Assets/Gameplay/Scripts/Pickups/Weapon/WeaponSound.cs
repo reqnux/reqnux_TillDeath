@@ -8,7 +8,8 @@ public class WeaponSound : MonoBehaviour {
 
     public void playShotSound()
     {
-        audioSourceShot.PlayOneShot(audioSourceShot.clip);
+		if(audioSourceShot != null)
+        	audioSourceShot.PlayOneShot(audioSourceShot.clip);
     }
     public void playReloadSound(float timeToReloadEnd)
     {
@@ -17,6 +18,7 @@ public class WeaponSound : MonoBehaviour {
 
     void reloadSound()
     {
-        audioSourceReload.PlayOneShot(audioSourceReload.clip);
+		if(audioSourceReload != null)
+        	audioSourceReload.PlayOneShot(audioSourceReload.clip);
     }
 }

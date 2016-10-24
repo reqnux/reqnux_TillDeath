@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class FinalMissionEndingSequence : MonoBehaviour {
 
-	bool sequenceStarted;
+	[SerializeField] float sequenceStartDelay = 3f;
 
 	[Header("HUD")]
 	[SerializeField][Range(0,1)] float hudFadeValue = 0.05f;
@@ -17,22 +17,28 @@ public class FinalMissionEndingSequence : MonoBehaviour {
 	[SerializeField] int enemiesWaveIntervalPerWave = 8;
 	[SerializeField] float enemiesWaveInterval = 2f;
 
+	bool sequenceStarted;
+
 	void Awake() {
 		SceneFade.blackScreenFadeCompletedEvent += startCreditsScene;
 	}
 
 	public void play()	{
 		sequenceStarted = true;
+		GameObject.FindObjectOfType<AvailablePickups> ().disableItemsDrop ();
+
+		Invoke ("startHideHUDCoroutine", sequenceStartDelay);
+		Invoke ("startSpawnMonstersCoroutine", sequenceStartDelay*3);
 		//---- start final sequence ----
 		// disable player panel
 
 		// hide hud
 		// tunr off buffs
-		StartCoroutine(hideHud());
+
 		// play music
 
 		// spawn monsters
-		StartCoroutine (spawnMonsters ());
+
 
 		// wait for players death
 		// stop game
@@ -41,9 +47,17 @@ public class FinalMissionEndingSequence : MonoBehaviour {
 
 	}
 
+	void startHideHUDCoroutine() {
+		StartCoroutine(hideHud());
+	}
+	void startSpawnMonstersCoroutine() {
+		StartCoroutine(spawnMonsters());
+	}
+
 	IEnumerator hideHud() {
-		Image[] bonusRowsImages = GameObject.FindObjectOfType<ActiveBonusesPanel>().GetComponentsInChildren<Image>();
-		hudSprites.AddRange (bonusRowsImages);
+		GameObject.Find("ActiveBonusesPanel").SetActive (false);
+		//Image[] bonusRowsImages = GameObject.FindObjectOfType<ActiveBonusesPanel>().GetComponentsInChildren<Image>();
+		//hudSprites.AddRange (bonusRowsImages);
 
 		GameObject.FindObjectOfType<LevelUpIndicator> ().GetComponent<Animator> ().enabled = false;
 		Text lvlUpText = GameObject.FindObjectOfType<LevelUpIndicator>().GetComponentInChildren<Text> ();
