@@ -179,10 +179,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b7c6ca626d23d34d93dcf4c38e1ac10, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &197609502 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 128640, guid: 7d95d76fd7dd73343bd3176421d07ea2, type: 2}
-  m_PrefabInternal: {fileID: 1655766207}
 --- !u!1001 &299747562
 Prefab:
   m_ObjectHideFlags: 0
@@ -309,24 +305,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460694, guid: 3e1154d551b95d446a81622e181addf4, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11484322, guid: 3e1154d551b95d446a81622e181addf4, type: 2}
       propertyPath: endGamePanel
       value: 
       objectReference: {fileID: 1004986910}
-    - target: {fileID: 11410372, guid: 3e1154d551b95d446a81622e181addf4, type: 2}
-      propertyPath: playerPanel
-      value: 
-      objectReference: {fileID: 197609502}
-    - target: {fileID: 11410372, guid: 3e1154d551b95d446a81622e181addf4, type: 2}
-      propertyPath: pausePanel
-      value: 
-      objectReference: {fileID: 1431548982}
-    - target: {fileID: 11400576, guid: 3e1154d551b95d446a81622e181addf4, type: 2}
-      propertyPath: weapons.Array.data[3].available
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e1154d551b95d446a81622e181addf4, type: 2}
   m_IsPrefabParent: 0
@@ -538,10 +522,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 299747562}
   m_Script: {fileID: 11500000, guid: f46d0f5232ca89b4a84611cdfa460ded, type: 3}
---- !u!1 &1431548982 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 158644, guid: 7d95d76fd7dd73343bd3176421d07ea2, type: 2}
-  m_PrefabInternal: {fileID: 1655766207}
 --- !u!4 &1541836369 stripped
 Transform:
   m_PrefabParentObject: {fileID: 489296, guid: 702de74fd331882448bf28c798e16148, type: 2}
