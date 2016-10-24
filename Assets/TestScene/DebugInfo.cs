@@ -10,7 +10,8 @@ public class DebugInfo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyDown (KeyCode.E))
+			GameObject.FindObjectOfType<FinalMissionEndingSequence> ().play ();
 	}
 
 	void OnGUI() {

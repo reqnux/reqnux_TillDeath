@@ -8,8 +8,6 @@ public class MissionGameEventsHandler : MonoBehaviour {
 
 	void Awake() {
 		endGamePanel = GameObject.Find ("BasePanel").transform.FindChild ("MissionEndGamePanel").GetComponent<MissionEndGamePanel> ();
-		if (endGamePanel == null)
-			Debug.Log ("fszysko chuj");
 	}
 
     void Start () {
@@ -23,15 +21,26 @@ public class MissionGameEventsHandler : MonoBehaviour {
 
     public void onMissionComplete()
     {
-		GameManager.stopGame();
-        checkForNewHighscore();
-        StartCoroutine(showEndGamePanel());
+		if (SceneManager.GetActiveScene ().name == "Mission30") {
+			checkForNewHighscore();
+			GameObject.FindObjectOfType<FinalMissionEndingSequence> ().play ();
+		} else {
+			GameManager.stopGame();
+			checkForNewHighscore();
+			StartCoroutine(showEndGamePanel());
+		}
     }
 
     void onPlayerDeath()
     {
-		GameManager.stopGame();
-        StartCoroutine(showEndGamePanel());
+		GameManager.stopGame ();
+		if (SceneManager.GetActiveScene ().name == "Mission30"
+		    && GameObject.FindObjectOfType<FinalMissionEndingSequence> ().SequenceStarted) {
+			GameObject.FindObjectOfType<SceneFade> ().toBlackScreenFade ();
+		} else {
+			GameObject.FindObjectOfType<SceneFade> ().deathFade ();
+			StartCoroutine (showEndGamePanel ());
+		}
     }
 
     IEnumerator showEndGamePanel()

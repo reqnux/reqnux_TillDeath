@@ -17,6 +17,7 @@ public class SurvivalGameEventsHandler : MonoBehaviour {
     void onPlayerDeath()
     {
 		GameManager.stopGame();
+		GameObject.FindObjectOfType<SceneFade> ().deathFade ();
         checkForNewHighscore();
         StartCoroutine(showEndGamePanel());
     }

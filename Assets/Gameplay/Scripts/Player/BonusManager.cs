@@ -47,6 +47,12 @@ public class BonusManager : MonoBehaviour {
             bonus.activate();
         }
     }
+
+	public void timeOutBonuses() {
+		foreach (Bonus b in activeBonuses)
+			b.TimeLeft = 0;
+	}
+
     Bonus findActiveBonusOfType(Bonus bonus)
     {
         foreach (Bonus b in activeBonuses)

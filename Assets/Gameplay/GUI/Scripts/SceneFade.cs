@@ -3,15 +3,22 @@ using System.Collections;
 
 public class SceneFade : MonoBehaviour {
 
-	void OnEnable () {
-		Player.playerDeathEvent += deathFade;
-	}
-	
-	void deathFade() {
+	public delegate void BlackScreenFadeCompletedEvent();
+	public static event BlackScreenFadeCompletedEvent blackScreenFadeCompletedEvent;
+
+	public void deathFade() {
 		GetComponent<Animator> ().Play ("PlayerDeathFade");
 	}
 
-	void OnDisable () {
-		Player.playerDeathEvent -= deathFade;
+	public void toBlackScreenFade() {
+		GetComponent<Animator> ().Play ("BlackScreenFade");
+		Invoke ("blackScreenFadeCompleted", GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length);
+
 	}
+
+	void blackScreenFadeCompleted() {
+		if (blackScreenFadeCompletedEvent != null)
+			blackScreenFadeCompletedEvent ();
+	}
+
 }
