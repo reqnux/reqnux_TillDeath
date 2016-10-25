@@ -4,6 +4,10 @@ public class MissionsNames {
 
     public static string[] names =
         {
+		/*
+
+
+		*/
         "DAY ZERO",
         "WARM UP",
 		"MOVE, FASTER",
@@ -25,14 +29,14 @@ public class MissionsNames {
 		"DEJA VU",
 		"BIG BAD RED",
 		"SWISS CHEESE",
-		"MISSION 22",
-		"MISSION 23",
-		"MISSION 24",
-		"MISSION 25",
-		"MISSION 26",
-		"MISSION 27",
-		"MISSION 28",
-		"MISSION 29",
+		"MASS MURDER",
+		"TAKE IT SLOW",
+		"PLAYGROUND",
+		"ONE BY ONE",
+		"LONG RUN",
+		"TWO FRONTS",
+		"THEY KEEP COMING",
+		"FINAL GOODBYE",
 		"TILL DEATH",
         };
 }
