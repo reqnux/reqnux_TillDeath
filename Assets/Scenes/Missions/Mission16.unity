@@ -178,7 +178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11402752, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: appearOnMapTime
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 11408502, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: enemies.Array.data[1]
@@ -290,7 +290,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11402752, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: appearOnMapTime
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 11408502, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: enemies.Array.data[1]
@@ -471,7 +471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11402752, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: appearOnMapTime
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 11408502, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: enemies.Array.data[1]
@@ -594,7 +594,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11402752, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: appearOnMapTime
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 11408502, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: enemies.Array.data[1]
@@ -803,7 +803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11402752, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: appearOnMapTime
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 11408502, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: enemies.Array.data[1]
@@ -1244,7 +1244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11402752, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: appearOnMapTime
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 11408502, guid: 215e7dcea8a9aea4f82833ab3400220d, type: 2}
       propertyPath: enemies.Array.data[1]
