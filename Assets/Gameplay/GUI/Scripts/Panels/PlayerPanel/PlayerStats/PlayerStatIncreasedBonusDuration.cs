@@ -7,16 +7,16 @@ public class PlayerStatIncreasedBonusDuration : PlayerStat {
 		pointsAddedWhilePanelOpen++;
 		totalPointAdded++;
 		player.StatPoints--;
-		player.Stats.StatPointsIncreasedBonusDuration += statPerPoint/100;
+		player.Stats.StatPointsIncreasedBonusDuration += statPerPoint/100f;
 	}
 	public override void removePoint () {
 		pointsAddedWhilePanelOpen--;
 		totalPointAdded--;
 		player.StatPoints++;
-		player.Stats.StatPointsIncreasedBonusDuration -= statPerPoint/100;
+		player.Stats.StatPointsIncreasedBonusDuration -= statPerPoint/100f;
 	}
 
 	protected override void setValue() {
-		valueText.text = (player.Stats.IncreasedBonusDuration * 100).ToString() + "%";
+		valueText.text = (Mathf.Round(player.Stats.IncreasedBonusDuration * 100f)).ToString() + "%";
 	}
 }

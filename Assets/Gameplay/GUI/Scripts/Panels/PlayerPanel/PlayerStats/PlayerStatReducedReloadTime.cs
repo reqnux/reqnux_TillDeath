@@ -7,17 +7,17 @@ public class PlayerStatReducedReloadTime : PlayerStat {
 		pointsAddedWhilePanelOpen++;
 		totalPointAdded++;
 		player.StatPoints--;
-		player.Stats.StatPointsReducedReloadTime += statPerPoint/100;
+		player.Stats.StatPointsReducedReloadTime += statPerPoint/100f;
 	}
 	public override void removePoint () {
 		pointsAddedWhilePanelOpen--;
 		totalPointAdded--;
 		player.StatPoints++;
-		player.Stats.StatPointsReducedReloadTime -= statPerPoint/100;
+		player.Stats.StatPointsReducedReloadTime -= statPerPoint/100f;
 	}
 
 	protected override void setValue() {
-		valueText.text = (player.Stats.ReducedReloadTime * 100).ToString() + "%";
+		valueText.text = (Mathf.Round(player.Stats.ReducedReloadTime * 100f)).ToString() + "%";
 		if (player.Stats.BonusReducedReloadTime > 0)
 			valueText.color = Color.green;
 		else

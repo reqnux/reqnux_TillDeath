@@ -13,8 +13,8 @@ public abstract class PlayerStat : MonoBehaviour {
 	protected Player player;
 	protected Text valueText;
 
-	GameObject plusButton;
-	GameObject minusButton;
+	Button plusButton;
+	Button minusButton;
 
 	public abstract void addPoint ();
 	public abstract void removePoint ();
@@ -23,8 +23,8 @@ public abstract class PlayerStat : MonoBehaviour {
 	void Awake() {
 		player = GameManager.Player;
 		valueText = transform.FindChild ("Value").GetChild(0).GetComponent<Text> ();
-		plusButton = transform.FindChild ("AddPointButton").gameObject;
-		minusButton = transform.FindChild ("RemovePointButton").gameObject;
+		plusButton = transform.FindChild ("AddPointButton").GetComponent<Button>();
+		minusButton = transform.FindChild ("RemovePointButton").GetComponent<Button>();
 	}
 	void Update() {
 		handleButtonsDisplay ();
@@ -40,14 +40,14 @@ public abstract class PlayerStat : MonoBehaviour {
 
 	void handleButtonsDisplay() {
 		if (showPlusButton ())
-			plusButton.SetActive (true);
+			plusButton.interactable = true;
 		else
-			plusButton.SetActive (false);
+			plusButton.interactable = false;
 		
 		if (showMinusButton ())
-			minusButton.SetActive (true);
+			minusButton.interactable = true;
 		else
-			minusButton.SetActive (false);
+			minusButton.interactable = false;
 	}
 
 	void OnDisable() {
