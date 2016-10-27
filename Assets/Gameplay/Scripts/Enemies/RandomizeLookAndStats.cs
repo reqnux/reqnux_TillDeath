@@ -12,7 +12,7 @@ public class RandomizeLookAndStats : MonoBehaviour {
 	[SerializeField][Range(0,1)] float colorPercentage;
 
 	Enemy enemy;
-	int defaultHealth;
+	float defaultHealth;
 	float defaultSpeed;
 	Color defaultColor;
 

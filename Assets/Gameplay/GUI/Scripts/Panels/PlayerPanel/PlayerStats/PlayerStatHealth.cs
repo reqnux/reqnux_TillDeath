@@ -7,20 +7,20 @@ public class PlayerStatHealth : PlayerStat {
 		pointsAddedWhilePanelOpen++;
 		totalPointAdded++;
 		player.StatPoints--;
-		player.Stats.StatPointsMaxHealth += (int)statPerPoint;
+		player.Stats.StatPointsMaxHealth += statPerPoint;
 		if (player.Stats.CurrentHealth > 0)
-			player.Stats.CurrentHealth += (int)statPerPoint;
+			player.Stats.CurrentHealth += statPerPoint;
 		
 	}
 	public override void removePoint () {
 		pointsAddedWhilePanelOpen--;
 		totalPointAdded--;
 		player.StatPoints++;
-		player.Stats.StatPointsMaxHealth -= (int)statPerPoint;
-		player.Stats.CurrentHealth -= (int)statPerPoint;
+		player.Stats.StatPointsMaxHealth -= statPerPoint;
+		player.Stats.CurrentHealth -= statPerPoint;
 	}
 
 	protected override void setValue() {
-		valueText.text = player.Stats.MaxHealth.ToString();
+		valueText.text = Mathf.Round(player.Stats.MaxHealth).ToString();
 	}
 }

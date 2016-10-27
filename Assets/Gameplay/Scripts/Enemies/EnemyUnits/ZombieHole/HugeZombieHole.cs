@@ -9,7 +9,7 @@ public class HugeZombieHole : ZombieHole {
 		base.Awake();
 	}
 	
-	public override void takeDamage(int damage)	{
+	public override void takeDamage(float damage)	{
 		if (!shieldActive) {
 			stats.CurrentHealth -= damage;
 			if (stats.CurrentHealth <= 0)

@@ -9,9 +9,9 @@ public abstract class Unit : MonoBehaviour , IDamageable{
     }
 
     public abstract void death();
-    public abstract void takeDamage(int damage);
+	public abstract void takeDamage(float damage);
 
-    public void heal(int health)
+	public void heal(float health)
     {
         stats.CurrentHealth = Mathf.Min(stats.CurrentHealth + health, stats.MaxHealth);
     }

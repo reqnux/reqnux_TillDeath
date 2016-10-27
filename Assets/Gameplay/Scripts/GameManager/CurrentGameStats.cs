@@ -26,7 +26,7 @@ public class CurrentGameStats : MonoBehaviour {
     }
     void addScore(Enemy enemy)
     {
-        score += enemy.Stats.MaxHealth;
+		score += Mathf.RoundToInt(enemy.Stats.MaxHealth);
     }
 
     public int EnemiesKilled

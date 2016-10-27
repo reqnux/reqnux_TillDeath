@@ -10,7 +10,7 @@ public class ZombieHole : Enemy {
 		Invoke ("appearOnMap", appearOnMapTime);
 	}
 
-	public override void takeDamage(int damage)	{
+	public override void takeDamage(float damage)	{
 		stats.CurrentHealth -= damage;
 		if (stats.CurrentHealth <= 0)
 			death();

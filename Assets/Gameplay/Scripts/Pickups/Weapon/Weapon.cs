@@ -15,7 +15,7 @@ public abstract class Weapon : PickableItem {
     protected Transform gunEnding;
     protected WeaponSound weaponSound;
 
-    [SerializeField] protected int damage;
+	[SerializeField] protected float damage;
     protected int currentAmmo;
     [SerializeField] protected int magazineSize;
 	[SerializeField] protected BulletType bulletType;
@@ -115,7 +115,7 @@ public abstract class Weapon : PickableItem {
 		get { return magazineSize + (magazineSize * player.Stats.BonusIncreasedMagazineSize/100); }
 	}
 
-	public int Damage { 
+	public float Damage { 
 		get{ return damage; }
 	}
 

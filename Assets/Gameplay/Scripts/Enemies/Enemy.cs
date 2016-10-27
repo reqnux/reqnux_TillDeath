@@ -36,7 +36,7 @@ public class Enemy : Unit {
 		reset ();
     }
     
-    public override void takeDamage(int damage)
+	public override void takeDamage(float damage)
     {
         stats.CurrentHealth -= damage;
 		if(GlobalSettings.bloodOnGround)
