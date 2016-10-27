@@ -3,10 +3,8 @@ using System.Collections;
 
 public class CameraMovement : MonoBehaviour {
 
-    [SerializeField]
-    private float xMovementRange, yMovementRange = 0; // Camera movement boundaries
-    [SerializeField]
-    private Transform player = null;
+    public float xMovementRange, yMovementRange = 0; // Camera movement boundaries
+	[SerializeField] Transform player = null;
 
     void Update()
     {
@@ -14,4 +12,9 @@ public class CameraMovement : MonoBehaviour {
                                         Mathf.Clamp(player.position.y,-yMovementRange,yMovementRange),
                                         transform.position.z);
     }
+
+	public void adjustRangesToOrtographicSize() {
+		xMovementRange = Map.mapSizeX / 2f - Camera.main.orthographicSize*Camera.main.aspect;
+		yMovementRange = Map.mapSizeY / 2f - Camera.main.orthographicSize;
+	}
 }
