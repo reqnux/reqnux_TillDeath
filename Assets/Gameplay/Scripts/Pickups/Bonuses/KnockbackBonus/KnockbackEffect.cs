@@ -21,7 +21,8 @@ public class KnockbackEffect : MonoBehaviour {
         int i = 0;
         while (i < enemiesInRange.Length)
         {
-			if (enemiesInRange[i] != null && enemiesInRange[i].tag == "Enemy" && enemiesInRange[i].GetComponent<UnitMovement>() != null)
+			if (enemiesInRange[i] != null && enemiesInRange[i].tag == "Enemy" 
+				&& enemiesInRange[i].GetComponent<UnitMovement>() != null && enemiesInRange[i].GetComponent<HugeZombie>() == null)
             {
                 Vector2 force = (enemiesInRange[i].transform.position - transform.position) * knockbackForce;
                 enemiesInRange[i].GetComponent<UnitMovement>().disableMovement();
