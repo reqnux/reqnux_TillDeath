@@ -30,7 +30,7 @@ public class ZombieHole : Enemy {
 		GetComponents<CircleCollider2D> ()[0].enabled = false;
 		GetComponents<CircleCollider2D> ()[1].enabled = false;
 		GetComponent<Animator>().Play ("ZombieHoleDisappear");
-		GetComponent<AudioSource> ().Play ();
+		GameManager.AudioManager.play (GetComponent<AudioSource> (), AudioType.ZombieHoleCollapse);
 		Destroy (gameObject, GetComponent<AudioSource> ().clip.length);
 	}
 

@@ -18,7 +18,7 @@ public class ShieldEffect : MonoBehaviour {
 		CancelInvoke ();
 		effects.SetActive (true);
 		shieldSprite.flipY = !shieldSprite.flipY;
-		audioSource.Play ();
+		GameManager.AudioManager.play (audioSource, AudioType.ZombieHoleShieldHit);
 		Invoke ("stopEffect", effectDuration);
 	}
 

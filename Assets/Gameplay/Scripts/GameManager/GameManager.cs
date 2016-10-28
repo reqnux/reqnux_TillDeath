@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	public static Difficulty difficulty;
 
 	static Player player;
+	static AudioManager audioManager;
 	static CursorImageController cursorImageController;
 
 	void Awake() {
@@ -32,6 +33,16 @@ public class GameManager : MonoBehaviour {
 					Debug.LogError ("Cant find Player object in the scene!");
 			}
 			return player;
+		}
+	}
+	public static AudioManager AudioManager {
+		get {
+			if (audioManager == null) {
+				audioManager = GameObject.FindObjectOfType<AudioManager> ();
+				if (audioManager == null)
+					Debug.LogError ("Cant get AudioManager from GameManager object!");
+			}
+			return audioManager;
 		}
 	}
 

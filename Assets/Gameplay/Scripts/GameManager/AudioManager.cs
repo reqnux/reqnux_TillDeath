@@ -4,18 +4,21 @@ using System.Collections.Generic;
 
 public enum AudioType {
 	BulletShot,
+	Explosion,
 	BloodSplash,
-	Reload,
 	ZombieHoleCollapse,
-	ZombieHoleShieldHit
+	ZombieHoleShieldHit,
+	Other
 }
 
 public class AudioManager : MonoBehaviour {
 
-	[SerializeField] int bulletShotCap = 15;
-	[SerializeField] int bloodSplashCap = 15;
+	[SerializeField] int bulletShotCap = 6;
+	[SerializeField] int explosionCap = 4;
+	[SerializeField] int bloodSplashCap = 20;
 	[SerializeField] int zombieHoleCollapseCap = 3;
 	[SerializeField] int zombieHoleShieldHitCap = 5;
+	[SerializeField] int otherSoundsCap = 5;
 
 	Dictionary<AudioType,int> audiosPlaying;
 	Dictionary<AudioType,int> audiosMaxCap;
@@ -23,24 +26,31 @@ public class AudioManager : MonoBehaviour {
 	void Awake() {
 		audiosPlaying = new Dictionary<AudioType,int> () {
 			{ AudioType.BulletShot,0},
+			{ AudioType.Explosion,0},
 			{ AudioType.BloodSplash,0},
 			{ AudioType.ZombieHoleCollapse,0},
-			{ AudioType.ZombieHoleShieldHit,0}
+			{ AudioType.ZombieHoleShieldHit,0},
+			{ AudioType.Other,0}
 		};
 		audiosMaxCap = new Dictionary<AudioType,int> () {
 			{ AudioType.BulletShot,bulletShotCap},
+			{ AudioType.Explosion,explosionCap},
 			{ AudioType.BloodSplash,bloodSplashCap},
 			{ AudioType.ZombieHoleCollapse,zombieHoleCollapseCap},
-			{ AudioType.ZombieHoleShieldHit,zombieHoleShieldHitCap}
+			{ AudioType.ZombieHoleShieldHit,zombieHoleShieldHitCap},
+			{ AudioType.Other,otherSoundsCap}
 		};
 	}
 
-	public void play(AudioType type, float length) {
-		audiosPlaying [type] = audiosPlaying [type] + 1;
-		StartCoroutine (decrementAudiosPlaying (type, length));
+	public void play(AudioSource source, AudioType type) {
+		if (canPlay (type)) {
+			source.PlayOneShot (source.clip);
+			audiosPlaying [type] = audiosPlaying [type] + 1;
+			StartCoroutine (decrementAudiosPlaying (type, source.clip.length));
+		}
 	}
 
-	public bool canPlay(AudioType type) {
+	bool canPlay(AudioType type) {
 		return audiosPlaying [type] < audiosMaxCap [type];
 	}
 

@@ -18,6 +18,7 @@ GameObject:
   - 82: {fileID: 8264606}
   - 114: {fileID: 11449802}
   - 114: {fileID: 11486044}
+  - 114: {fileID: 11401216}
   m_Layer: 0
   m_Name: GameManagerMission
   m_TagString: GameManager
@@ -111,6 +112,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11401216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50134ead0a8d75146b9b17acf398f50f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletShotCap: 6
+  explosionCap: 4
+  bloodSplashCap: 20
+  zombieHoleCollapseCap: 3
+  zombieHoleShieldHitCap: 5
+  otherSoundsCap: 5
 --- !u!114 &11411876
 MonoBehaviour:
   m_ObjectHideFlags: 1

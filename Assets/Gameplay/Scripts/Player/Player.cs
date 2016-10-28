@@ -73,7 +73,7 @@ public class Player : Unit {
 		statPoints++;
 		if(playerLevelUpEvent != null)
 			playerLevelUpEvent ();
-		audioSource.PlayOneShot (audioSource.clip);
+		GameManager.AudioManager.play (audioSource, AudioType.Other);
 	}
 
 	void OnDisable() {

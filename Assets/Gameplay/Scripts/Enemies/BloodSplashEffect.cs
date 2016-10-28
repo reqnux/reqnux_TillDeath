@@ -10,7 +10,7 @@ public class BloodSplashEffect : MonoBehaviour {
 	}
 	
 	void OnEnable () {
-		audioSource.PlayOneShot (audioSource.clip);
+		GameManager.AudioManager.play (audioSource, AudioType.BloodSplash);
 		Invoke ("disable", audioSource.clip.length);
 	}
 

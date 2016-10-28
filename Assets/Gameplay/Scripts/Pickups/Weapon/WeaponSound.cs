@@ -9,7 +9,7 @@ public class WeaponSound : MonoBehaviour {
     public void playShotSound()
     {
 		if(audioSourceShot != null)
-        	audioSourceShot.PlayOneShot(audioSourceShot.clip);
+			GameManager.AudioManager.play (audioSourceShot, AudioType.BulletShot);
     }
     public void playReloadSound(float timeToReloadEnd)
     {
@@ -19,6 +19,6 @@ public class WeaponSound : MonoBehaviour {
     void reloadSound()
     {
 		if(audioSourceReload != null)
-        	audioSourceReload.PlayOneShot(audioSourceReload.clip);
+			GameManager.AudioManager.play (audioSourceReload, AudioType.Other);
     }
 }
