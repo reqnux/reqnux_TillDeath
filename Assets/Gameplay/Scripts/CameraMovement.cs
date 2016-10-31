@@ -14,7 +14,6 @@ public class CameraMovement : MonoBehaviour {
     }
 
 	public void adjustRangesToOrtographicSize() {
-		xMovementRange = Map.mapSizeX / 2f - Camera.main.orthographicSize*Camera.main.aspect;
 		yMovementRange = Map.mapSizeY / 2f - Camera.main.orthographicSize;
 	}
 }
