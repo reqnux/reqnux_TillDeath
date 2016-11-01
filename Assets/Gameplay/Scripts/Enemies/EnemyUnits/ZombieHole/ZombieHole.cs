@@ -4,6 +4,9 @@ using System.Collections;
 public class ZombieHole : Enemy {
 
 	[SerializeField] protected float appearOnMapTime;
+	[SerializeField] protected AudioSource audioSourceHit;
+	[SerializeField] protected AudioSource audioSourceCollapse;
+
 
 	protected override void Awake () {
 		base.Awake();
@@ -12,6 +15,7 @@ public class ZombieHole : Enemy {
 
 	public override void takeDamage(float damage)	{
 		stats.CurrentHealth -= damage;
+		GameManager.AudioManager.play (audioSourceHit, AudioType.ZombieHoleHit);
 		if (stats.CurrentHealth <= 0)
 			death();
 	}
@@ -30,7 +34,7 @@ public class ZombieHole : Enemy {
 		GetComponents<CircleCollider2D> ()[0].enabled = false;
 		GetComponents<CircleCollider2D> ()[1].enabled = false;
 		GetComponent<Animator>().Play ("ZombieHoleDisappear");
-		GameManager.AudioManager.play (GetComponent<AudioSource> (), AudioType.ZombieHoleCollapse);
+		GameManager.AudioManager.play (audioSourceCollapse, AudioType.ZombieHoleCollapse);
 		Destroy (gameObject, GetComponent<AudioSource> ().clip.length);
 	}
 

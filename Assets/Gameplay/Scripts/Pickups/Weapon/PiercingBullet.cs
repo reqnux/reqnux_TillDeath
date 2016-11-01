@@ -10,7 +10,7 @@ public class PiercingBullet : Bullet {
     void OnTriggerEnter2D(Collider2D col) {
 		if (col.gameObject.tag == "Enemy" && !col.isTrigger) {
 			col.gameObject.GetComponent<IDamageable> ().takeDamage (weapon.Player.Stats.Damage);
-			if(GlobalSettings.bloodSplash)
+			if(GlobalSettings.bloodSplash && col.GetComponent<ZombieHole>() == null)
 				spawnBloodSplashEffect (col.gameObject);
 		}
     }

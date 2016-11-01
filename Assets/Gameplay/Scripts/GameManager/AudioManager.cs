@@ -6,6 +6,7 @@ public enum AudioType {
 	BulletShot,
 	Explosion,
 	BloodSplash,
+	ZombieHoleHit,
 	ZombieHoleCollapse,
 	ZombieHoleShieldHit,
 	Other
@@ -16,6 +17,7 @@ public class AudioManager : MonoBehaviour {
 	[SerializeField] int bulletShotCap = 6;
 	[SerializeField] int explosionCap = 4;
 	[SerializeField] int bloodSplashCap = 20;
+	[SerializeField] int zombieHoleHitCap = 5;
 	[SerializeField] int zombieHoleCollapseCap = 3;
 	[SerializeField] int zombieHoleShieldHitCap = 5;
 	[SerializeField] int otherSoundsCap = 5;
@@ -28,6 +30,7 @@ public class AudioManager : MonoBehaviour {
 			{ AudioType.BulletShot,0},
 			{ AudioType.Explosion,0},
 			{ AudioType.BloodSplash,0},
+			{ AudioType.ZombieHoleHit,0},
 			{ AudioType.ZombieHoleCollapse,0},
 			{ AudioType.ZombieHoleShieldHit,0},
 			{ AudioType.Other,0}
@@ -36,6 +39,7 @@ public class AudioManager : MonoBehaviour {
 			{ AudioType.BulletShot,bulletShotCap},
 			{ AudioType.Explosion,explosionCap},
 			{ AudioType.BloodSplash,bloodSplashCap},
+			{ AudioType.ZombieHoleHit,zombieHoleHitCap},
 			{ AudioType.ZombieHoleCollapse,zombieHoleCollapseCap},
 			{ AudioType.ZombieHoleShieldHit,zombieHoleShieldHitCap},
 			{ AudioType.Other,otherSoundsCap}

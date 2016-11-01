@@ -12,6 +12,7 @@ public class HugeZombieHole : ZombieHole {
 	public override void takeDamage(float damage)	{
 		if (!shieldActive) {
 			stats.CurrentHealth -= damage;
+			GameManager.AudioManager.play (audioSourceHit, AudioType.ZombieHoleHit);
 			if (stats.CurrentHealth <= 0)
 				death ();
 		}
