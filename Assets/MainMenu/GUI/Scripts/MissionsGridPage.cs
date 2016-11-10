@@ -7,10 +7,15 @@ public class MissionsGridPage : MonoBehaviour {
     [SerializeField] MissionGridButton selectedButton;
 	[SerializeField] int chapterNumber;
 
+	static MissionGridButton globalSelectecButton;
+
     void OnEnable()
     {
         setupMissionsButtons();
 		transform.parent.GetComponent<ScrollRect> ().content = (RectTransform)transform;;
+
+		if(globalSelectecButton != null && selectedButton != null && globalSelectecButton != selectedButton)
+			selectedButton.setSelectedFrameColor(false);
     }
 
     void setupMissionsButtons()
@@ -31,7 +36,8 @@ public class MissionsGridPage : MonoBehaviour {
         {
             if (selectedButton != null)
                 selectedButton.setSelectedFrameColor(false);
-            selectedButton = value;    
+            selectedButton = value;
+			globalSelectecButton = selectedButton;
         }
     }
 
