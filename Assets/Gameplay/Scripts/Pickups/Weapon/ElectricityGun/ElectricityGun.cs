@@ -23,7 +23,6 @@ public class ElectricityGun : Weapon {
 				effect.initFromWeapon (this, hit.collider.transform);
             else 
                 effect.GetComponent<ElectricityEffect>().DefaultLength = range;
-
         }
     }
     public override void reload(){} //electricityGun cant be reloaded
