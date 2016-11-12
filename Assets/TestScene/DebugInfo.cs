@@ -12,10 +12,12 @@ public class DebugInfo : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.P))
 			GameObject.FindObjectOfType<FinalMissionEndingSequence> ().play ();
+		//if (Input.GetKeyDown (KeyCode.KeypadPlus))
+		//	GameManager.Player.levelUp ();
 	}
 
 	void OnGUI() {
-		//GUI.Label (new Rect (150, 5, 150, 50), "Difficulty: " + GameManager.difficulty);
+		//GUI.Label (new Rect (150, 5, 150, 50), "MS: " + GameManager.Player.Stats.MovementSpeed);
 
 	}
 }
